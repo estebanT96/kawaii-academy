@@ -22,7 +22,6 @@ const StudyCard = () => {
               alignItems: "center",
             }}
           >
-            <Typography>This is where my studycard will be rendered</Typography>
             <Typography boxShadow="1px solid black" variant="h1">
               あ
             </Typography>

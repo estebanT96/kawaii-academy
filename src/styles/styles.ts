@@ -6,10 +6,10 @@ export const theme = createTheme({
     fontFamily: "'Google Sans Flex', sans-serif",
     // Now we specifically override the headings to use the Cute font
     h1: { fontFamily: "'Noto Sans Japanese', sans-serif", fontSize:'132px', fontWeight:600 },
-    h2: { fontFamily: "'Noto Sans Japanese', sans-serif" },
-    h3: { fontFamily: "'Noto Sans Japanese', sans-serif" },
-    h4: { fontFamily: "'Noto Sans Japanese', sans-serif" },
-    h5: { fontFamily: "'Noto Sans Japanese', sans-serif" },
+    h2: { fontFamily: "'Google Sans Flex', sans-serif", fontWeight:600 },
+    h3: { fontFamily: "'Google Sans Flex', sans-serif", fontWeight:600 },
+    h4: { fontFamily: "'Noto Sans Japanese', sans-serif", fontWeight:600  },
+    h5: { fontFamily: "'Noto Sans Japanese', sans-serif", fontWeight:600  },
     h6: { fontFamily: "'Noto Sans Japanese', sans-serif" },
   },
   
