@@ -15,7 +15,7 @@ const NavBar = () => {
           alignItems: "center",
         }}
       >
-        <Box sx={{ height: "52px" }}>
+        <Box sx={{ height: "54px" }}>
           <img src={logo} alt="" height="100%" />
           <img src={logoLetters} alt="" height="100%" />
         </Box>
@@ -25,7 +25,7 @@ const NavBar = () => {
           width="25%"
           paddingRight={5}
         >
-          <Link component={RouterLink} underline="hover" to="/study" color="rgb(240, 78, 28)"
+          <Link component={RouterLink} underline="hover" to="/" color="rgb(240, 78, 28)"
           >
             Study
           </Link>

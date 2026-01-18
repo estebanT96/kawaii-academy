@@ -3,6 +3,7 @@ import { theme } from "./styles/styles";
 import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StudyCard from "./components/StudyCard";
+import Home from "./components/Home";
 function App() {
   return (
     <>
@@ -10,12 +11,12 @@ function App() {
         <CssBaseline />
         <Router>
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
+            <Grid>
               <Grid size={12}>
                 <NavBar />
               </Grid>
               <Routes>
-                <Route path="/" element={<StudyCard />}></Route>
+                <Route path="/" element={<Home />}></Route>
                 <Route path="/study" element={<StudyCard />}></Route>
               </Routes>
             </Grid>
