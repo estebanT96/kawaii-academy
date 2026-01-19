@@ -5,13 +5,15 @@ import KatakanaTable from "../components/KatakanaTable";
 import Kanji from "../components/Kanji";
 import Romaji from "../components/Romaji";
 import Furigana from "../components/Furigana";
-import { KANA_CHAR } from "../data/kana";
 
 const Learn = () => {
   return (
     <LearnContainer>
-      <Card sx={{ padding: "15px", maxWidth: "1400px", margin: "0 auto" }}>
-        <HiraganaTable data={KANA_CHAR} />
+      <Card sx={{
+        padding: "15px",
+        maxWidth: "1400px",
+        margin: "0 auto" }}>
+        <HiraganaTable />
         <KatakanaTable />
         <Kanji />
         <Romaji />

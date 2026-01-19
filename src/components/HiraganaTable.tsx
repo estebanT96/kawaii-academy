@@ -7,38 +7,17 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-
-import type { KanaChar } from "../data/kana";
-
-interface Props {
-  data: KanaChar[];
-}
-
-const HiraganaTable = ({ data }: Props) => {
-  const seionHiraganaA = data
-    .filter((item) => item.type === "seion-hiragana" && item.row === "a")
-    .map((character) => character.char);
-  console.log(seionHiraganaA);
-
-  const seionHiraganaI = data
-    .filter((item) => item.type === "seion-hiragana" && item.row === "i")
-    .map((character) => character.char);
-  console.log(seionHiraganaI);
-
-  const seionHiraganaU = data
-    .filter((item) => item.type === "seion-hiragana" && item.row === "u")
-    .map((character) => character.char);
-  console.log(seionHiraganaU);
-
-  const seionHiraganaE = data
-    .filter((item) => item.type === "seion-hiragana" && item.row === "e")
-    .map((character) => character.char);
-  console.log(seionHiraganaE);
-
-  const seionHiraganaO = data
-    .filter((item) => item.type === "seion-hiragana" && item.row === "o")
-    .map((character) => character.char);
-  console.log(seionHiraganaO);
+import HiraganaRow from "./HiraganaRow";
+import {
+  seionHiraganaA,
+  seionHiraganaI,
+  seionHiraganaU,
+  seionHiraganaE,
+  seionHiraganaO,
+} from "../data/filteredHiragana";
+import TableCard from "./TableCard";
+const HiraganaTable = () => {
+  const consonants = ["", "", "k", "s", "t", "n", "h", "m", "y", "r", "w", "n"];
 
   return (
     <>
@@ -53,12 +32,33 @@ const HiraganaTable = ({ data }: Props) => {
           ひらがな （平仮名）
         </Typography>
       </Box>
-      <Table>
-        <TableHead>
-          <TableRow></TableRow>
-        </TableHead>
-        <TableBody></TableBody>
-      </Table>
+      <Box display='flex' >
+        <Table sx={{ width: "80%" }}>
+          <TableHead>
+            <TableRow>
+              {consonants.map((consonant) => (
+                <TableCell key={consonant}>
+                  <Typography
+                    color="rgb(0, 104, 215)"
+                    paddingLeft="20px"
+                    variant="h4"
+                  >
+                    {consonant}
+                  </Typography>
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <HiraganaRow vowel="a" rowCharacters={seionHiraganaA} />
+            <HiraganaRow vowel="i" rowCharacters={seionHiraganaI} />
+            <HiraganaRow vowel="u" rowCharacters={seionHiraganaU} />
+            <HiraganaRow vowel="e" rowCharacters={seionHiraganaE} />
+            <HiraganaRow vowel="o" rowCharacters={seionHiraganaO} />
+          </TableBody>
+        </Table>
+        <TableCard></TableCard>
+      </Box>
     </>
   );
 };

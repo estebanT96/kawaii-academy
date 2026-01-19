@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
 
 const Kanji = () => {
   return (
@@ -11,7 +10,7 @@ const Kanji = () => {
         Kanji
       </Typography>
       <Typography variant="h5" color="rgb(100,100,100)">
-          漢字
+        漢字
       </Typography>
     </Box>
   );
