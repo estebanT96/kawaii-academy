@@ -1,18 +1,18 @@
 import { Box, Typography } from "@mui/material";
 import ScriptDescriptions from "./ScriptDescriptions";
 import { descriptions } from "../data/descriptions";
-import SeionHiraganaTable from "./SeionHiraganaTable";
+import KanaTable from "./KanaTable";
 import { seionConsonants, SEION_HIRAGANA_ROWS } from "../data/filteredHiragana";
 import CharacterCard from "./CharacterCard";
 import { useState } from "react";
 
 const HiraganaLearnSection = () => {
   const [activeItem, setActiveItem] = useState({ char: "あ", romaji: "a" });
-  
+
   const handleHover = (character: string, romaji: string) => {
     setActiveItem({ char: character, romaji: romaji });
   };
-  
+
   const hiraganaDescriptions = descriptions.filter((desc) =>
     desc.title.includes("Hiragana"),
   );
@@ -32,7 +32,7 @@ const HiraganaLearnSection = () => {
       </Box>
       <ScriptDescriptions data={hiraganaDescriptions} />
       <Box display="flex">
-        <SeionHiraganaTable
+        <KanaTable
           headers={seionConsonants}
           rows={SEION_HIRAGANA_ROWS}
           onHover={handleHover}

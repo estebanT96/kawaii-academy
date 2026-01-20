@@ -26,7 +26,7 @@ interface Props {
   onHover: (character: string, romaji: string) => void;
 }
 
-const SeionHiraganaTable = ({ headers, rows, onHover }: Props) => {
+const KanaTable = ({ headers, rows, onHover }: Props) => {
   return (
     <Box width="80%">
       <Table>
@@ -68,4 +68,4 @@ const SeionHiraganaTable = ({ headers, rows, onHover }: Props) => {
   );
 };
 
-export default SeionHiraganaTable;
+export default KanaTable;
