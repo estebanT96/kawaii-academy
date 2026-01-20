@@ -12,7 +12,7 @@ interface Props {
 
 const ScriptDescriptions = ({ data }: Props) => {
   return (
-    <Box display="flex" marginTop="20px">
+    <Box display="flex" marginTop="30px" marginBottom="20px">
       {data.map((item) => (
         <Box key={item.title} paddingRight="100px" marginBottom="20px">
           <Box

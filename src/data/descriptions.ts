@@ -2,13 +2,13 @@ export const SYSTEM_DESCRIPTIONS = [
   {
     title: "Seion Hiragana",
     description:
-      "The 46 standard 'clear sound' characters used for native words and grammar particles.",
-    icon: "あ",
+      "The 46 standard clear sound characters used for native words and grammar particles.",
+    icon: "か",
   },
   {
     title: "Dakuon Hiragana",
     description:
-      "Voiced 'muddy sounds' created by adding a dakuten (゛) or handakuten (゜) to specific characters.",
+      "Voiced muddy sounds created by adding a dakuten ゛or handakuten ゜to specific characters.",
     icon: "が",
   },
   {

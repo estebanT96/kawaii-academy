@@ -1,7 +1,7 @@
 export interface KanaChar {
   char: string;
   romaji: string;
-  type: "seion-hiragana" | "yoon-hiragana" | "dakuon-hiragana" | "katakana";
+  type: "seion-hiragana" | "dakuon-hiragana" | "yoon-hiragana";
   row: string;
 }
 
@@ -22,11 +22,6 @@ export const KANA_CHAR: KanaChar[] = [
   { char: "ら", romaji: "ra", type: "seion-hiragana", row: "a" },
   { char: "わ", romaji: "wa", type: "seion-hiragana", row: "a" },
   { char: "ん", romaji: "n", type: "seion-hiragana", row: "a" },
-  { char: "が", romaji: "ga", type: "dakuon-hiragana", row: "a" },
-  { char: "ざ", romaji: "za", type: "dakuon-hiragana", row: "a" },
-  { char: "だ", romaji: "da", type: "dakuon-hiragana", row: "a" },
-  { char: "ば", romaji: "ba", type: "dakuon-hiragana", row: "a" },
-  { char: "ぱ", romaji: "pa", type: "dakuon-hiragana", row: "a" },
 
   { char: "い", romaji: "i", type: "seion-hiragana", row: "i" },
   { char: "き", romaji: "ki", type: "seion-hiragana", row: "i" },
@@ -36,11 +31,6 @@ export const KANA_CHAR: KanaChar[] = [
   { char: "ひ", romaji: "hi", type: "seion-hiragana", row: "i" },
   { char: "み", romaji: "mi", type: "seion-hiragana", row: "i" },
   { char: "り", romaji: "ri", type: "seion-hiragana", row: "i" },
-  { char: "ぎ", romaji: "gi", type: "dakuon-hiragana", row: "i" },
-  { char: "じ", romaji: "ji", type: "dakuon-hiragana", row: "i" },
-  { char: "ぢ", romaji: "di", type: "dakuon-hiragana", row: "i" },
-  { char: "び", romaji: "bi", type: "dakuon-hiragana", row: "i" },
-  { char: "ぴ", romaji: "pi", type: "dakuon-hiragana", row: "i" },
 
   { char: "う", romaji: "u", type: "seion-hiragana", row: "u" },
   { char: "く", romaji: "ku", type: "seion-hiragana", row: "u" },
@@ -51,11 +41,6 @@ export const KANA_CHAR: KanaChar[] = [
   { char: "む", romaji: "mu", type: "seion-hiragana", row: "u" },
   { char: "ゆ", romaji: "yu", type: "seion-hiragana", row: "u" },
   { char: "る", romaji: "ru", type: "seion-hiragana", row: "u" },
-  { char: "ぐ", romaji: "gu", type: "dakuon-hiragana", row: "u" },
-  { char: "ず", romaji: "zu", type: "dakuon-hiragana", row: "u" },
-  { char: "づ", romaji: "dzu", type: "dakuon-hiragana", row: "u" },
-  { char: "ぶ", romaji: "bu", type: "dakuon-hiragana", row: "u" },
-  { char: "ぷ", romaji: "pu", type: "dakuon-hiragana", row: "u" },
 
   { char: "え", romaji: "e", type: "seion-hiragana", row: "e" },
   { char: "け", romaji: "ke", type: "seion-hiragana", row: "e" },
@@ -65,11 +50,6 @@ export const KANA_CHAR: KanaChar[] = [
   { char: "へ", romaji: "he", type: "seion-hiragana", row: "e" },
   { char: "め", romaji: "me", type: "seion-hiragana", row: "e" },
   { char: "れ", romaji: "re", type: "seion-hiragana", row: "e" },
-  { char: "げ", romaji: "ge", type: "dakuon-hiragana", row: "e" },
-  { char: "ぜ", romaji: "ze", type: "dakuon-hiragana", row: "e" },
-  { char: "で", romaji: "de", type: "dakuon-hiragana", row: "e" },
-  { char: "べ", romaji: "be", type: "dakuon-hiragana", row: "e" },
-  { char: "ぺ", romaji: "pe", type: "dakuon-hiragana", row: "e" },
 
   { char: "お", romaji: "o", type: "seion-hiragana", row: "o" },
   { char: "こ", romaji: "ko", type: "seion-hiragana", row: "o" },
@@ -81,6 +61,31 @@ export const KANA_CHAR: KanaChar[] = [
   { char: "よ", romaji: "yo", type: "seion-hiragana", row: "o" },
   { char: "ろ", romaji: "ro", type: "seion-hiragana", row: "o" },
   { char: "を", romaji: "wo", type: "seion-hiragana", row: "o" },
+
+  { char: "が", romaji: "ga", type: "dakuon-hiragana", row: "a" },
+  { char: "ざ", romaji: "za", type: "dakuon-hiragana", row: "a" },
+  { char: "だ", romaji: "da", type: "dakuon-hiragana", row: "a" },
+  { char: "ば", romaji: "ba", type: "dakuon-hiragana", row: "a" },
+  { char: "ぱ", romaji: "pa", type: "dakuon-hiragana", row: "a" },
+
+  { char: "ぎ", romaji: "gi", type: "dakuon-hiragana", row: "i" },
+  { char: "じ", romaji: "ji", type: "dakuon-hiragana", row: "i" },
+  { char: "ぢ", romaji: "di", type: "dakuon-hiragana", row: "i" },
+  { char: "び", romaji: "bi", type: "dakuon-hiragana", row: "i" },
+  { char: "ぴ", romaji: "pi", type: "dakuon-hiragana", row: "i" },
+
+  { char: "ぐ", romaji: "gu", type: "dakuon-hiragana", row: "u" },
+  { char: "ず", romaji: "zu", type: "dakuon-hiragana", row: "u" },
+  { char: "づ", romaji: "dzu", type: "dakuon-hiragana", row: "u" },
+  { char: "ぶ", romaji: "bu", type: "dakuon-hiragana", row: "u" },
+  { char: "ぷ", romaji: "pu", type: "dakuon-hiragana", row: "u" },
+
+  { char: "げ", romaji: "ge", type: "dakuon-hiragana", row: "e" },
+  { char: "ぜ", romaji: "ze", type: "dakuon-hiragana", row: "e" },
+  { char: "で", romaji: "de", type: "dakuon-hiragana", row: "e" },
+  { char: "べ", romaji: "be", type: "dakuon-hiragana", row: "e" },
+  { char: "ぺ", romaji: "pe", type: "dakuon-hiragana", row: "e" },
+
   { char: "ご", romaji: "go", type: "dakuon-hiragana", row: "o" },
   { char: "ぞ", romaji: "zo", type: "dakuon-hiragana", row: "o" },
   { char: "ど", romaji: "do", type: "dakuon-hiragana", row: "o" },
@@ -99,9 +104,8 @@ export const KANA_CHAR: KanaChar[] = [
   { char: "ぢゃ", romaji: "dya", type: "yoon-hiragana", row: "yoon-a" },
   { char: "びゃ", romaji: "bya", type: "yoon-hiragana", row: "yoon-a" },
   { char: "ぴゃ", romaji: "pya", type: "yoon-hiragana", row: "yoon-a" },
-  { char: "きゅ", romaji: "kyu", type: "yoon-hiragana", row: "yoon-a" },
-  { char: "きょ", romaji: "kyo", type: "yoon-hiragana", row: "yoon-a" },
 
+  { char: "きゅ", romaji: "kyu", type: "yoon-hiragana", row: "yoon-u" },
   { char: "しゅ", romaji: "shu", type: "yoon-hiragana", row: "yoon-u" },
   { char: "ちゅ", romaji: "chu", type: "yoon-hiragana", row: "yoon-u" },
   { char: "にゅ", romaji: "nyu", type: "yoon-hiragana", row: "yoon-u" },
@@ -113,8 +117,9 @@ export const KANA_CHAR: KanaChar[] = [
   { char: "ぢゅ", romaji: "dyu", type: "yoon-hiragana", row: "yoon-u" },
   { char: "びゅ", romaji: "byu", type: "yoon-hiragana", row: "yoon-u" },
   { char: "ぴゅ", romaji: "pyu", type: "yoon-hiragana", row: "yoon-u" },
-  { char: "しょ", romaji: "sho", type: "yoon-hiragana", row: "yoon-u" },
 
+  { char: "きょ", romaji: "kyo", type: "yoon-hiragana", row: "yoon-o" },
+  { char: "しょ", romaji: "sho", type: "yoon-hiragana", row: "yoon-o" },
   { char: "ちょ", romaji: "cho", type: "yoon-hiragana", row: "yoon-o" },
   { char: "にょ", romaji: "nyo", type: "yoon-hiragana", row: "yoon-o" },
   { char: "ひょ", romaji: "hyo", type: "yoon-hiragana", row: "yoon-o" },

@@ -1,23 +1,19 @@
 import { Card } from "@mui/material";
-import LearnContainer from "../components/LearnContainer";
-import HiraganaTable from "../components/HiraganaTable";
-import KatakanaTable from "../components/KatakanaTable";
-import Kanji from "../components/Kanji";
-import Romaji from "../components/Romaji";
-import Furigana from "../components/Furigana";
+import LearnContainer from "../components/ui/LearnContainer";
+import HiraganaLearnSection from "../components/HiraganaLearnSection";
 
 const Learn = () => {
   return (
     <LearnContainer>
-      <Card sx={{
-        padding: "15px",
-        maxWidth: "1400px",
-        margin: "0 auto" }}>
-        <HiraganaTable />
-        {/* <KatakanaTable />
-        <Kanji />
-        <Romaji />
-        <Furigana /> */}
+      <Card
+        sx={{
+          padding: "15px",
+          maxWidth: "1400px",
+          margin: "0 auto",
+        }}
+      >
+        <HiraganaLearnSection />
+        {/* <KatakanaLearnSection /> */}
       </Card>
     </LearnContainer>
   );
