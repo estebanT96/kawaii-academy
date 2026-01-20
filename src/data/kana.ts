@@ -10,14 +10,6 @@ export interface VowelTableSymbols {
   vowel: string;
 }
 
-export const VOWEL_CHARS: VowelTableSymbols[] = [
-  { id: 0, vowel: "a" },
-  { id: 1, vowel: "i" },
-  { id: 3, vowel: "u" },
-  { id: 4, vowel: "e" },
-  { id: 5, vowel: "o" },
-];
-
 export const KANA_CHAR: KanaChar[] = [
   { char: "あ", romaji: "a", type: "seion-hiragana", row: "a" },
   { char: "か", romaji: "ka", type: "seion-hiragana", row: "a" },

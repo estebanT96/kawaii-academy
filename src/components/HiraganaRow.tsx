@@ -1,38 +1,45 @@
 import { TableCell, TableRow, Typography } from "@mui/material";
-import SymbolContainer from "./SymbolContainer";
+import SymbolContainer from "./ui/SymbolContainer";
+
+interface KanaData {
+  character: string;
+  romaji: string;
+}
 
 interface Props {
   vowel: string;
-  rowCharacters: string[];
+  rowCharacters: KanaData[];
+  onHover: (character: string, romaji: string) => void;
 }
 
-const HiraganaRow = ({ vowel, rowCharacters }: Props) => {
+const HiraganaRow = ({ vowel, rowCharacters, onHover }: Props) => {
   return (
-    <>
-      <TableRow>
-        <TableCell
-          sx={{
-            borderRight: "1px solid rgb(222, 222, 222)",
-            textAlign: "center",
-          }}
-        >
-          <Typography variant="h4" color="rgb(0, 104, 215)">
-            {vowel}
-          </Typography>
-        </TableCell>
+    <TableRow>
+      <TableCell
+        sx={{
+          borderLeft: "1px solid rgb(222, 222, 222)",
 
-        {rowCharacters.map((character) => (
-          <TableCell
-            sx={{ borderRight: "1px solid rgb(235, 235, 235)" }}
-            key={character}
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h4" color="rgb(0, 104, 215)">
+          {vowel}
+        </Typography>
+      </TableCell>
+
+      {rowCharacters.map((item) => (
+        <TableCell
+          sx={{ border: "1px solid rgb(235, 235, 235)" }}
+          key={item.character}
+        >
+          <SymbolContainer
+            onMouseEnter={() => onHover(item.character, item.romaji)}
           >
-            <SymbolContainer>
-              <Typography variant="h4">{character}</Typography>
-            </SymbolContainer>
-          </TableCell>
-        ))}
-      </TableRow>
-    </>
+            <Typography variant="h4">{item.character}</Typography>
+          </SymbolContainer>
+        </TableCell>
+      ))}
+    </TableRow>
   );
 };
 

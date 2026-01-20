@@ -1,23 +1,23 @@
-import {
-  Box,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Typography,
-} from "@mui/material";
-import HiraganaRow from "./HiraganaRow";
-import {
-  seionHiraganaA,
-  seionHiraganaI,
-  seionHiraganaU,
-  seionHiraganaE,
-  seionHiraganaO,
-} from "../data/filteredHiragana";
+import { Box, Table, TableBody, TableHead, Typography } from "@mui/material";
 import TableCard from "./TableCard";
+import ConsonantsRow from "./ConsonantsRow";
+import NormalHiraganaRows from "./NormalHiraganaRows";
+import { useState } from "react";
+import ScriptDescriptions from "./ScriptDescriptions";
+import { descriptions } from "../data/descriptions";
 const HiraganaTable = () => {
-  const consonants = ["", "", "k", "s", "t", "n", "h", "m", "y", "r", "w", "n"];
+  const [activeItem, setActiveItem] = useState({
+    character: "あ",
+    romaji: "a",
+  });
+
+  const handleHover = (character: string, romaji: string) => {
+    setActiveItem({ character, romaji });
+  };
+
+  const hiraganaDescriptions = descriptions.filter((desc) =>
+    desc.title.includes("Hiragana"),
+  );
 
   return (
     <>
@@ -32,32 +32,22 @@ const HiraganaTable = () => {
           ひらがな （平仮名）
         </Typography>
       </Box>
-      <Box display='flex' >
-        <Table sx={{ width: "80%" }}>
-          <TableHead>
-            <TableRow>
-              {consonants.map((consonant) => (
-                <TableCell key={consonant}>
-                  <Typography
-                    color="rgb(0, 104, 215)"
-                    paddingLeft="20px"
-                    variant="h4"
-                  >
-                    {consonant}
-                  </Typography>
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <HiraganaRow vowel="a" rowCharacters={seionHiraganaA} />
-            <HiraganaRow vowel="i" rowCharacters={seionHiraganaI} />
-            <HiraganaRow vowel="u" rowCharacters={seionHiraganaU} />
-            <HiraganaRow vowel="e" rowCharacters={seionHiraganaE} />
-            <HiraganaRow vowel="o" rowCharacters={seionHiraganaO} />
-          </TableBody>
-        </Table>
-        <TableCard></TableCard>
+      <Box display="flex" flexDirection="column">
+        <ScriptDescriptions data={hiraganaDescriptions} />
+        <Box display="flex">
+          <Table sx={{ width: "85%" }}>
+            <TableHead>
+              <ConsonantsRow />
+            </TableHead>
+            <TableBody>
+              <NormalHiraganaRows onHover={handleHover} />
+            </TableBody>
+          </Table>
+          <TableCard
+            character={activeItem.character}
+            romaji={activeItem.romaji}
+          ></TableCard>
+        </Box>
       </Box>
     </>
   );

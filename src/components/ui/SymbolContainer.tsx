@@ -6,8 +6,8 @@ const SymbolContainer = styled(Box)(() => ({
   transition: "all ease 150ms",
   textAlign: "center",
   "&:hover": {
-  backgroundColor: "#dedede",
-  color: "rgb(255, 97, 35)",
+    backgroundColor: "#dedede",
+    color: "rgb(255, 97, 35)",
     cursor: "pointer",
   },
 }));

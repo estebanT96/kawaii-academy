@@ -14,10 +14,10 @@ const Learn = () => {
         maxWidth: "1400px",
         margin: "0 auto" }}>
         <HiraganaTable />
-        <KatakanaTable />
+        {/* <KatakanaTable />
         <Kanji />
         <Romaji />
-        <Furigana />
+        <Furigana /> */}
       </Card>
     </LearnContainer>
   );

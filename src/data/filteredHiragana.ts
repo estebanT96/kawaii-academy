@@ -1,26 +1,43 @@
 import { KANA_CHAR } from "./kana";
 
-export const seionHiraganaA = KANA_CHAR.filter(
-  (item) => item.type === "seion-hiragana" && item.row === "a",
-).map((character) => character.char);
+const getRow = (vowel: string) => {
+  return KANA_CHAR.filter(
+    (item) => item.type === "seion-hiragana" && item.row === vowel,
+  ).map((item) => ({
+    character: item.char,
+    romaji: item.romaji,
+  }));
+};
 
-// This table row will have 2 empty cells
-const rawHiraganaI = KANA_CHAR.filter(
-  (item) => item.type === "seion-hiragana" && item.row === "i",
-).map((character) => character.char);
-rawHiraganaI.splice(7, 0, " ");
-rawHiraganaI.splice(9, 0, " ");
-export const seionHiraganaI = rawHiraganaI;
+const rowA = getRow("a");
+const rowU = getRow("u");
+const rowE = getRow("e");
+const rowO = getRow("o");
+const rowI = getRow("i");
 
-const rawHiraganaU = KANA_CHAR.filter(
-  (item) => item.type === "seion-hiragana" && item.row === "u",
-).map((character) => character.char);
-export const seionHiraganaU = rawHiraganaU;
+const emptySpace = { character: "", romaji: "" };
 
-export const seionHiraganaE = KANA_CHAR.filter(
-  (item) => item.type === "seion-hiragana" && item.row === "e",
-).map((character) => character.char);
+rowI.splice(7, 0, emptySpace);
 
-export const seionHiraganaO = KANA_CHAR.filter(
-  (item) => item.type === "seion-hiragana" && item.row === "o",
-).map((character) => character.char);
+export const HIRAGANA_ROWS = [
+  { vowel: "a", chars: rowA },
+  { vowel: "i", chars: rowI },
+  { vowel: "u", chars: rowU },
+  { vowel: "e", chars: rowE },
+  { vowel: "o", chars: rowO },
+];
+
+export const consonants = [
+  "",
+  "",
+  "k",
+  "s",
+  "t",
+  "n",
+  "h",
+  "m",
+  "y",
+  "r",
+  "w",
+  "n",
+];

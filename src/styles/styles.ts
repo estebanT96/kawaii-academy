@@ -11,9 +11,10 @@ export const theme = createTheme({
       fontWeight: 600,
     },
     h2: { fontFamily: "'Google Sans Flex', sans-serif", fontWeight: 600 },
-    h3: { fontFamily: "'Google Sans Flex', sans-serif", fontWeight: 600 },
+    h3: { fontFamily: "'Poppins', sans-serif", fontWeight: 600 },
     h4: { fontFamily: "'Poppins', 'Noto Sans Japanese'", fontWeight: 600 },
-    h5: { fontFamily: "'Google Sans Flex', sans-serif", fontWeight: 600 },
+    h5: { fontFamily: "'Poppins', sans-serif", fontWeight: 600 },
     h6: { fontFamily: "'Google Sans Flex', sans-serif" },
+    body1: { fontFamily: "'Poppins', sans-serif" },
   },
 });
