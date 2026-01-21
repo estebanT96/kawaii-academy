@@ -1,7 +1,7 @@
 import { Box, styled } from "@mui/material";
 
 const SymbolContainer = styled(Box)(() => ({
-  padding: "10px 0",
+  padding: "5px 1px",
   fontFamily: "'Poppins', sans-serif",
   transition: "all ease 150ms",
   textAlign: "center",

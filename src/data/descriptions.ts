@@ -8,7 +8,7 @@ export const SYSTEM_DESCRIPTIONS = [
   {
     title: "Dakuon Hiragana",
     description:
-      "Voiced muddy sounds created by adding a dakuten ゛or handakuten ゜to specific characters.",
+      "Voiced sounds created by adding a dakuten ゛or handakuten ゜to specific characters.",
     icon: "が",
   },
   {

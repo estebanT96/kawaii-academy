@@ -2,23 +2,23 @@ import { Box, Typography } from "@mui/material";
 import ScriptDescriptions from "./ScriptDescriptions";
 import { descriptions } from "../data/descriptions";
 import KanaTable from "./KanaTable";
-import { seionConsonants, SEION_HIRAGANA_ROWS } from "../data/filteredHiragana";
-import CharacterCard from "./CharacterCard";
-import { useState } from "react";
+import {
+  SEION_HIRAGANA_ROWS,
+  DAKUON_HIRAGANA_ROWS,
+  YOON_HIRAGANA_ROWS,
+  seionConsonants,
+  dakuonConsonants,
+  yoonConsonants,
+} from "../data/filteredHiragana";
 
 const HiraganaLearnSection = () => {
-  const [activeItem, setActiveItem] = useState({ char: "あ", romaji: "a" });
-
-  const handleHover = (character: string, romaji: string) => {
-    setActiveItem({ char: character, romaji: romaji });
-  };
-
   const hiraganaDescriptions = descriptions.filter((desc) =>
     desc.title.includes("Hiragana"),
   );
 
+
   return (
-    <>
+    <Box>
       <Box display="flex" alignItems="baseline">
         <Typography
           variant="h3"
@@ -31,15 +31,14 @@ const HiraganaLearnSection = () => {
         </Typography>
       </Box>
       <ScriptDescriptions data={hiraganaDescriptions} />
-      <Box display="flex">
-        <KanaTable
-          headers={seionConsonants}
-          rows={SEION_HIRAGANA_ROWS}
-          onHover={handleHover}
-        />
-        <CharacterCard char={activeItem.char} romaji={activeItem.romaji} />
+      <Box display="flex" justifyContent="space-between" width="80%">
+        <KanaTable consonants={seionConsonants} rows={SEION_HIRAGANA_ROWS} />
+        <KanaTable consonants={dakuonConsonants} rows={DAKUON_HIRAGANA_ROWS} />
       </Box>
-    </>
+      <Box width="80%" display="flex" justifyContent="center">
+        <KanaTable consonants={yoonConsonants} rows={YOON_HIRAGANA_ROWS} />
+      </Box>
+    </Box>
   );
 };
 

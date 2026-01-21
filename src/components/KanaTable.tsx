@@ -1,5 +1,4 @@
 import {
-  Box,
   Table,
   TableBody,
   TableCell,
@@ -7,64 +6,72 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import SymbolContainer from "./ui/SymbolContainer";
 import VowelContainer from "./ui/VowelContainer";
-
 interface KanaChar {
   character: string;
   romaji: string;
 }
 
-interface RowData {
+interface Row {
   vowel: string;
   chars: KanaChar[];
 }
 
 interface Props {
-  headers: string[];
-  rows: RowData[];
-  onHover: (character: string, romaji: string) => void;
+  consonants: string[];
+  rows: Row[];
 }
 
-const KanaTable = ({ headers, rows, onHover }: Props) => {
+const KanaTable = ({ consonants, rows }: Props) => {
   return (
-    <Box width="80%">
-      <Table>
-        <TableHead>
-          <TableRow>
-            {headers.map((headerChar, index) => (
-              <TableCell key={index}>
-                <VowelContainer> {headerChar}</VowelContainer>
+    <Table
+      size="small"
+      sx={{ marginBottom: "20px", width: "auto", tableLayout: "auto" }}
+    >
+      <TableHead>
+        <TableRow>
+          {consonants.map((consonant, i) => (
+            <TableCell
+              key={i}
+              sx={{ borderBottom: "1px solid rgb(205, 205, 205)" }}
+            >
+              <VowelContainer>{consonant}</VowelContainer>
+            </TableCell>
+          ))}
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        {rows.map((row, i) => (
+          <TableRow key={i}>
+            <TableCell
+              sx={{
+                border: "1px solid rgb(205, 205, 205)",
+              }}
+            >
+              <VowelContainer>{row.vowel}</VowelContainer>
+            </TableCell>
+            {row.chars.map((data, i) => (
+              <TableCell
+                sx={{
+                  fontFamily: "'Poppins', sans-serif",
+                  transition: "all ease 150ms",
+                  borderRadius: "5px",
+                  "&:hover": {
+                    backgroundColor: "#dedede",
+                    color: "rgb(255, 97, 35)",
+                    cursor: "pointer",
+                  },
+                }}
+                onMouseEnter={() => console.log(data.character)}
+                key={i}
+              >
+                <Typography variant="h5">{data.character}</Typography>
               </TableCell>
             ))}
           </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.vowel}>
-              <TableCell>
-                <VowelContainer>{row.vowel}</VowelContainer>
-              </TableCell>
-              {row.chars.map((item, i) => (
-                <TableCell
-                  key={`${row.vowel}-${i}`}
-                  align="center"
-                  sx={{ border: "1px solid rgb(218, 218, 218)" }}
-                >
-                  <Box>
-                    <SymbolContainer
-                      onMouseEnter={() => onHover(item.character, item.romaji)}
-                    >
-                      <Typography variant="h4">{item.character}</Typography>
-                    </SymbolContainer>
-                  </Box>
-                </TableCell>
-              ))}
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Box>
+        ))}
+      </TableBody>
+    </Table>
   );
 };
 

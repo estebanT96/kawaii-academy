@@ -10,7 +10,8 @@ const getRow = (kanaType: string, vowel: string) => {
 };
 
 export const seionConsonants = [" "," ","k","s","t","n","h","m","y","r","w","n"];
-export const dakuonConsonants = ["g", "z", "d", "b", "p"];
+export const dakuonConsonants = [" ","g", "z", "d", "b", "p"];
+export const yoonConsonants = [" ","k","s","c","n","h","m","r","g","j","d","b","p"];
 
 const seionRowA = getRow("seion-hiragana", "a");
 const seionRowI = getRow("seion-hiragana", "i");
@@ -26,9 +27,9 @@ const dakuonRowU = getRow("dakuon-hiragana", "u");
 const dakuonRowE = getRow("dakuon-hiragana", "e");
 const dakuonRowO = getRow("dakuon-hiragana", "o");
 
-const yoonRowA = getRow("yoon-hiragana", "a");
-const yoonRowU = getRow("yoon-hiragana", "u");
-const yoonRowO = getRow("yoon-hiragana", "o");
+const yoonRowA = getRow("yoon-hiragana", "ya");
+const yoonRowU = getRow("yoon-hiragana", "yu");
+const yoonRowO = getRow("yoon-hiragana", "yo");
 
 export const SEION_HIRAGANA_ROWS = [
   { vowel: "a", chars: seionRowA },
@@ -47,7 +48,7 @@ export const DAKUON_HIRAGANA_ROWS = [
 ];
 
 export const YOON_HIRAGANA_ROWS = [
-  { vowel: "a", chars: yoonRowA },
-  { vowel: "u", chars: yoonRowU },
-  { vowel: "o", chars: yoonRowO },
+  { vowel: "ya", chars: yoonRowA },
+  { vowel: "yu", chars: yoonRowU },
+  { vowel: "yo", chars: yoonRowO },
 ];

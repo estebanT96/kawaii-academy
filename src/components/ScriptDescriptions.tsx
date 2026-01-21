@@ -12,19 +12,19 @@ interface Props {
 
 const ScriptDescriptions = ({ data }: Props) => {
   return (
-    <Box display="flex" marginTop="30px" marginBottom="20px">
+    <Box display="flex" marginTop="20px" marginBottom="10px">
       {data.map((item) => (
-        <Box key={item.title} paddingRight="100px" marginBottom="20px">
+        <Box key={item.title} paddingRight="100px" marginBottom="10px">
           <Box
             display="flex"
             justifyContent="space-between"
             marginBottom="5px"
             alignItems="baseline"
           >
-            <Typography variant="h5">{item.title}</Typography>
+            <Typography variant="h6">{item.title}</Typography>
             <Box
               borderRadius="10px"
-              width="20%"
+              width="10%"
               sx={{
                 backgroundColor: "rgb(255, 51, 51)",
                 display: "flex",
@@ -32,7 +32,7 @@ const ScriptDescriptions = ({ data }: Props) => {
                 alignItems: "center",
               }}
             >
-              <Typography color="white" fontWeight="600" fontSize="20px">
+              <Typography color="white" fontWeight="600" fontSize="18px">
                 {item.icon}
               </Typography>
             </Box>
