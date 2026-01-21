@@ -2,6 +2,7 @@ import { Card } from "@mui/material";
 import LearnContainer from "../components/ui/LearnContainer";
 import HiraganaLearnSection from "../components/HiraganaLearnSection";
 import KatakanaLearnSection from "../components/KatanaLearnSection";
+import WordLearnSection from "../components/WordLearnSection";
 
 const Learn = () => (
   <LearnContainer>
@@ -14,6 +15,7 @@ const Learn = () => (
     >
       <HiraganaLearnSection />
       <KatakanaLearnSection />
+      <WordLearnSection />
     </Card>
   </LearnContainer>
 );

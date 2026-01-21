@@ -15,7 +15,7 @@ import { useState } from "react";
 
 const KatakanaLearnSection = () => {
   const [activeItem, setActiveItem] = useState({
-    character: "あ",
+    character: "ア",
     romaji: "a",
   });
 
