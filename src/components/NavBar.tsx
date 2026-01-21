@@ -10,7 +10,7 @@ const NavBar = () => {
       <Box
         sx={{
           background: "rgba(254, 248, 230)",
-          padding: "10px",
+          padding: "5px",
         }}
       >
         <Stack
@@ -22,7 +22,7 @@ const NavBar = () => {
             margin: "0 auto",
           }}
         >
-          <Box sx={{ height: "54px" }}>
+          <Box sx={{ height: "46px" }}>
             <img src={logo} alt="" height="100%" />
             <img src={logoLetters} alt="" height="100%" />
           </Box>
