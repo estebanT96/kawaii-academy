@@ -19,18 +19,21 @@ export const SYSTEM_DESCRIPTIONS = [
   },
   {
     title: "Seion Katakana",
-    description: "Seion Katakana Description",
+    description:
+      "The standard angular characters used primarily for loanwords, foreign names, scientific terms, and emphasis.",
     icon: "ア",
   },
   {
     title: "Dakuon Katakana",
-    description: "Dakuon Katakana Description",
+    description:
+      "Voiced sounds created by adding a dakuten ゛or handakuten ゜to specific characters, just like in Hiragana.",
     icon: "ガ",
   },
   {
     title: "Yoon Katakana",
-    description: "Yoon Katakana Description",
-    icon: "チャ",
+    description:
+      "キャ Contracted 'gliding sounds' formed by combining a character with a small ya (ャ), yu (ュ), or yo (ョ).",
+    icon: "キャ",
   },
 ];
 

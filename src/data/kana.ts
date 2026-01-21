@@ -1,7 +1,13 @@
 export interface KanaChar {
   char: string;
   romaji: string;
-  type: "seion-hiragana" | "dakuon-hiragana" | "yoon-hiragana";
+  type:
+    | "seion-hiragana"
+    | "dakuon-hiragana"
+    | "yoon-hiragana"
+    | "seion-katakana"
+    | "dakuon-katakana"
+    | "yoon-katakana";
   row: string;
 }
 
@@ -130,4 +136,127 @@ export const KANA_CHAR: KanaChar[] = [
   { char: "ぢょ", romaji: "dyo", type: "yoon-hiragana", row: "yo" },
   { char: "びょ", romaji: "byo", type: "yoon-hiragana", row: "yo" },
   { char: "ぴょ", romaji: "pyo", type: "yoon-hiragana", row: "yo" },
+
+  // --- SEION KATAKANA ---
+  { char: "ア", romaji: "a", type: "seion-katakana", row: "a" },
+  { char: "カ", romaji: "ka", type: "seion-katakana", row: "a" },
+  { char: "サ", romaji: "sa", type: "seion-katakana", row: "a" },
+  { char: "タ", romaji: "ta", type: "seion-katakana", row: "a" },
+  { char: "ナ", romaji: "na", type: "seion-katakana", row: "a" },
+  { char: "ハ", romaji: "ha", type: "seion-katakana", row: "a" },
+  { char: "マ", romaji: "ma", type: "seion-katakana", row: "a" },
+  { char: "ヤ", romaji: "ya", type: "seion-katakana", row: "a" },
+  { char: "ラ", romaji: "ra", type: "seion-katakana", row: "a" },
+  { char: "ワ", romaji: "wa", type: "seion-katakana", row: "a" },
+  { char: "ン", romaji: "n", type: "seion-katakana", row: "a" },
+
+  { char: "イ", romaji: "i", type: "seion-katakana", row: "i" },
+  { char: "キ", romaji: "ki", type: "seion-katakana", row: "i" },
+  { char: "シ", romaji: "shi", type: "seion-katakana", row: "i" },
+  { char: "チ", romaji: "chi", type: "seion-katakana", row: "i" },
+  { char: "ニ", romaji: "ni", type: "seion-katakana", row: "i" },
+  { char: "ヒ", romaji: "hi", type: "seion-katakana", row: "i" },
+  { char: "ミ", romaji: "mi", type: "seion-katakana", row: "i" },
+  { char: "リ", romaji: "ri", type: "seion-katakana", row: "i" },
+
+  { char: "ウ", romaji: "u", type: "seion-katakana", row: "u" },
+  { char: "ク", romaji: "ku", type: "seion-katakana", row: "u" },
+  { char: "ス", romaji: "su", type: "seion-katakana", row: "u" },
+  { char: "ツ", romaji: "tsu", type: "seion-katakana", row: "u" },
+  { char: "ヌ", romaji: "nu", type: "seion-katakana", row: "u" },
+  { char: "フ", romaji: "fu", type: "seion-katakana", row: "u" },
+  { char: "ム", romaji: "mu", type: "seion-katakana", row: "u" },
+  { char: "ユ", romaji: "yu", type: "seion-katakana", row: "u" },
+  { char: "ル", romaji: "ru", type: "seion-katakana", row: "u" },
+
+  { char: "エ", romaji: "e", type: "seion-katakana", row: "e" },
+  { char: "ケ", romaji: "ke", type: "seion-katakana", row: "e" },
+  { char: "セ", romaji: "se", type: "seion-katakana", row: "e" },
+  { char: "テ", romaji: "te", type: "seion-katakana", row: "e" },
+  { char: "ネ", romaji: "ne", type: "seion-katakana", row: "e" },
+  { char: "ヘ", romaji: "he", type: "seion-katakana", row: "e" },
+  { char: "メ", romaji: "me", type: "seion-katakana", row: "e" },
+  { char: "レ", romaji: "re", type: "seion-katakana", row: "e" },
+
+  { char: "オ", romaji: "o", type: "seion-katakana", row: "o" },
+  { char: "コ", romaji: "ko", type: "seion-katakana", row: "o" },
+  { char: "ソ", romaji: "so", type: "seion-katakana", row: "o" },
+  { char: "ト", romaji: "to", type: "seion-katakana", row: "o" },
+  { char: "ノ", romaji: "no", type: "seion-katakana", row: "o" },
+  { char: "ホ", romaji: "ho", type: "seion-katakana", row: "o" },
+  { char: "モ", romaji: "mo", type: "seion-katakana", row: "o" },
+  { char: "ヨ", romaji: "yo", type: "seion-katakana", row: "o" },
+  { char: "ロ", romaji: "ro", type: "seion-katakana", row: "o" },
+  { char: "ヲ", romaji: "wo", type: "seion-katakana", row: "o" },
+
+  // --- DAKUON KATAKANA ---
+  { char: "ガ", romaji: "ga", type: "dakuon-katakana", row: "a" },
+  { char: "ザ", romaji: "za", type: "dakuon-katakana", row: "a" },
+  { char: "ダ", romaji: "da", type: "dakuon-katakana", row: "a" },
+  { char: "バ", romaji: "ba", type: "dakuon-katakana", row: "a" },
+  { char: "パ", romaji: "pa", type: "dakuon-katakana", row: "a" },
+
+  { char: "ギ", romaji: "gi", type: "dakuon-katakana", row: "i" },
+  { char: "ジ", romaji: "ji", type: "dakuon-katakana", row: "i" },
+  { char: "ヂ", romaji: "di", type: "dakuon-katakana", row: "i" },
+  { char: "ビ", romaji: "bi", type: "dakuon-katakana", row: "i" },
+  { char: "ピ", romaji: "pi", type: "dakuon-katakana", row: "i" },
+
+  { char: "グ", romaji: "gu", type: "dakuon-katakana", row: "u" },
+  { char: "ズ", romaji: "zu", type: "dakuon-katakana", row: "u" },
+  { char: "ヅ", romaji: "dzu", type: "dakuon-katakana", row: "u" },
+  { char: "ブ", romaji: "bu", type: "dakuon-katakana", row: "u" },
+  { char: "プ", romaji: "pu", type: "dakuon-katakana", row: "u" },
+
+  { char: "ゲ", romaji: "ge", type: "dakuon-katakana", row: "e" },
+  { char: "ゼ", romaji: "ze", type: "dakuon-katakana", row: "e" },
+  { char: "デ", romaji: "de", type: "dakuon-katakana", row: "e" },
+  { char: "ベ", romaji: "be", type: "dakuon-katakana", row: "e" },
+  { char: "ペ", romaji: "pe", type: "dakuon-katakana", row: "e" },
+
+  { char: "ゴ", romaji: "go", type: "dakuon-katakana", row: "o" },
+  { char: "ゾ", romaji: "zo", type: "dakuon-katakana", row: "o" },
+  { char: "ド", romaji: "do", type: "dakuon-katakana", row: "o" },
+  { char: "ボ", romaji: "bo", type: "dakuon-katakana", row: "o" },
+  { char: "ポ", romaji: "po", type: "dakuon-katakana", row: "o" },
+
+  // --- YOON KATAKANA ---
+  { char: "キャ", romaji: "kya", type: "yoon-katakana", row: "ya" },
+  { char: "シャ", romaji: "sha", type: "yoon-katakana", row: "ya" },
+  { char: "チャ", romaji: "cha", type: "yoon-katakana", row: "ya" },
+  { char: "ニャ", romaji: "nya", type: "yoon-katakana", row: "ya" },
+  { char: "ヒャ", romaji: "hya", type: "yoon-katakana", row: "ya" },
+  { char: "ミャ", romaji: "mya", type: "yoon-katakana", row: "ya" },
+  { char: "リャ", romaji: "rya", type: "yoon-katakana", row: "ya" },
+  { char: "ギャ", romaji: "gya", type: "yoon-katakana", row: "ya" },
+  { char: "ジャ", romaji: "jya", type: "yoon-katakana", row: "ya" },
+  { char: "ヂャ", romaji: "dya", type: "yoon-katakana", row: "ya" },
+  { char: "ビャ", romaji: "bya", type: "yoon-katakana", row: "ya" },
+  { char: "ピャ", romaji: "pya", type: "yoon-katakana", row: "ya" },
+
+  { char: "キュ", romaji: "kyu", type: "yoon-katakana", row: "yu" },
+  { char: "シュ", romaji: "shu", type: "yoon-katakana", row: "yu" },
+  { char: "チュ", romaji: "chu", type: "yoon-katakana", row: "yu" },
+  { char: "ニュ", romaji: "nyu", type: "yoon-katakana", row: "yu" },
+  { char: "ヒュ", romaji: "hyu", type: "yoon-katakana", row: "yu" },
+  { char: "ミュ", romaji: "myu", type: "yoon-katakana", row: "yu" },
+  { char: "リュ", romaji: "ryu", type: "yoon-katakana", row: "yu" },
+  { char: "ギュ", romaji: "gyu", type: "yoon-katakana", row: "yu" },
+  { char: "ジュ", romaji: "jyu", type: "yoon-katakana", row: "yu" },
+  { char: "ヂュ", romaji: "dyu", type: "yoon-katakana", row: "yu" },
+  { char: "ビュ", romaji: "byu", type: "yoon-katakana", row: "yu" },
+  { char: "ピュ", romaji: "pyu", type: "yoon-katakana", row: "yu" },
+
+  { char: "キョ", romaji: "kyo", type: "yoon-katakana", row: "yo" },
+  { char: "ショ", romaji: "sho", type: "yoon-katakana", row: "yo" },
+  { char: "チョ", romaji: "cho", type: "yoon-katakana", row: "yo" },
+  { char: "ニョ", romaji: "nyo", type: "yoon-katakana", row: "yo" },
+  { char: "ヒョ", romaji: "hyo", type: "yoon-katakana", row: "yo" },
+  { char: "ミョ", romaji: "myo", type: "yoon-katakana", row: "yo" },
+  { char: "リョ", romaji: "ryo", type: "yoon-katakana", row: "yo" },
+  { char: "ギョ", romaji: "gyo", type: "yoon-katakana", row: "yo" },
+  { char: "ジョ", romaji: "jyo", type: "yoon-katakana", row: "yo" },
+  { char: "ヂョ", romaji: "dyo", type: "yoon-katakana", row: "yo" },
+  { char: "ビョ", romaji: "byo", type: "yoon-katakana", row: "yo" },
+  { char: "ピョ", romaji: "pyo", type: "yoon-katakana", row: "yo" },
 ];

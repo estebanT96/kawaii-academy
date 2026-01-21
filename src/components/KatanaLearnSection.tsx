@@ -3,17 +3,17 @@ import ScriptDescriptions from "./ScriptDescriptions";
 import { descriptions } from "../data/descriptions";
 import KanaTable from "./KanaTable";
 import {
-  SEION_HIRAGANA_ROWS,
-  DAKUON_HIRAGANA_ROWS,
-  YOON_HIRAGANA_ROWS,
+  SEION_KATAKANA_ROWS,
+  DAKUON_KATAKANA_ROWS,
+  YOON_KATAKANA_ROWS,
   seionConsonants,
   dakuonConsonants,
   yoonConsonants,
-} from "../data/filteredHiragana";
+} from "../data/filteredKatakana";
 import TableCard from "./TableCard";
 import { useState } from "react";
 
-const HiraganaLearnSection = () => {
+const KatakanaLearnSection = () => {
   const [activeItem, setActiveItem] = useState({
     character: "あ",
     romaji: "a",
@@ -23,8 +23,8 @@ const HiraganaLearnSection = () => {
     setActiveItem({ character: character, romaji: romaji });
   };
 
-  const hiraganaDescriptions = descriptions.filter((desc) =>
-    desc.title.includes("Hiragana"),
+  const katakanaDescriptions = descriptions.filter((desc) =>
+    desc.title.includes("Katakana"),
   );
 
   return (
@@ -34,37 +34,32 @@ const HiraganaLearnSection = () => {
           variant="h3"
           sx={{ textDecoration: "underline", marginRight: "20px" }}
         >
-          Hiragana
+         Katakana
         </Typography>
         <Typography variant="h5" color="rgb(100,100,100)">
-          ひらがな （平仮名）
+          カタカナ
         </Typography>
       </Box>
-      <ScriptDescriptions data={hiraganaDescriptions} />
+      <ScriptDescriptions data={katakanaDescriptions} />
       <Box display="flex" justifyContent="space-between">
         <Box width="77%">
           <Box display="flex" justifyContent="space-between">
             <KanaTable
               onHover={handleHover}
               consonants={seionConsonants}
-              rows={SEION_HIRAGANA_ROWS}
+              rows={SEION_KATAKANA_ROWS}
             />
             <KanaTable
               onHover={handleHover}
               consonants={dakuonConsonants}
-              rows={DAKUON_HIRAGANA_ROWS}
+              rows={DAKUON_KATAKANA_ROWS}
             />
           </Box>
-          <Box
-            width="100%"
-            display="flex"
-            justifyContent="center"
-            marginBottom="50px"
-          >
+          <Box width="100%" display="flex" justifyContent="center"  marginBottom="50px">
             <KanaTable
               onHover={handleHover}
               consonants={yoonConsonants}
-              rows={YOON_HIRAGANA_ROWS}
+              rows={YOON_KATAKANA_ROWS}
             />
           </Box>
         </Box>
@@ -79,4 +74,4 @@ const HiraganaLearnSection = () => {
   );
 };
 
-export default HiraganaLearnSection;
+export default KatakanaLearnSection;

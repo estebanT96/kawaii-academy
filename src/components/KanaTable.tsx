@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import VowelContainer from "./ui/VowelContainer";
+import KanaCell from "./KanaCell";
 
 interface KanaChar {
   character: string;
@@ -32,9 +33,9 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
     >
       <TableHead>
         <TableRow>
-          {consonants.map((consonant, i) => (
+          {consonants.map((consonant, index) => (
             <TableCell
-              key={i}
+              key={index}
               sx={{ borderBottom: "1px solid rgb(205, 205, 205)" }}
             >
               <VowelContainer>{consonant}</VowelContainer>
@@ -43,8 +44,8 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
         </TableRow>
       </TableHead>
       <TableBody>
-        {rows.map((row, i) => (
-          <TableRow key={i}>
+        {rows.map((row) => (
+          <TableRow key={row.vowel}>
             <TableCell
               sx={{
                 border: "1px solid rgb(205, 205, 205)",
@@ -52,23 +53,13 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
             >
               <VowelContainer sx={{ width: "20%" }}>{row.vowel}</VowelContainer>
             </TableCell>
-            {row.chars.map((data, i) => (
-              <TableCell
-                sx={{
-                  border: "1px solid rgb(224, 224, 224)",
-                  fontFamily: "'Poppins', sans-serif",
-                  transition: "all ease 150ms",
-                  "&:hover": {
-                    backgroundColor: "#dedede",
-                    color: "rgb(255, 97, 35)",
-                    cursor: "pointer",
-                  },
-                }}
-                onMouseEnter={() => onHover(data.character, data.romaji)}
-                key={i}
-              >
-                <Typography variant="h5">{data.character}</Typography>
-              </TableCell>
+            {row.chars.map((data) => (
+              <KanaCell
+                key={data.character}
+                character={data.character}
+                romaji={data.romaji}
+                onHover={onHover}
+              ></KanaCell>
             ))}
           </TableRow>
         ))}

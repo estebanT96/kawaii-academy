@@ -12,7 +12,7 @@ interface Props {
 
 const ScriptDescriptions = ({ data }: Props) => {
   return (
-    <Box display="flex" marginTop="20px" marginBottom="10px">
+    <Box display="flex" marginTop="20px" marginBottom="10px" justifyContent='space-between'>
       {data.map((item) => (
         <Box key={item.title} paddingRight="100px" marginBottom="10px">
           <Box
@@ -24,12 +24,14 @@ const ScriptDescriptions = ({ data }: Props) => {
             <Typography variant="h6">{item.title}</Typography>
             <Box
               borderRadius="10px"
-              width="10%"
+              width="15%"
               sx={{
                 backgroundColor: "rgb(255, 51, 51)",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                padding:'0 8px',
+                width:"fit-content"
               }}
             >
               <Typography color="white" fontWeight="600" fontSize="18px">
