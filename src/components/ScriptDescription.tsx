@@ -1,0 +1,54 @@
+import { Box, Typography } from "@mui/material";
+
+interface Desc {
+  title: string;
+  icon: string;
+}
+
+interface Props {
+  data: Desc[];
+}
+
+const ScriptDescription = ({ data }: Props) => {
+  return (
+    <div>
+      <Box
+        display="flex"
+        marginTop="10px"
+        justifyContent="space-between"
+        width="60%"
+      >
+        {data.map((item) => (
+          <Box key={item.title} paddingRight="100px">
+            <Box
+              display="flex"
+              justifyContent="space-between"
+              marginBottom="10px"
+              alignItems="baseline"
+            >
+              <Typography variant="h6" color="rgb(152, 152, 152)">{item.title}</Typography>
+              <Box
+                sx={{
+                  marginLeft: "10px",
+                  borderRadius: "10px",
+                  backgroundColor: "rgb(255, 51, 51)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "0 8px",
+                  width: "fit-content",
+                }}
+              >
+                <Typography color="white" fontWeight="600" fontSize="16px">
+                  {item.icon}
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        ))}
+      </Box>
+    </div>
+  );
+};
+
+export default ScriptDescription;

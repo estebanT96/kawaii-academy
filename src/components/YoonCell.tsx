@@ -3,10 +3,10 @@ import { TableCell, Typography } from "@mui/material";
 interface Props {
   character: string;
   romaji: string;
-  onHover: (character: string, romaji: string) => void;
+  onHover:(character: string, romaji:string) => void;
 }
 
-const KanaCell = ({ character, romaji, onHover }: Props) => {
+const YoonCell = ({ character, romaji, onHover }: Props) => {
   return (
     <TableCell
       sx={{
@@ -21,11 +21,11 @@ const KanaCell = ({ character, romaji, onHover }: Props) => {
           transform: "scale(1.1)",
         },
       }}
-      onMouseEnter={() => onHover(character, romaji)}
       key={character}
+      onMouseEnter={() => onHover(character, romaji)}
     >
       <Typography variant="h5">{character}</Typography>
     </TableCell>
   );
 };
-export default KanaCell;
+export default YoonCell;

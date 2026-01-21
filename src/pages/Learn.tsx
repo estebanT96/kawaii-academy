@@ -7,9 +7,9 @@ import WordLearnSection from "../components/WordLearnSection";
 const Learn = () => (
   <LearnContainer>
     <Card
-      sx={{
+      sx={{ 
         padding: "15px",
-        maxWidth: "1400px",
+        maxWidth: "1000px",
         margin: "0 auto",
       }}
     >

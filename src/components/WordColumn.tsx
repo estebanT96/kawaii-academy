@@ -33,6 +33,7 @@ const WordColumn = ({ headers, words, onHover }: Props) => {
             <TableCell
               sx={{
                 padding: "5px 0",
+                whiteSpace: "nowrap",
               }}
             >
               <Typography variant="h5">{header.type}</Typography>

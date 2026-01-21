@@ -4,7 +4,6 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  Typography,
 } from "@mui/material";
 import VowelContainer from "./ui/VowelContainer";
 import KanaCell from "./KanaCell";

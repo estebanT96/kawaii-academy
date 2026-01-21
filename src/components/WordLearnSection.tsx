@@ -6,7 +6,7 @@ import {
   katakanaTableHeader,
   katakanaWords,
 } from "../data/words";
-import WordCard from "./WordCard";
+
 import { useState } from "react";
 const WordLearnSection = () => {
   const [activeWord, setActiveWord] = useState({
@@ -29,7 +29,7 @@ const WordLearnSection = () => {
         </Typography>
       </Box>
       <Box display="flex" justifyContent="space-between" alignItems="stretch">
-        <Box display="flex" width="60%" justifyContent="space-between">
+        <Box display="flex" width="80%" justifyContent="space-between">
           <WordColumn
             headers={[hiraganaTableHeader]}
             words={hiraganaWords}
@@ -41,7 +41,6 @@ const WordLearnSection = () => {
             onHover={handleHover}
           ></WordColumn>
         </Box>
-        <WordCard words={[activeWord]} />
       </Box>
     </Box>
   );
