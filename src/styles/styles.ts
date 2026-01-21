@@ -10,7 +10,11 @@ export const theme = createTheme({
       fontSize: "132px",
       fontWeight: 600,
     },
-    h2: { fontFamily: "'Google Sans Flex', sans-serif", fontWeight: 600 },
+    h2: {
+      fontFamily: "'Noto Sans Japanese', sans-serif",
+      fontWeight: 700,
+      fontSize: "70px",
+    },
     h3: { fontFamily: "'Poppins', sans-serif", fontWeight: 600 },
     h4: { fontFamily: "'Noto Sans Japanese', sans-serif", fontWeight: 600 },
     h5: { fontFamily: "'Poppins', sans-serif", fontWeight: 600 },

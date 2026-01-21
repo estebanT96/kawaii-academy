@@ -15,8 +15,8 @@ import { useState } from "react";
 
 const KatakanaLearnSection = () => {
   const [activeItem, setActiveItem] = useState({
-    character: "ア",
-    romaji: "a",
+    character: "",
+    romaji: "",
   });
 
   const handleHover = (character: string, romaji: string) => {

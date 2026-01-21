@@ -21,9 +21,10 @@ interface Header {
 interface Props {
   headers: Header[];
   words: Word[];
+  onHover: (word: string, romaji: string) => void;
 }
 
-const WordColumn = ({ headers, words }: Props) => {
+const WordColumn = ({ headers, words, onHover }: Props) => {
   return (
     <Table size="small" sx={{ width: "auto", maxWidth: "600px" }}>
       <TableHead>
@@ -50,6 +51,7 @@ const WordColumn = ({ headers, words }: Props) => {
         {words.map((word) => (
           <TableRow key={word.wordInRomaji}>
             <TableCell
+              onMouseEnter={() => onHover(word.wordInKana, word.wordInRomaji)}
               sx={{
                 border: "1px solid rgb(224, 224, 224)",
                 fontFamily: "'Poppins', sans-serif",
