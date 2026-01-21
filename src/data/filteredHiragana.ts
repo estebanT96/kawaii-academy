@@ -9,10 +9,6 @@ const getRow = (kanaType: string, vowel: string) => {
   }));
 };
 
-export const seionConsonants = [" "," ","k","s","t","n","h","m","y","r","w","n"];
-export const dakuonConsonants = [" ","g", "z", "d", "b", "p"];
-export const yoonConsonants = [" ","k","s","c","n","h","m","r","g","j","d","b","p"];
-
 const seionRowA = getRow("seion-hiragana", "a");
 const seionRowI = getRow("seion-hiragana", "i");
 const seionRowU = getRow("seion-hiragana", "u");
@@ -30,6 +26,37 @@ const dakuonRowO = getRow("dakuon-hiragana", "o");
 const yoonRowA = getRow("yoon-hiragana", "ya");
 const yoonRowU = getRow("yoon-hiragana", "yu");
 const yoonRowO = getRow("yoon-hiragana", "yo");
+
+export const seionConsonants = [
+  "",
+  "",
+  "k",
+  "s",
+  "t",
+  "n",
+  "h",
+  "m",
+  "y",
+  "r",
+  "w",
+  "n",
+];
+export const dakuonConsonants = ["", "g", "z", "d", "b", "p"];
+export const yoonConsonants = [
+  "",
+  "k",
+  "s",
+  "c",
+  "n",
+  "h",
+  "m",
+  "r",
+  "g",
+  "j",
+  "d",
+  "b",
+  "p",
+];
 
 export const SEION_HIRAGANA_ROWS = [
   { vowel: "a", chars: seionRowA },

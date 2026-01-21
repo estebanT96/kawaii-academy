@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import VowelContainer from "./ui/VowelContainer";
+
 interface KanaChar {
   character: string;
   romaji: string;
@@ -20,9 +21,10 @@ interface Row {
 interface Props {
   consonants: string[];
   rows: Row[];
+  onHover: (character: string, romaji: string) => void;
 }
 
-const KanaTable = ({ consonants, rows }: Props) => {
+const KanaTable = ({ consonants, rows, onHover }: Props) => {
   return (
     <Table
       size="small"
@@ -48,21 +50,21 @@ const KanaTable = ({ consonants, rows }: Props) => {
                 border: "1px solid rgb(205, 205, 205)",
               }}
             >
-              <VowelContainer>{row.vowel}</VowelContainer>
+              <VowelContainer sx={{ width: "20%" }}>{row.vowel}</VowelContainer>
             </TableCell>
             {row.chars.map((data, i) => (
               <TableCell
                 sx={{
+                  border: "1px solid rgb(224, 224, 224)",
                   fontFamily: "'Poppins', sans-serif",
                   transition: "all ease 150ms",
-                  borderRadius: "5px",
                   "&:hover": {
                     backgroundColor: "#dedede",
                     color: "rgb(255, 97, 35)",
                     cursor: "pointer",
                   },
                 }}
-                onMouseEnter={() => console.log(data.character)}
+                onMouseEnter={() => onHover(data.character, data.romaji)}
                 key={i}
               >
                 <Typography variant="h5">{data.character}</Typography>

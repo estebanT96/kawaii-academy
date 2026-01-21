@@ -10,12 +10,22 @@ import {
   dakuonConsonants,
   yoonConsonants,
 } from "../data/filteredHiragana";
+import TableCard from "./TableCard";
+import { useState } from "react";
 
 const HiraganaLearnSection = () => {
+  const [activeItem, setActiveItem] = useState({
+    character: "あ",
+    romaji: "a",
+  });
+
+  const handleHover = (character: string, romaji: string) => {
+    setActiveItem({ character: character, romaji: romaji });
+  };
+
   const hiraganaDescriptions = descriptions.filter((desc) =>
     desc.title.includes("Hiragana"),
   );
-
 
   return (
     <Box>
@@ -31,12 +41,34 @@ const HiraganaLearnSection = () => {
         </Typography>
       </Box>
       <ScriptDescriptions data={hiraganaDescriptions} />
-      <Box display="flex" justifyContent="space-between" width="80%">
-        <KanaTable consonants={seionConsonants} rows={SEION_HIRAGANA_ROWS} />
-        <KanaTable consonants={dakuonConsonants} rows={DAKUON_HIRAGANA_ROWS} />
-      </Box>
-      <Box width="80%" display="flex" justifyContent="center">
-        <KanaTable consonants={yoonConsonants} rows={YOON_HIRAGANA_ROWS} />
+      <Box display="flex" justifyContent="space-between">
+        <Box width="77%">
+          <Box display="flex" justifyContent="space-between">
+            <KanaTable
+              onHover={handleHover}
+              consonants={seionConsonants}
+              rows={SEION_HIRAGANA_ROWS}
+            />
+            <KanaTable
+              onHover={handleHover}
+              consonants={dakuonConsonants}
+              rows={DAKUON_HIRAGANA_ROWS}
+            />
+          </Box>
+          <Box width="100%" display="flex" justifyContent="center">
+            <KanaTable
+              onHover={handleHover}
+              consonants={yoonConsonants}
+              rows={YOON_HIRAGANA_ROWS}
+            />
+          </Box>
+        </Box>
+        <Box width="20%" display="flex" justifyContent="center">
+          <TableCard
+            character={activeItem.character}
+            romaji={activeItem.romaji}
+          ></TableCard>
+        </Box>
       </Box>
     </Box>
   );
