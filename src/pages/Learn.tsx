@@ -14,7 +14,8 @@ const Learn = () => (
       }}
     >
       <HiraganaLearnSection />
-
+      {/* <KatakanaLearnSection /> */}
+      {/* <WordLearnSection /> */}
     </Card>
   </LearnContainer>
 );

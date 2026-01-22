@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { YOON_HIRAGANA_ROWS, yoonRowHeader } from "../data/filteredHiragana";
 
 import YoonHiraganaLearn from "./YoonHiraganaLearn";
-import SeionHiraganaLearn from "./SeionHiraganaLearn";
+// import SeionHiraganaLearn from "./SeionHiraganaLearn";
 import DakuonHiraganaLearn from "./DakuonHiraganaLearn";
 const HiraganaLearnSection = () => {
   return (
@@ -32,7 +32,7 @@ const HiraganaLearnSection = () => {
 
       <Box display="flex" justifyContent="space-between" >
         <Box>
-          <SeionHiraganaLearn />
+          {/* <SeionHiraganaLearn /> */}
           <DakuonHiraganaLearn />
           <YoonHiraganaLearn
             rowHeader={yoonRowHeader}
