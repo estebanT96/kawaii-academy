@@ -9,7 +9,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Router>
+        <Router basename={import.meta.env.BASE_URL}>
           <Box
             display="grid"
             sx={{
@@ -31,7 +31,7 @@ function App() {
             </Box>
             <Box sx={{ gridArea: "main" }}>
               <Routes>
-                <Route path="/study" element={<Home />}></Route>
+                <Route path="/" element={<Home />}></Route>
                 <Route path="/learn" element={<Learn />}></Route>
               </Routes>
             </Box>
