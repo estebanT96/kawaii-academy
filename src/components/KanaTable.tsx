@@ -1,4 +1,5 @@
 import {
+  Box,
   Table,
   TableBody,
   TableCell,
@@ -26,44 +27,48 @@ interface Props {
 
 const KanaTable = ({ consonants, rows, onHover }: Props) => {
   return (
-    <Table
-      size="small"
-      sx={{ marginBottom: "20px", width: "auto", tableLayout: "auto" }}
-    >
-      <TableHead>
-        <TableRow>
-          {consonants.map((consonant, index) => (
-            <TableCell
-              key={index}
-              sx={{ borderBottom: "1px solid rgb(205, 205, 205)" }}
-            >
-              <VowelContainer>{consonant}</VowelContainer>
-            </TableCell>
-          ))}
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {rows.map((row) => (
-          <TableRow key={row.vowel}>
-            <TableCell
-              sx={{
-                border: "1px solid rgb(205, 205, 205)",
-              }}
-            >
-              <VowelContainer sx={{ width: "20%" }}>{row.vowel}</VowelContainer>
-            </TableCell>
-            {row.chars.map((data) => (
-              <KanaCell
-                key={data.character}
-                character={data.character}
-                romaji={data.romaji}
-                onHover={onHover}
-              ></KanaCell>
+    <Box sx={{overflowX:'auto', width:"100%"}}>
+      <Table
+        size="small"
+        sx={{ marginBottom: "20px", width: "auto", tableLayout: "auto" }}
+      >
+        <TableHead>
+          <TableRow>
+            {consonants.map((consonant, index) => (
+              <TableCell
+                key={index}
+                sx={{ borderBottom: "1px solid rgb(205, 205, 205)" }}
+              >
+                <VowelContainer>{consonant}</VowelContainer>
+              </TableCell>
             ))}
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow key={row.vowel}>
+              <TableCell
+                sx={{
+                  border: "1px solid rgb(205, 205, 205)",
+                }}
+              >
+                <VowelContainer sx={{ width: "20%" }}>
+                  {row.vowel}
+                </VowelContainer>
+              </TableCell>
+              {row.chars.map((data) => (
+                <KanaCell
+                  key={data.character}
+                  character={data.character}
+                  romaji={data.romaji}
+                  onHover={onHover}
+                ></KanaCell>
+              ))}
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </Box>
   );
 };
 

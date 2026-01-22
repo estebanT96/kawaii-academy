@@ -18,12 +18,12 @@ const NavBar = () => {
           justifyContent="space-between"
           sx={{
             alignItems: "center",
-            maxWidth: "1400px",
-            width:"100%",
+            maxWidth: "1000px",
+            width: "100%",
             margin: "0 auto",
           }}
         >
-          <Box sx={{ height: "46px" }}>
+          <Box paddingLeft={5} sx={{ height: "46px" }}>
             <img src={logo} alt="" height="100%" />
             <img src={logoLetters} alt="" height="100%" />
           </Box>

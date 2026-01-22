@@ -16,7 +16,7 @@ const ScriptDescription = ({ data }: Props) => {
         display="flex"
         marginTop="10px"
         justifyContent="space-between"
-        width="60%"
+        sx={{ width: { xs: "100%", md: "60%" } }}
       >
         {data.map((item) => (
           <Box key={item.title} paddingRight="100px">
@@ -26,7 +26,9 @@ const ScriptDescription = ({ data }: Props) => {
               marginBottom="10px"
               alignItems="center"
             >
-              <Typography variant="h6" color="rgb(152, 152, 152)">{item.title}</Typography>
+              <Typography variant="h6" color="rgb(152, 152, 152)">
+                {item.title}
+              </Typography>
               <Box
                 sx={{
                   marginLeft: "10px",

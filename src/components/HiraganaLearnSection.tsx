@@ -4,6 +4,7 @@ import { YOON_HIRAGANA_ROWS, yoonRowHeader } from "../data/filteredHiragana";
 import YoonHiraganaLearn from "./YoonHiraganaLearn";
 // import SeionHiraganaLearn from "./SeionHiraganaLearn";
 import DakuonHiraganaLearn from "./DakuonHiraganaLearn";
+import SeionHiraganaLearn from "./SeionHiraganaLearn";
 const HiraganaLearnSection = () => {
   return (
     <Box>
@@ -21,18 +22,23 @@ const HiraganaLearnSection = () => {
             textDecoration: "underline",
             marginRight: "20px",
             marginBottom: "15px",
+            fontSize: { xs: "24px", md: "48px" },
           }}
         >
           Hiragana
         </Typography>
-        <Typography variant="h5" color="rgb(100,100,100)">
-          ひらがな （平仮名）
+        <Typography
+          variant="h5"
+          color="rgb(100,100,100)"
+          sx={{ fontSize: { xs: "18px", md: "24px" } }}
+        >
+          ひらがな
         </Typography>
       </Box>
 
-      <Box display="flex" justifyContent="space-between" >
-        <Box>
-          {/* <SeionHiraganaLearn /> */}
+      <Box display="flex" justifyContent="space-between">
+        <Box width="100%">
+          <SeionHiraganaLearn />
           <DakuonHiraganaLearn />
           <YoonHiraganaLearn
             rowHeader={yoonRowHeader}

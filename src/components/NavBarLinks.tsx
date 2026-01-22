@@ -1,4 +1,4 @@
-import { Link, Stack } from "@mui/material";
+import { Link, Stack, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import links from "../data/links";
 const NavBarLinks = () => {
@@ -17,9 +17,10 @@ const NavBarLinks = () => {
             component={RouterLink}
             underline="hover"
             to={link.path}
-            color="rgb(240, 78, 28)"
           >
-            {link.tag}
+            <Typography  color="rgb(9, 134, 218)" fontWeight="600" >
+              {link.tag}
+            </Typography>
           </Link>
         ))}
       </Stack>
