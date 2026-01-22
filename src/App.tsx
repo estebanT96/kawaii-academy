@@ -31,7 +31,7 @@ function App() {
             </Box>
             <Box sx={{ gridArea: "main" }}>
               <Routes>
-                <Route path="/" element={<Home />}></Route>
+                <Route path="/study" element={<Home />}></Route>
                 <Route path="/learn" element={<Learn />}></Route>
               </Routes>
             </Box>
