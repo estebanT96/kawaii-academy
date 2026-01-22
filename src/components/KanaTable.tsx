@@ -27,7 +27,7 @@ interface Props {
 
 const KanaTable = ({ consonants, rows, onHover }: Props) => {
   return (
-    <Box sx={{overflowX:'auto', width:"100%"}}>
+    <Box sx={{overflowX:'auto', width:"60%"}}>
       <Table
         size="small"
         sx={{ marginBottom: "20px", width: "auto", tableLayout: "auto" }}
