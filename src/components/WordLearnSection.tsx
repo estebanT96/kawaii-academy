@@ -7,17 +7,7 @@ import {
   katakanaWords,
 } from "../data/words";
 
-import { useState } from "react";
 const WordLearnSection = () => {
-  const [activeWord, setActiveWord] = useState({
-    kanaWord: "",
-    romaji: "",
-  });
-
-  const handleHover = (kanaWord: string, romaji: string) => {
-    setActiveWord({ kanaWord: kanaWord, romaji: romaji });
-  };
-
   return (
     <Box display="flex" flexDirection="column" position="relative">
       <Box display="flex" alignItems="baseline" marginBottom="20px">
@@ -33,12 +23,10 @@ const WordLearnSection = () => {
           <WordColumn
             headers={[hiraganaTableHeader]}
             words={hiraganaWords}
-            onHover={handleHover}
           ></WordColumn>
           <WordColumn
             headers={[katakanaTableHeader]}
             words={katakanaWords}
-            onHover={handleHover}
           ></WordColumn>
         </Box>
       </Box>
