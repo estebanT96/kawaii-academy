@@ -3,10 +3,7 @@ import KanaTable from "./KanaTable";
 import TableCard from "./TableCard";
 import { Box } from "@mui/material";
 import { dakuonHiraganaDesc } from "../data/descriptions";
-import {
-  dakuonConsonants,
-  DAKUON_HIRAGANA_ROWS,
-} from "../data/filteredHiragana";
+import { dakuonConsonants, DAKUON_HIRAGANA_ROWS,} from "../data/filteredHiragana";
 import { useState } from "react";
 
 const DakuonHiraganaLearn = () => {

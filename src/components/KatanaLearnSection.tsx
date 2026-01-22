@@ -7,7 +7,14 @@ import SeionKatakanaLearn from "./SeionKatakanaLearn";
 const HiraganaLearnSection = () => {
   return (
     <Box>
-      <Box display="flex" alignItems="baseline">
+      <Box
+        display="flex"
+        alignItems="baseline"
+        width="100%"
+        sx={{
+          justifyContent: { xs: "flex-start" },
+        }}
+      >
         <Typography
           variant="h3"
           sx={{
@@ -24,7 +31,7 @@ const HiraganaLearnSection = () => {
       </Box>
 
       <Box display="flex" justifyContent="space-between" width="100%">
-        <Box width="100%">
+        <Box>
           <SeionKatakanaLearn />
           <DakuonKatakanaLearn />
           <YoonKatakanaLearn
