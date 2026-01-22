@@ -17,12 +17,21 @@ const SeionHiraganaLearn = () => {
   return (
     <>
       <ScriptDescription data={[seionHiraganaDesc]} />
-      <Box display="flex" sx={{ flexDirection: "space-between" }}>
-        <KanaTable
-          onHover={handleHover}
-          consonants={seionConsonants}
-          rows={SEION_HIRAGANA_ROWS}
-        />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" }, 
+          justifyContent: "space-between", 
+          gap: 2,
+        }}
+      >
+        <Box sx={{ overflowX: "auto", width: "100%" }}>
+          <KanaTable
+            onHover={handleHover}
+            consonants={seionConsonants}
+            rows={SEION_HIRAGANA_ROWS}
+          />
+        </Box>
         <TableCard
           character={activeItem.character}
           romaji={activeItem.romaji}
