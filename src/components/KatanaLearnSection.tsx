@@ -10,7 +10,7 @@ const HiraganaLearnSection = () => {
       <Box
         display="flex"
         alignItems="baseline"
-        width="100%"
+        width="auto"
         sx={{
           justifyContent: { xs: "flex-start" },
         }}
