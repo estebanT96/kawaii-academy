@@ -20,7 +20,7 @@ const DakuonHiraganaLearn = () => {
   return (
     <>
       <ScriptDescription data={[dakuonHiraganaDesc]} />
-      <Box display="flex">
+      <Box display="flex" sx={{ flexDirection: "space-between" }}>
         <KanaTable
           onHover={handleHover}
           consonants={dakuonConsonants}

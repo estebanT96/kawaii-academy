@@ -12,10 +12,10 @@ const TableCard = ({ character, romaji }: Props) => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      paddingLeft="10%"
+      margin="0 auto"
     >
       <Typography variant="h1">{character}</Typography>
-      <Typography marginBottom="10px" color="rgb(255, 61, 61)" variant="h4">
+      <Typography marginBottom="10px" color="rgb(255, 67, 67)" variant="h4">
         [ {romaji ? `${romaji}` : "hover on kana"} ]
       </Typography>
     </Box>

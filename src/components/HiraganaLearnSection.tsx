@@ -10,7 +10,7 @@ const HiraganaLearnSection = () => {
       <Box display="flex" alignItems="baseline">
         <Typography
           variant="h3"
-          sx={{ textDecoration: "underline", marginRight: "20px" }}
+          sx={{ textDecoration: "underline", marginRight: "20px", marginBottom:"15px" }}
         >
           Hiragana
         </Typography>
@@ -19,8 +19,8 @@ const HiraganaLearnSection = () => {
         </Typography>
       </Box>
 
-      <Box display="flex" justifyContent="space-between">
-        <Box>
+      <Box display="flex" justifyContent="space-between" width="100%">
+        <Box width="100%">
           <SeionHiraganaLearn />
           <DakuonHiraganaLearn />
           <YoonHiraganaLearn

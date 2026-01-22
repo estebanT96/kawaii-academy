@@ -17,7 +17,7 @@ const SeionHiraganaLearn = () => {
   return (
     <>
       <ScriptDescription data={[seionHiraganaDesc]} />
-      <Box display="flex">
+      <Box display="flex" sx={{ flexDirection: "space-between" }}>
         <KanaTable
           onHover={handleHover}
           consonants={seionConsonants}

@@ -24,13 +24,13 @@ const ScriptDescription = ({ data }: Props) => {
               display="flex"
               justifyContent="space-between"
               marginBottom="10px"
-              alignItems="baseline"
+              alignItems="center"
             >
               <Typography variant="h6" color="rgb(152, 152, 152)">{item.title}</Typography>
               <Box
                 sx={{
                   marginLeft: "10px",
-                  borderRadius: "10px",
+                  borderRadius: "5px",
                   backgroundColor: "rgb(255, 51, 51)",
                   display: "flex",
                   justifyContent: "center",
@@ -39,7 +39,7 @@ const ScriptDescription = ({ data }: Props) => {
                   width: "fit-content",
                 }}
               >
-                <Typography color="white" fontWeight="600" fontSize="16px">
+                <Typography color="white" fontWeight="600" fontSize="14px">
                   {item.icon}
                 </Typography>
               </Box>
