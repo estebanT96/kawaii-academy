@@ -12,7 +12,7 @@ const HiraganaLearnSection = () => {
         alignItems="baseline"
         width="100%"
         sx={{
-          justifyContent: { xs: "center" },
+          justifyContent: { xs: "flex-start" },
         }}
       >
         <Typography
