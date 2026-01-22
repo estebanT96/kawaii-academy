@@ -9,7 +9,7 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Router basename={import.meta.env.BASE_URL}>
+        <Router>
           <Box
             display="grid"
             sx={{
