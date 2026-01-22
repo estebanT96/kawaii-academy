@@ -20,12 +20,11 @@ const SeionHiraganaLearn = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" }, 
-          justifyContent: "space-between", 
+          flexDirection: { xs: "column", md: "row" },
           gap: 2,
         }}
       >
-        <Box sx={{ overflowX: "auto", width: "100%" }}>
+        <Box>
           <KanaTable
             onHover={handleHover}
             consonants={seionConsonants}

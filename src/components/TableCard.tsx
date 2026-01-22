@@ -16,7 +16,7 @@ const TableCard = ({ character, romaji }: Props) => {
       sx={{ display: { xs: "none", md: "flex" } }}
     >
       <Typography variant="h1">{character}</Typography>
-      <Typography marginBottom="10px" color="rgb(255, 67, 67)" variant="h4">
+      <Typography marginBottom="10px" color="rgb(255, 67, 67)" variant="h5">
         [ {romaji ? `${romaji}` : "select kana"} ]
       </Typography>
     </Box>

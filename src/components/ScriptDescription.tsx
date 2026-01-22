@@ -16,10 +16,10 @@ const ScriptDescription = ({ data }: Props) => {
         display="flex"
         marginTop="10px"
         justifyContent="space-between"
-        sx={{ width: { xs: "100%", md: "60%" } }}
+        sx={{ width: { xs: "100%" } }}
       >
         {data.map((item) => (
-          <Box key={item.title} paddingRight="100px">
+          <Box key={item.title}>
             <Box
               display="flex"
               justifyContent="space-between"
