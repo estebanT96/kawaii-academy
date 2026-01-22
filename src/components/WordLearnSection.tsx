@@ -19,7 +19,7 @@ const WordLearnSection = () => {
         </Typography>
       </Box>
       <Box display="flex" justifyContent="space-between" alignItems="stretch">
-        <Box display="flex" width="80%" justifyContent="space-between">
+        <Box display="flex" width="100%" justifyContent="space-between">
           <WordColumn
             headers={[hiraganaTableHeader]}
             words={hiraganaWords}

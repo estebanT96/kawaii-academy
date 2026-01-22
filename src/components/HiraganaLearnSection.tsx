@@ -7,10 +7,21 @@ import DakuonHiraganaLearn from "./DakuonHiraganaLearn";
 const HiraganaLearnSection = () => {
   return (
     <Box>
-      <Box display="flex" alignItems="baseline">
+      <Box
+        display="flex"
+        alignItems="baseline"
+        width="100%"
+        sx={{
+          justifyContent: { xs: "center" },
+        }}
+      >
         <Typography
           variant="h3"
-          sx={{ textDecoration: "underline", marginRight: "20px", marginBottom:"15px" }}
+          sx={{
+            textDecoration: "underline",
+            marginRight: "20px",
+            marginBottom: "15px",
+          }}
         >
           Hiragana
         </Typography>
@@ -19,8 +30,8 @@ const HiraganaLearnSection = () => {
         </Typography>
       </Box>
 
-      <Box display="flex" justifyContent="space-between" width="100%">
-        <Box width="100%">
+      <Box display="flex" justifyContent="space-between" >
+        <Box>
           <SeionHiraganaLearn />
           <DakuonHiraganaLearn />
           <YoonHiraganaLearn
