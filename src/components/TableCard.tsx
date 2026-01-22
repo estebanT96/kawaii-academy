@@ -16,7 +16,7 @@ const TableCard = ({ character, romaji }: Props) => {
     >
       <Typography variant="h1">{character}</Typography>
       <Typography marginBottom="10px" color="rgb(255, 67, 67)" variant="h4">
-        [ {romaji ? `${romaji}` : "hover on kana"} ]
+        [ {romaji ? `${romaji}` : "select kana"} ]
       </Typography>
     </Box>
   );
