@@ -1,7 +1,7 @@
 import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 import { theme } from "./styles/styles";
 import NavBar from "./components/NavBar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Learn from "./pages/Learn";
 function App() {
