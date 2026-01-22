@@ -10,6 +10,7 @@ const Learn = () => (
       sx={{ 
         padding: "15px",
         maxWidth: "1000px",
+        width:"auto",
         margin: "0 auto",
       }}
     >
