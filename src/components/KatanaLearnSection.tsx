@@ -43,6 +43,7 @@ const HiraganaLearnSection = () => {
             fontSize="10px"
             fontWeight="600"
             color="rgb(255, 106, 106)"
+            display={{xs:'block', md:'none'}}
           >
             [scroll horizontally]
           </Typography>
