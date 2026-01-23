@@ -255,3 +255,4 @@ export const KANA_CHAR: KanaChar[] = [
   { char: "ビョ", romaji: "byo", type: "yoon-katakana", row: "bi" },
   { char: "ピョ", romaji: "pyo", type: "yoon-katakana", row: "pi" },
 ];
+

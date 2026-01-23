@@ -7,6 +7,8 @@ import {
 } from "@mui/material";
 import Card from "@mui/material/Card";
 
+import { STUDY_CHAR } from "../data/testKana";
+
 const StudyCard = () => {
   return (
     <>
@@ -33,6 +35,9 @@ const StudyCard = () => {
                 variant="filled"
               ></TextField>
             </Box>
+            <Typography boxShadow="1px solid black" variant="h3">
+              a
+            </Typography>
           </CardContent>
         </Card>
       </Container>
