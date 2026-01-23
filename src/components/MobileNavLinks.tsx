@@ -7,7 +7,7 @@ const MobileNavLinks = () => {
   const navigate = useNavigate();
   const location = useLocation();
   return (
-    <Box sx={{ display: { xs: "block", md: "none", padding: "10px 22px" } }}>
+    <Box sx={{ display: { xs: "block", md: "none", padding: "2px 10px" } }}>
       <FormControl
         sx={{ m: 1, minWidth: "auto", bgcolor: "transparent" }}
         size="small"

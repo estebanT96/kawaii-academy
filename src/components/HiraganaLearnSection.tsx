@@ -46,11 +46,7 @@ const HiraganaLearnSection = () => {
       <Box display="flex" justifyContent="space-between">
         <Box width="100%">
           <SeionHiraganaLearn />
-          
           <DakuonHiraganaLearn />
-          <Box>
-            <Typography> </Typography>
-          </Box>
           <YoonHiraganaLearn
             rowHeader={yoonRowHeader}
             rows={YOON_HIRAGANA_ROWS}

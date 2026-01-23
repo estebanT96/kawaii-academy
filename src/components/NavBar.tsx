@@ -8,8 +8,10 @@ const NavBar = () => {
     <>
       <Box
         sx={{
-          background: "rgb(255, 252, 242)", //Color de fondo
+          background: "#4797ed",
           paddingLeft: "20px",
+          paddingTop: { xs: "0", md: "5px" },
+          paddingBottom: { xs: "0", md: "5px" },
         }}
       >
         <Stack
@@ -26,20 +28,24 @@ const NavBar = () => {
             display="flex"
             alignItems="center"
             sx={{
-              height: { xs: "42px", md: "52px" },
+              height: { xs: "48px", md: "54px" },
             }}
           >
             <img src={logo} alt="" height="100%" />
             <Box display="flex" alignItems="center">
               <Typography
                 variant="body2"
-                fontSize="16px"
                 fontWeight="800"
                 margin="0 5px"
+                sx={{ fontSize: { xs: "14px", md: "16px" } }}
               >
                 Kawaii
               </Typography>
-              <Typography variant="body2" fontSize="16px" fontWeight="800">
+              <Typography
+                variant="body2"
+                fontWeight="800"
+                sx={{ fontSize: { xs: "14px", md: "16px" } }}
+              >
                 Academy
               </Typography>
             </Box>
