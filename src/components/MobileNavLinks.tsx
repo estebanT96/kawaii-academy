@@ -19,7 +19,7 @@ const MobileNavLinks = () => {
           onChange={(e) => navigate(e.target.value)}
           renderValue={() => (
             <Box display="flex" alignItems="center">
-              <TiThMenu size={26} ></TiThMenu>
+              <TiThMenu size={26}></TiThMenu>
             </Box>
           )}
           IconComponent={() => null}
@@ -29,6 +29,10 @@ const MobileNavLinks = () => {
             "& .MuiOutlinedInput-notchedOutline": { border: "1px solid black" },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
               border: "none",
+            },
+            "&:active": {
+              transform: "translate(1px, 1px)",
+              boxShadow: "1px 1px 0px transparent ",
             },
             "& .MuiSelect-select": {
               paddingRight: "6px !important",
