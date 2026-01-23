@@ -8,7 +8,7 @@ import SeionHiraganaLearn from "./SeionHiraganaLearn";
 
 const HiraganaLearnSection = () => {
   return (
-    <Box>
+    <Box sx={{backgroundColor:"rgba(255, 214, 8, 0.11)", padding:"15px"}}>
       <Box
         display="flex"
         alignItems="baseline"

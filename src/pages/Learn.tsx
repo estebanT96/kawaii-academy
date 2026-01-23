@@ -9,7 +9,6 @@ const Learn = () => (
   <LearnContainer>
     <Card
       sx={{
-        padding: "15px",
         maxWidth: "1000px",
         width: "auto",
         margin: "0 auto",
@@ -25,8 +24,6 @@ const Learn = () => (
         width="100%"
         sx={{
           backgroundColor: "black",
-          marginTop: "5px",
-          marginBottom: "15px",
         }}
       ></Box>
       <KatanaLearnSection />
@@ -35,8 +32,6 @@ const Learn = () => (
         width="100%"
         sx={{
           backgroundColor: "black",
-          marginTop: "5px",
-          marginBottom: "15px",
         }}
       ></Box>
       <WordLearnSection />

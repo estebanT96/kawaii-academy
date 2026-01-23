@@ -6,7 +6,7 @@ import DakuonKatakanaLearn from "./DakuonKatakanaLearn";
 import SeionKatakanaLearn from "./SeionKatakanaLearn";
 const HiraganaLearnSection = () => {
   return (
-    <Box>
+    <Box sx={{backgroundColor:"rgba(255, 214, 8, 0.11)", padding:"15px"}}>
       <Box
         display="flex"
         alignItems="baseline"
@@ -43,7 +43,7 @@ const HiraganaLearnSection = () => {
             fontSize="10px"
             fontWeight="600"
             color="rgb(255, 106, 106)"
-            display={{xs:'block', md:'none'}}
+            display={{ xs: "block", md: "none" }}
           >
             [scroll horizontally]
           </Typography>

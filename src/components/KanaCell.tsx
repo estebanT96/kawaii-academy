@@ -10,7 +10,7 @@ const KanaCell = ({ character, romaji, onHover }: Props) => {
   return (
     <TableCell
       sx={{
-        border: "1px solid rgb(224, 224, 224)",
+
         transition: "all ease 150ms",
         whiteSpace: "nowrap",
         "&:hover": {
