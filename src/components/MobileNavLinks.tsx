@@ -19,22 +19,22 @@ const MobileNavLinks = () => {
           onChange={(e) => navigate(e.target.value)}
           renderValue={() => (
             <Box display="flex" alignItems="center">
-              <TiThMenu size={32} color="rgb(0, 4, 108)"></TiThMenu>
+              <TiThMenu size={26} ></TiThMenu>
             </Box>
           )}
           IconComponent={() => null}
           sx={{
-            backgroundColor: "transparent",
-            "& .MuiOutlinedInput-notchedOutline": { border: "none" },
-            "&:hover .MuiOutlinedInput-notchedOutline": { border: "none" },
+            backgroundColor: "rgb(237, 207, 4)",
+            boxShadow: "2px 2px 0px black",
+            "& .MuiOutlinedInput-notchedOutline": { border: "1px solid black" },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
               border: "none",
             },
             "& .MuiSelect-select": {
-              paddingRight: "4px !important",
-              paddingLeft: "4px",
-              paddingTop: "4px",
-              paddingBottom: "4px",
+              paddingRight: "6px !important",
+              paddingLeft: "6px",
+              paddingTop: "6px",
+              paddingBottom: "6px",
               display: "flex",
               alignItems: "center",
             },
