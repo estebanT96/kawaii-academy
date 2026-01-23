@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import Card from "@mui/material/Card";
 
-import { STUDY_CHAR } from "../data/testKana";
+// import { STUDY_CHAR } from "../data/testKana";
 
 const StudyCard = () => {
   return (
