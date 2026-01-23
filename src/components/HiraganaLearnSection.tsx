@@ -39,7 +39,7 @@ const HiraganaLearnSection = () => {
       <Box display="flex" justifyContent="space-between">
         <Box width="100%">
           <SeionHiraganaLearn />
-          <Box display="flex" justifyContent="flex-end">
+          <Box display="flex" justifyContent="flex-start">
             <Typography
               display={{ xs: "block", sm: "none" }}
               fontSize="12px"
