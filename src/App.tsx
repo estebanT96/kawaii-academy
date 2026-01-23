@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Learn from "./pages/Learn";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -42,6 +43,7 @@ function App() {
                 <Route path="/learn" element={<Learn />}></Route>
               </Routes>
             </Box>
+            <Footer></Footer>
           </Box>
         </Router>
       </ThemeProvider>

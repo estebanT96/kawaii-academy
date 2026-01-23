@@ -9,7 +9,7 @@ const HiraganaLearnSection = () => {
     <Box
       sx={{
         background: "rgb(255, 255, 255)", //color de fondo
-        padding: "15px",
+        padding: "30px",
       }}
     >
       <Box

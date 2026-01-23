@@ -11,6 +11,7 @@ const LearnContainer = ({ children }: Props) => {
       sx={{
         margin: "0 auto",
         background: "#4797ed43", //color de fondo
+        padding:"20px 0"
       }}
     >
       {children}

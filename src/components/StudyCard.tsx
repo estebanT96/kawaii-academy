@@ -12,10 +12,19 @@ import Card from "@mui/material/Card";
 const StudyCard = () => {
   return (
     <>
-      <Container maxWidth="xs" sx={{ paddingTop: "100px" }}>
+      <Container maxWidth="md" sx={{ paddingTop: "50px" }}>
         <Card
           variant="outlined"
-          sx={{ padding: "20px", alignItems: "center", borderRadius: "5px" }}
+          sx={{
+            padding: "20px 0",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: "5px",
+            border: "1px solid rgb(0, 95, 164)",
+            boxShadow: "5px 5px 0px rgb(0, 95, 164)",
+            height: "500px",
+          }}
         >
           <CardContent
             sx={{
@@ -27,7 +36,7 @@ const StudyCard = () => {
             <Typography boxShadow="1px solid black" variant="h1">
               あ
             </Typography>
-            <Box width="40%">
+            <Box>
               <TextField
                 size="small"
                 hiddenLabel

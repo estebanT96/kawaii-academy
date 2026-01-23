@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import LearnContainer from "../components/ui/LearnContainer";
 import HiraganaLearnSection from "../components/HiraganaLearnSection";
 import WordLearnSection from "../components/WordLearnSection";
-import KatanaLearnSection from "../components/KatanaLearnSection";
+import KatakanaLearnSection from "../components/KatakanaLearnSection";
 
 const Learn = () => (
   <LearnContainer>
@@ -11,11 +11,14 @@ const Learn = () => (
         maxWidth: "1000px",
         width: "auto",
         margin: "0 auto",
-        border: "none",
+        border: "1px solid rgb(0, 95, 164)",
+        borderRadius: "5px",
+        overflow: "hidden",
+        boxShadow: "5px 5px 0px rgb(0, 95, 164)",
       }}
     >
       <HiraganaLearnSection />
-      <KatanaLearnSection />
+      <KatakanaLearnSection />
       <WordLearnSection />
     </Box>
   </LearnContainer>

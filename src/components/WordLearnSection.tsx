@@ -16,6 +16,7 @@ const WordLearnSection = () => {
       padding="15px"
       sx={{
         backgroundColor: "rgb(255, 255, 255)",
+        padding: "30px",
       }}
     >
       <Box display="flex" alignItems="baseline" marginBottom="20px">
