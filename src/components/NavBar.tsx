@@ -37,7 +37,7 @@ const NavBar = () => {
                 variant="body2"
                 fontWeight="800"
                 margin="0 5px"
-                sx={{ fontSize: { xs: "14px", md: "16px" } }}
+                sx={{ fontSize: { xs: "14px", md: "16px" } }} 
               >
                 Kawaii
               </Typography>
