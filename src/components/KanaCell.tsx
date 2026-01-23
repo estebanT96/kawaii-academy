@@ -11,7 +11,6 @@ const KanaCell = ({ character, romaji, onHover }: Props) => {
     <TableCell
       sx={{
         border: "1px solid rgb(224, 224, 224)",
-        fontFamily: "'Poppins', sans-serif",
         transition: "all ease 150ms",
         whiteSpace: "nowrap",
         "&:hover": {
@@ -24,7 +23,7 @@ const KanaCell = ({ character, romaji, onHover }: Props) => {
       onMouseEnter={() => onHover(character, romaji)}
       key={character}
     >
-      <Typography variant="h5">{character}</Typography>
+      <Typography sx={{fontWeight:{xs:600}, fontSize:{xs:"16px", md:"24px"}}}>{character}</Typography>
     </TableCell>
   );
 };

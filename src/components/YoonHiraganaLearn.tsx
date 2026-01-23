@@ -50,7 +50,10 @@ const YoonHiraganaLearn = ({ rowHeader, rows }: Props) => {
               {rowHeader.map((item) => (
                 <TableCell
                   key={item}
-                  sx={{ borderBottom: "1px solid rgb(205, 205, 205)" }}
+                  sx={{
+                    borderBottom: "1px solid rgb(205, 205, 205)",
+                    fontSize: { xs: "16px", md: "20px" },
+                  }}
                 >
                   <VowelContainer>{item}</VowelContainer>
                 </TableCell>
@@ -63,6 +66,7 @@ const YoonHiraganaLearn = ({ rowHeader, rows }: Props) => {
                 <TableCell
                   sx={{
                     border: "1px solid rgb(205, 205, 205)",
+                    fontSize: { xs: "16px", md: "20px" },
                   }}
                 >
                   <VowelContainer>{row.rowSyllable}</VowelContainer>

@@ -3,7 +3,7 @@ import { TableCell, Typography } from "@mui/material";
 interface Props {
   character: string;
   romaji: string;
-  onHover:(character: string, romaji:string) => void;
+  onHover: (character: string, romaji: string) => void;
 }
 
 const YoonCell = ({ character, romaji, onHover }: Props) => {
@@ -24,7 +24,12 @@ const YoonCell = ({ character, romaji, onHover }: Props) => {
       key={character}
       onMouseEnter={() => onHover(character, romaji)}
     >
-      <Typography variant="h5">{character}</Typography>
+      <Typography
+        variant="h5"
+        sx={{ fontWeight: { xs: 600 }, fontSize: { xs: "16px", md: "24px" } }}
+      >
+        {character}
+      </Typography>
     </TableCell>
   );
 };

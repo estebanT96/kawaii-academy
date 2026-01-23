@@ -31,7 +31,7 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
       sx={{
         overflowX: { xs: "auto", md: "visible" },
         width: "100%",
-        maxWidth: { xs: "90vw", md: "100%" },
+        maxWidth: { xs: "85vw", md: "100%" },
       }}
     >
       <Table
@@ -45,7 +45,9 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
                 key={index}
                 sx={{ borderBottom: "1px solid rgb(205, 205, 205)" }}
               >
-                <VowelContainer>{consonant}</VowelContainer>
+                <VowelContainer sx={{ fontSize: { xs: "16px", md: "20px" } }}>
+                  {consonant}
+                </VowelContainer>
               </TableCell>
             ))}
           </TableRow>
@@ -58,7 +60,9 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
                   border: "1px solid rgb(205, 205, 205)",
                 }}
               >
-                <VowelContainer sx={{ width: "20%" }}>
+                <VowelContainer
+                  sx={{ width: "20%", fontSize: { xs: "16px", md: "20px" } }}
+                >
                   {row.vowel}
                 </VowelContainer>
               </TableCell>
