@@ -23,9 +23,14 @@ const NavBar = () => {
             margin: "0 auto",
           }}
         >
-          <Box paddingLeft={5} sx={{ height: "46px" }}>
+          <Box
+            paddingLeft={5}
+            display="flex"
+            alignItems="center"
+            sx={{ height: "36px" }}
+          >
             <img src={logo} alt="" height="100%" />
-            <img src={logoLetters} alt="" height="100%" />
+            <img src={logoLetters} alt="" height="90%" />
           </Box>
           <NavBarLinks />
           <MobileNavLinks />

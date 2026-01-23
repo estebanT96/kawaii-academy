@@ -15,7 +15,6 @@ const YoonCell = ({ character, romaji, onHover }: Props) => {
         transition: "all ease 150ms",
         whiteSpace: "nowrap",
         "&:hover": {
-          backgroundColor: "#dedede",
           color: "rgb(255, 97, 35)",
           cursor: "pointer",
           transform: "scale(1.1)",

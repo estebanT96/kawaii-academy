@@ -21,11 +21,16 @@ const HiraganaLearnSection = () => {
             textDecoration: "underline",
             marginRight: "20px",
             marginBottom: "15px",
+            fontSize: { xs: "24px", md: "48px" },
           }}
         >
           Katakana
         </Typography>
-        <Typography variant="h5" color="rgb(100,100,100)">
+        <Typography
+          variant="h5"
+          color="rgb(100,100,100)"
+          sx={{ fontSize: { xs: "18px", md: "24px" } }}
+        >
           カタカナ
         </Typography>
       </Box>

@@ -13,7 +13,7 @@ const TableCard = ({ character, romaji }: Props) => {
       justifyContent="center"
       alignItems="center"
       margin="0 auto"
-      width="50%"
+      width="100%"
       sx={{ display: { xs: "none", md: "flex" } }}
     >
       <Typography variant="h1">{character}</Typography>

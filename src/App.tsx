@@ -26,7 +26,15 @@ function App() {
               },
             }}
           >
-            <Box sx={{ gridArea: "nav" }}>
+            <Box
+              sx={{
+                gridArea: "nav",
+                position: "sticky",
+                top: 0, 
+                zIndex: 1100,
+                borderBottom:"1px solid rgb(230, 235, 255)"
+              }}
+            >
               <NavBar />
             </Box>
             <Box sx={{ gridArea: "main" }}>

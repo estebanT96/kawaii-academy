@@ -36,7 +36,7 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
     >
       <Table
         size="small"
-        sx={{ marginBottom: "20px", width: "auto", tableLayout: "auto" }}
+        sx={{ width: "auto", tableLayout: "auto" }}
       >
         <TableHead>
           <TableRow>

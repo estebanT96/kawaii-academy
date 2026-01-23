@@ -66,7 +66,7 @@ const WordColumn = ({ headers, words }: Props) => {
                 },
               }}
             >
-              <Typography variant="h5" sx={{ fontSize:{xs:"1rem", md:"1.5rem"} }}>{word.wordInKana}</Typography>
+              <Typography variant="h5" sx={{ fontSize:{xs:"14px", md:"1.5rem"}, whiteSpace:"nowrap" }}>{word.wordInKana}</Typography>
             </TableCell>
             <TableCell
               sx={{
@@ -80,7 +80,7 @@ const WordColumn = ({ headers, words }: Props) => {
                 className="romaji-text"
                 sx={{
                   fontFamily: "'Poppins', sans-serif",
-                  fontSize:{xs:"1rem", md:"1.5rem"}  ,
+                  fontSize:{xs:"14px", md:"1.5rem"}  ,
                   transition: "all ease 200ms",
                   color: "rgb(163, 163, 163)",
                   fontWeight: "500",

@@ -14,8 +14,8 @@ const ScriptDescription = ({ data }: Props) => {
     <div>
       <Box
         display="flex"
-        marginTop="10px"
         justifyContent="space-between"
+        marginTop="10px"
         sx={{ width: { xs: "100%" } }}
       >
         {data.map((item) => (

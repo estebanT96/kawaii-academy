@@ -39,7 +39,20 @@ const HiraganaLearnSection = () => {
       <Box display="flex" justifyContent="space-between">
         <Box width="100%">
           <SeionHiraganaLearn />
+          <Box display="flex" justifyContent="flex-end">
+            <Typography
+              display={{ xs: "block", sm: "none" }}
+              fontSize="12px"
+              fontWeight='500'
+              color="rgb(142, 142, 142)"
+            >
+              [scroll horizontally]
+            </Typography>
+          </Box>
           <DakuonHiraganaLearn />
+          <Box>
+            <Typography> </Typography>
+          </Box>
           <YoonHiraganaLearn
             rowHeader={yoonRowHeader}
             rows={YOON_HIRAGANA_ROWS}
