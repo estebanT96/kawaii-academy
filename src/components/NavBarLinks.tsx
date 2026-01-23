@@ -19,7 +19,7 @@ const NavBarLinks = () => {
             <Box>
               <Box
                 padding="5px 25px"
-                marginRight="10px"
+                marginRight="20px"
                 borderRadius="5px"
                 sx={{
                   backgroundColor: link.color,
