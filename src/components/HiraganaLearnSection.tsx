@@ -4,7 +4,7 @@ import { YOON_HIRAGANA_ROWS, yoonRowHeader } from "../data/filteredHiragana";
 import YoonHiraganaLearn from "./YoonHiraganaLearn";
 
 import DakuonHiraganaLearn from "./DakuonHiraganaLearn";
-import SeionHiraganaLearn from "./SeionHiraganaLearn";
+
 const HiraganaLearnSection = () => {
   return (
     <Box>
