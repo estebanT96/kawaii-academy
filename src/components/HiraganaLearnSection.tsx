@@ -13,6 +13,8 @@ const HiraganaLearnSection = () => {
         display="flex"
         alignItems="baseline"
         width="100%"
+        position="sticky"
+        top='0'
         sx={{
           justifyContent: { xs: "flex-start" },
         }}

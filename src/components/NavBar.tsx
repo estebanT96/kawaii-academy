@@ -1,6 +1,5 @@
 import { Box, Stack } from "@mui/material";
-import logo from "../assets/kitsuneBlueHachimakiface.jpeg";
-import logoLetters from "../assets/kitsuneBlueHachimakiletters.jpeg";
+import logo from "../assets/logoFace.png";
 import NavBarLinks from "./NavBarLinks";
 import MobileNavLinks from "./MobileNavLinks";
 
@@ -9,8 +8,7 @@ const NavBar = () => {
     <>
       <Box
         sx={{
-          background: "rgba(254, 248, 230)",
-          padding: "5px",
+          background: "#f1d302",
         }}
       >
         <Stack
@@ -24,15 +22,29 @@ const NavBar = () => {
           }}
         >
           <Box
-            paddingLeft={5}
             display="flex"
             alignItems="center"
-            sx={{ height: "36px" }}
+            sx={{
+              height: "76px",
+              borderLeft: "2px solid black",
+              borderRight: "2px solid black",
+            }}
           >
             <img src={logo} alt="" height="100%" />
-            <img src={logoLetters} alt="" height="90%" />
+            {/* <Box display="flex" flexDirection="column" alignItems="center">
+              <Typography  fontSize="20px" fontWeight="900">Kawaii</Typography>
+              <Typography marginTop="-10px" fontSize="16px" fontWeight="800">Academy</Typography>
+            </Box> */}
           </Box>
-          <NavBarLinks />
+          <Box
+            borderLeft="2px solid black"
+            borderRight="2px solid black"
+            height="100%"
+            padding="26px"
+            display={{ xs: "none", sm: "none", md: "block" }}
+          >
+            <NavBarLinks />
+          </Box>
           <MobileNavLinks />
         </Stack>
       </Box>

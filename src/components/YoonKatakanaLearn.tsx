@@ -63,6 +63,9 @@ const YoonKatakanaLearn = ({ rowHeader, rows }: Props) => {
                 <TableCell
                   sx={{
                     border: "1px solid rgb(205, 205, 205)",
+                    fontSize: { xs: "16px", md: "20px" },
+                    backgroundColor: "rgb(62, 110, 255)",
+                    color: "white",
                   }}
                 >
                   <VowelContainer>{row.rowSyllable}</VowelContainer>

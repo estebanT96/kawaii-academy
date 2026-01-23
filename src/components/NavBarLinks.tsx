@@ -18,7 +18,7 @@ const NavBarLinks = () => {
             underline="hover"
             to={link.path}
           >
-            <Typography  color="rgb(9, 134, 218)" fontWeight="600" >
+            <Typography color="rgb(9, 134, 218)" fontWeight="600">
               {link.tag}
             </Typography>
           </Link>

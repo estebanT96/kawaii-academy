@@ -32,7 +32,7 @@ function App() {
                 position: "sticky",
                 top: 0, 
                 zIndex: 1100,
-                borderBottom:"1px solid rgb(230, 235, 255)"
+                borderBottom:"2px solid rgb(0, 0, 0)"
               }}
             >
               <NavBar />

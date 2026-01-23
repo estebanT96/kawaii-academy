@@ -7,7 +7,10 @@ const MobileNavLinks = () => {
   const navigate = useNavigate();
   const location = useLocation();
   return (
-    <Box sx={{ display: { xs: "block", md: "none" }, paddingRight: 2 }}>
+    <Box
+      sx={{ display: { xs: "block", md: "none", padding: "10px 22px" } }}
+      borderRight="2px solid black"
+    >
       <FormControl
         sx={{ m: 1, minWidth: "auto", bgcolor: "transparent" }}
         size="small"
@@ -19,14 +22,12 @@ const MobileNavLinks = () => {
           onChange={(e) => navigate(e.target.value)}
           renderValue={() => (
             <Box display="flex" alignItems="center">
-              <TiThMenu size={24} color="white"></TiThMenu>
+              <TiThMenu size={32} color="white"></TiThMenu>
             </Box>
           )}
           IconComponent={() => null}
-          size="small"
           sx={{
-            color: "white",
-            backgroundColor: "rgb(19, 139, 194)",
+            backgroundColor: "transparent",
             "& .MuiOutlinedInput-notchedOutline": { border: "none" },
             "&:hover .MuiOutlinedInput-notchedOutline": { border: "none" },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
@@ -41,19 +42,13 @@ const MobileNavLinks = () => {
               alignItems: "center",
             },
           }}
-          MenuProps={{
-            MenuListProps: {
-              sx: {
-                paddingTop: 0,
-                paddingBottom: 0,
-              },
-            },
-          }}
         >
-          <MenuItem value="" sx={{display:"none"}}/>
+          <MenuItem value="" sx={{ display: "none" }} />
           {links.map((link) => (
             <MenuItem key={link.id} value={link.path}>
-              <Typography fontWeight="500" fontSize={{xs:"14px"}}>{link.tag}</Typography>
+              <Typography fontWeight="500" fontSize={{ xs: "14px" }}>
+                {link.tag}
+              </Typography>
             </MenuItem>
           ))}
         </Select>

@@ -22,7 +22,11 @@ const KanaCell = ({ character, romaji, onHover }: Props) => {
       onMouseEnter={() => onHover(character, romaji)}
       key={character}
     >
-      <Typography sx={{fontWeight:{xs:600}, fontSize:{xs:"16px", md:"24px"}}}>{character}</Typography>
+      <Typography
+        sx={{ fontWeight: { xs: 600 }, fontSize: { xs: "16px", md: "24px" } }}
+      >
+        {character}
+      </Typography>
     </TableCell>
   );
 };

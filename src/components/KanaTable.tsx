@@ -34,16 +34,16 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
         maxWidth: { xs: "85vw", md: "100%" },
       }}
     >
-      <Table
-        size="small"
-        sx={{ width: "auto", tableLayout: "auto" }}
-      >
+      <Table size="small" sx={{ width: "auto", tableLayout: "auto" }}>
         <TableHead>
           <TableRow>
             {consonants.map((consonant, index) => (
               <TableCell
                 key={index}
-                sx={{ borderBottom: "1px solid rgb(205, 205, 205)" }}
+                sx={{
+                  borderBottom: "1px solid rgb(205, 205, 205)",
+                  color: "rgb(62, 110, 255)",
+                }}
               >
                 <VowelContainer sx={{ fontSize: { xs: "16px", md: "20px" } }}>
                   {consonant}
@@ -58,11 +58,12 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
               <TableCell
                 sx={{
                   border: "1px solid rgb(205, 205, 205)",
+                  fontSize: { xs: "16px", md: "20px" },
+                  backgroundColor: "rgb(62, 110, 255)",
+                  color: "white",
                 }}
               >
-                <VowelContainer
-                  sx={{ width: "20%", fontSize: { xs: "16px", md: "20px" } }}
-                >
+                <VowelContainer sx={{ fontSize: { xs: "16px", md: "20px" } }}>
                   {row.vowel}
                 </VowelContainer>
               </TableCell>
