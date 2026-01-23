@@ -22,7 +22,7 @@ const MobileNavLinks = () => {
           onChange={(e) => navigate(e.target.value)}
           renderValue={() => (
             <Box display="flex" alignItems="center">
-              <TiThMenu size={32} color="white"></TiThMenu>
+              <TiThMenu size={32} color="rgb(0, 4, 108)"></TiThMenu>
             </Box>
           )}
           IconComponent={() => null}
