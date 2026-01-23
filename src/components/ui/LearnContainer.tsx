@@ -10,7 +10,7 @@ const LearnContainer = ({ children }: Props) => {
     <Box
       sx={{
         margin: "0 auto",
-        background: "#f1d302",
+        background: "rgb(255, 252, 242)", //color de fondo
       }}
     >
       {children}

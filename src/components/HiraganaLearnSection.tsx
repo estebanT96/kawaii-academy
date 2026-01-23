@@ -8,13 +8,17 @@ import SeionHiraganaLearn from "./SeionHiraganaLearn";
 
 const HiraganaLearnSection = () => {
   return (
-    <Box sx={{backgroundColor:"rgba(255, 214, 8, 0.11)", padding:"15px"}}>
+    <Box
+      sx={{
+        background: "rgb(255, 252, 242)", //color de fondo
+        padding: "15px",
+      }}
+    >
       <Box
         display="flex"
         alignItems="baseline"
         width="100%"
-        position="sticky"
-        top='0'
+        top="0"
         sx={{
           justifyContent: { xs: "flex-start" },
         }}
@@ -42,15 +46,7 @@ const HiraganaLearnSection = () => {
       <Box display="flex" justifyContent="space-between">
         <Box width="100%">
           <SeionHiraganaLearn />
-          <Typography
-            marginTop="2px"
-            fontSize="10px"
-            fontWeight="600"
-            color="rgb(255, 106, 106)"
-            display={{ xs: "block", md: "none" }}
-          >
-            [scroll horizontally]
-          </Typography>
+          
           <DakuonHiraganaLearn />
           <Box>
             <Typography> </Typography>

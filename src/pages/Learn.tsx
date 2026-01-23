@@ -1,21 +1,17 @@
-import { Box, Card } from "@mui/material";
+import { Box } from "@mui/material";
 import LearnContainer from "../components/ui/LearnContainer";
 import HiraganaLearnSection from "../components/HiraganaLearnSection";
-// import KatanaLearnSection from "../components/KatanaLearnSection";
 import WordLearnSection from "../components/WordLearnSection";
 import KatanaLearnSection from "../components/KatanaLearnSection";
 
 const Learn = () => (
   <LearnContainer>
-    <Card
+    <Box
       sx={{
         maxWidth: "1000px",
         width: "auto",
         margin: "0 auto",
         border: "none",
-        borderRadius: "0",
-        borderLeft: "2px solid black",
-        borderRight: "2px solid black",
       }}
     >
       <HiraganaLearnSection />
@@ -35,7 +31,7 @@ const Learn = () => (
         }}
       ></Box>
       <WordLearnSection />
-    </Card>
+    </Box>
   </LearnContainer>
 );
 

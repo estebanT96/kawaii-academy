@@ -13,6 +13,7 @@ const YoonCell = ({ character, romaji, onHover }: Props) => {
         fontFamily: "'Poppins', sans-serif",
         transition: "all ease 150ms",
         whiteSpace: "nowrap",
+    borderBottom: "2px solid rgb(226, 226, 226)",
         "&:hover": {
           color: "rgb(255, 97, 35)",
           cursor: "pointer",

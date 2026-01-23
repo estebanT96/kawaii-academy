@@ -30,6 +30,7 @@ const SeionHiraganaLearn = () => {
             consonants={seionConsonants}
             rows={SEION_HIRAGANA_ROWS}
           />
+          
         </Box>
         <TableCard
           character={activeItem.character}

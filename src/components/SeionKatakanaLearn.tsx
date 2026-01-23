@@ -18,11 +18,13 @@ const SeionKatakanaLearn = () => {
     <>
       <ScriptDescription data={[seionKatakanaDesc]} />
       <Box display="flex">
-        <KanaTable
-          onHover={handleHover}
-          consonants={seionConsonants}
-          rows={SEION_KATAKANA_ROWS}
-        />
+        <Box>
+          <KanaTable
+            onHover={handleHover}
+            consonants={seionConsonants}
+            rows={SEION_KATAKANA_ROWS}
+          />
+        </Box>
         <TableCard
           character={activeItem.character}
           romaji={activeItem.romaji}

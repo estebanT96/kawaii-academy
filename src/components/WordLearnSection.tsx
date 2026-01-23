@@ -9,7 +9,7 @@ import {
 
 const WordLearnSection = () => {
   return (
-    <Box display="flex" flexDirection="column" position="relative">
+    <Box display="flex" flexDirection="column" position="relative" padding="15px">
       <Box display="flex" alignItems="baseline" marginBottom="20px">
         <Typography
           variant="h3"

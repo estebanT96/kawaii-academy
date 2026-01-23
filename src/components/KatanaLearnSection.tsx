@@ -6,7 +6,12 @@ import DakuonKatakanaLearn from "./DakuonKatakanaLearn";
 import SeionKatakanaLearn from "./SeionKatakanaLearn";
 const HiraganaLearnSection = () => {
   return (
-    <Box sx={{backgroundColor:"rgba(255, 214, 8, 0.11)", padding:"15px"}}>
+    <Box
+      sx={{
+        background: "rgb(255, 252, 242)", //color de fondo
+        padding: "15px",
+      }}
+    >
       <Box
         display="flex"
         alignItems="baseline"
@@ -38,15 +43,6 @@ const HiraganaLearnSection = () => {
       <Box display="flex" justifyContent="space-between" width="100%">
         <Box>
           <SeionKatakanaLearn />
-          <Typography
-            marginTop="2px"
-            fontSize="10px"
-            fontWeight="600"
-            color="rgb(255, 106, 106)"
-            display={{ xs: "block", md: "none" }}
-          >
-            [scroll horizontally]
-          </Typography>
           <DakuonKatakanaLearn />
           <YoonKatakanaLearn
             rowHeader={yoonRowHeader}

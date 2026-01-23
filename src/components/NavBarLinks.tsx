@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Box, Link, Stack, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import links from "../data/links";
 const NavBarLinks = () => {
@@ -7,20 +7,41 @@ const NavBarLinks = () => {
       <Stack
         direction="row"
         justifyContent="space-between"
-        width="15%"
-        paddingRight={5}
         sx={{ display: { xs: "none", md: "flex" } }}
       >
         {links.map((link) => (
           <Link
             key={link.id}
             component={RouterLink}
-            underline="hover"
+            underline="none"
             to={link.path}
           >
-            <Typography color="rgb(9, 134, 218)" fontWeight="600">
-              {link.tag}
-            </Typography>
+            <Box>
+              <Box
+                padding="5px 25px"
+                marginRight="10px"
+                borderRadius="5px"
+                sx={{
+                  backgroundColor: link.color,
+                  transition: "all ease 200ms",
+                  border: link.border,
+                  boxShadow: link.boxShadow,
+                  "&:hover": {
+                    cursor: "pointer",
+                    filter: "brightness(1.1)",
+                    boxShadow: link["&:hover"],
+                  },
+                  "&:active": {
+                    transform: "translate(1px, 1px)",
+                    boxShadow: "1px 1px 0px transparent ",
+                  },
+                }}
+              >
+                <Typography color="black" fontWeight="500" fontSize="14px">
+                  {link.tag}
+                </Typography>
+              </Box>
+            </Box>
           </Link>
         ))}
       </Stack>

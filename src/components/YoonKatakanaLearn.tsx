@@ -50,7 +50,11 @@ const YoonKatakanaLearn = ({ rowHeader, rows }: Props) => {
               {rowHeader.map((item) => (
                 <TableCell
                   key={item}
-                  sx={{ borderBottom: "1px solid rgb(205, 205, 205)" }}
+                  sx={{
+                    borderBottom: "2px solid rgb(205, 205, 205)",
+                    fontSize: { xs: "16px", md: "20px" },
+                    color: "rgb(62, 110, 255)",
+                  }}
                 >
                   <VowelContainer>{item}</VowelContainer>
                 </TableCell>
@@ -62,10 +66,10 @@ const YoonKatakanaLearn = ({ rowHeader, rows }: Props) => {
               <TableRow key={row.rowSyllable}>
                 <TableCell
                   sx={{
-                    border: "1px solid rgb(205, 205, 205)",
+                    borderLeft: "2px solid rgb(205, 205, 205)",
+                    borderBottom: "2px solid rgb(226, 226, 226)",
                     fontSize: { xs: "16px", md: "20px" },
-                    backgroundColor: "rgb(62, 110, 255)",
-                    color: "white",
+                    color: "rgb(255, 63, 63)",
                   }}
                 >
                   <VowelContainer>{row.rowSyllable}</VowelContainer>

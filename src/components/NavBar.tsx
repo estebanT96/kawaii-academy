@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import logo from "../assets/logoFace.png";
 import NavBarLinks from "./NavBarLinks";
 import MobileNavLinks from "./MobileNavLinks";
@@ -8,7 +8,8 @@ const NavBar = () => {
     <>
       <Box
         sx={{
-          background: "#f1d302",
+          background: "rgb(255, 252, 242)", //Color de fondo
+          paddingLeft: "20px",
         }}
       >
         <Stack
@@ -25,24 +26,25 @@ const NavBar = () => {
             display="flex"
             alignItems="center"
             sx={{
-              height: "76px",
-              borderLeft: "2px solid black",
-              borderRight: "2px solid black",
+              height: { xs: "42px", md: "52px" },
             }}
           >
             <img src={logo} alt="" height="100%" />
-            {/* <Box display="flex" flexDirection="column" alignItems="center">
-              <Typography  fontSize="20px" fontWeight="900">Kawaii</Typography>
-              <Typography marginTop="-10px" fontSize="16px" fontWeight="800">Academy</Typography>
-            </Box> */}
+            <Box display="flex" alignItems="center">
+              <Typography
+                variant="body2"
+                fontSize="16px"
+                fontWeight="800"
+                margin="0 5px"
+              >
+                Kawaii
+              </Typography>
+              <Typography variant="body2" fontSize="16px" fontWeight="800">
+                Academy
+              </Typography>
+            </Box>
           </Box>
-          <Box
-            borderLeft="2px solid black"
-            borderRight="2px solid black"
-            height="100%"
-            padding="26px"
-            display={{ xs: "none", sm: "none", md: "block" }}
-          >
+          <Box height="100%" display={{ xs: "none", sm: "none", md: "block" }}>
             <NavBarLinks />
           </Box>
           <MobileNavLinks />

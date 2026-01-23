@@ -30,9 +30,8 @@ function App() {
               sx={{
                 gridArea: "nav",
                 position: "sticky",
-                top: 0, 
+                top: 0,
                 zIndex: 1100,
-                borderBottom:"2px solid rgb(0, 0, 0)"
               }}
             >
               <NavBar />
