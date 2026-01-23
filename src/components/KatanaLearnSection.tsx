@@ -3,7 +3,7 @@ import { YOON_KATAKANA_ROWS, yoonRowHeader } from "../data/filteredKatakana";
 
 import YoonKatakanaLearn from "./YoonKatakanaLearn";
 import DakuonKatakanaLearn from "./DakuonKatakanaLearn";
-// import SeionKatakanaLearn from "./SeionKatakanaLearn";
+import SeionKatakanaLearn from "./SeionKatakanaLearn";
 const HiraganaLearnSection = () => {
   return (
     <Box>
@@ -37,7 +37,15 @@ const HiraganaLearnSection = () => {
 
       <Box display="flex" justifyContent="space-between" width="100%">
         <Box>
-          {/* <SeionKatakanaLearn /> */}
+          <SeionKatakanaLearn />
+          <Typography
+            marginTop="2px"
+            fontSize="10px"
+            fontWeight="600"
+            color="rgb(255, 106, 106)"
+          >
+            [scroll horizontally]
+          </Typography>
           <DakuonKatakanaLearn />
           <YoonKatakanaLearn
             rowHeader={yoonRowHeader}

@@ -13,22 +13,32 @@ const WordLearnSection = () => {
       <Box display="flex" alignItems="baseline" marginBottom="20px">
         <Typography
           variant="h3"
-          sx={{ textDecoration: "underline", marginRight: "20px" }}
+          sx={{
+            textDecoration: "underline",
+            marginRight: "20px",
+            marginBottom: "15px",
+            fontSize: { xs: "24px", md: "48px" },
+          }}
         >
           Word Glossary
         </Typography>
       </Box>
-      <Box display="flex" justifyContent="space-between" alignItems="stretch">
-        <Box display="flex" width="100%" justifyContent="space-between">
-          <WordColumn
-            headers={[hiraganaTableHeader]}
-            words={hiraganaWords}
-          ></WordColumn>
-          <WordColumn
-            headers={[katakanaTableHeader]}
-            words={katakanaWords}
-          ></WordColumn>
-        </Box>
+
+      <Box
+        display="flex"
+        width={{ xs: "auto", md: "90%" }}
+        justifyContent="space-between"
+        margin="0 auto"
+        flexDirection={{ xs: "column", md: "row" }}
+      >
+        <WordColumn
+          headers={[hiraganaTableHeader]}
+          words={hiraganaWords}
+        ></WordColumn>
+        <WordColumn
+          headers={[katakanaTableHeader]}
+          words={katakanaWords}
+        ></WordColumn>
       </Box>
     </Box>
   );

@@ -32,7 +32,7 @@ const WordColumn = ({ headers, words }: Props) => {
             <TableCell
               sx={{
                 padding: "5px 0",
-                whiteSpace: "nowrap",
+                whiteSpace: "nowrap"
               }}
             >
               <Typography variant="h5">{header.type}</Typography>
