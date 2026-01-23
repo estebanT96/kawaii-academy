@@ -3,7 +3,7 @@ import { YOON_HIRAGANA_ROWS, yoonRowHeader } from "../data/filteredHiragana";
 
 import YoonHiraganaLearn from "./YoonHiraganaLearn";
 
-import DakuonHiraganaLearn from "./DakuonHiraganaLearn";
+// import DakuonHiraganaLearn from "./DakuonHiraganaLearn";
 
 const HiraganaLearnSection = () => {
   return (
@@ -39,17 +39,8 @@ const HiraganaLearnSection = () => {
       <Box display="flex" justifyContent="space-between">
         <Box width="100%">
           {/* <SeionHiraganaLearn /> */}
-          <Box display="flex" justifyContent="flex-start" width="">
-            <Typography
-              display={{ xs: "block", sm: "none" }}
-              fontSize="12px"
-              fontWeight="500"
-              color="rgb(142, 142, 142)"
-            >
-              [scroll horizontally]
-            </Typography>
-          </Box>
-          <DakuonHiraganaLearn />
+          <Box display="flex" justifyContent="flex-start" width=""></Box>
+          {/* <DakuonHiraganaLearn /> */}
           <Box>
             <Typography> </Typography>
           </Box>
