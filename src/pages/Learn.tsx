@@ -15,21 +15,7 @@ const Learn = () => (
       }}
     >
       <HiraganaLearnSection />
-      <Box
-        height="2px"
-        width="100%"
-        sx={{
-          backgroundColor: "black",
-        }}
-      ></Box>
       <KatanaLearnSection />
-      <Box
-        height="2px"
-        width="100%"
-        sx={{
-          backgroundColor: "black",
-        }}
-      ></Box>
       <WordLearnSection />
     </Box>
   </LearnContainer>

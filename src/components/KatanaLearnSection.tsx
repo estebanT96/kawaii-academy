@@ -8,7 +8,7 @@ const HiraganaLearnSection = () => {
   return (
     <Box
       sx={{
-        background: "rgb(255, 252, 242)", //color de fondo
+        background: "rgb(255, 255, 255)", //color de fondo
         padding: "15px",
       }}
     >
@@ -34,7 +34,7 @@ const HiraganaLearnSection = () => {
         <Typography
           variant="h5"
           color="rgb(100,100,100)"
-          sx={{ fontSize: { xs: "18px", md: "24px" } }}
+          sx={{ fontSize: { xs: "14px", md: "24px" } }}
         >
           カタカナ
         </Typography>

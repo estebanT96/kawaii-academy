@@ -9,7 +9,15 @@ import {
 
 const WordLearnSection = () => {
   return (
-    <Box display="flex" flexDirection="column" position="relative" padding="15px">
+    <Box
+      display="flex"
+      flexDirection="column"
+      position="relative"
+      padding="15px"
+      sx={{
+        backgroundColor: "rgb(255, 255, 255)",
+      }}
+    >
       <Box display="flex" alignItems="baseline" marginBottom="20px">
         <Typography
           variant="h3"
@@ -23,7 +31,6 @@ const WordLearnSection = () => {
           Word Glossary
         </Typography>
       </Box>
-
       <Box
         display="flex"
         width={{ xs: "auto", md: "90%" }}

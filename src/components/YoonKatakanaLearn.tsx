@@ -52,7 +52,7 @@ const YoonKatakanaLearn = ({ rowHeader, rows }: Props) => {
                   key={item}
                   sx={{
                     borderBottom: "2px solid rgb(205, 205, 205)",
-                    fontSize: { xs: "16px", md: "20px" },
+                    fontSize: { xs: "20px", md: "20px" },
                     color: "rgb(62, 110, 255)",
                   }}
                 >
@@ -66,8 +66,7 @@ const YoonKatakanaLearn = ({ rowHeader, rows }: Props) => {
               <TableRow key={row.rowSyllable}>
                 <TableCell
                   sx={{
-                    borderLeft: "2px solid rgb(205, 205, 205)",
-                    borderBottom: "2px solid rgb(226, 226, 226)",
+                    borderBottom: "2px solid rgb(236, 236, 236)",
                     fontSize: { xs: "16px", md: "20px" },
                     color: "rgb(255, 63, 63)",
                   }}

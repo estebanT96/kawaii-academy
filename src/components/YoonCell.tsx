@@ -13,7 +13,7 @@ const YoonCell = ({ character, romaji, onHover }: Props) => {
         fontFamily: "'Poppins', sans-serif",
         transition: "all ease 150ms",
         whiteSpace: "nowrap",
-    borderBottom: "2px solid rgb(226, 226, 226)",
+        borderBottom: "2px solid rgb(236, 236, 236)",
         "&:hover": {
           color: "rgb(255, 97, 35)",
           cursor: "pointer",
@@ -25,7 +25,7 @@ const YoonCell = ({ character, romaji, onHover }: Props) => {
     >
       <Typography
         variant="h5"
-        sx={{ fontWeight: { xs: 600 }, fontSize: { xs: "16px", md: "24px" } }}
+        sx={{ fontWeight: { xs: 600 }, fontSize: { xs: "20px", md: "24px" } }}
       >
         {character}
       </Typography>
