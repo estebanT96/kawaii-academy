@@ -5,7 +5,7 @@ import WordLearnSection from "../components/WordLearnSection";
 import KatakanaLearnSection from "../components/KatakanaLearnSection";
 
 const Learn = () => (
-  <Container maxWidth="lg" sx={{ paddingTop: "50px", background: "#4797ed43" }}>
+  <Container maxWidth="lg" sx={{ paddingTop: "50px" }}>
     <LearnContainer>
       <Box
         sx={{

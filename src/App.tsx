@@ -37,7 +37,15 @@ function App() {
             >
               <NavBar />
             </Box>
-            <Box sx={{ gridArea: "main", background: "#4797ed3a" }}>
+            <Box
+              sx={{
+                gridArea: "main",
+                background: "#4797ed3a",
+                width: "100%", 
+                overflowX: "hidden", 
+                minWidth: 0,
+              }}
+            >
               <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/learn" element={<Learn />}></Route>

@@ -11,7 +11,7 @@ const HiraganaLearnSection = () => {
     <Box
       sx={{
         background: "rgb(255, 255, 255)", //color de fondo
-        padding: "30px",
+        padding: { xs: "15px", md: "30px" },
       }}
     >
       <Box
@@ -44,7 +44,7 @@ const HiraganaLearnSection = () => {
       </Box>
 
       <Box display="flex" justifyContent="space-between">
-        <Box width="100%">
+        <Box width="100%" sx={{ minWidth: 0 }}>
           <SeionHiraganaLearn />
           <DakuonHiraganaLearn />
           <YoonHiraganaLearn
