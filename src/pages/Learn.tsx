@@ -5,12 +5,12 @@ import WordLearnSection from "../components/WordLearnSection";
 import KatakanaLearnSection from "../components/KatakanaLearnSection";
 
 const Learn = () => (
-  <Container sx={{ paddingTop: "50px"}}>
+  <Container maxWidth="lg" sx={{ paddingTop: "50px", background: "#4797ed43" }}>
     <LearnContainer>
       <Box
         sx={{
           maxWidth: "1000px",
-          width: "auto",
+          width: "100%",
           margin: "0 auto",
           border: "1px solid rgb(0, 95, 164)",
           borderRadius: "5px",
