@@ -10,8 +10,7 @@ const MainContainer = ({ children }: Props) => {
     <Box
       sx={{
         margin: "0 auto",
-        background: "#4797ed43", //color de fondo
-        height: "85vh",
+        height: "80vh",
       }}
     >
       {children}

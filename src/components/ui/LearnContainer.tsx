@@ -9,9 +9,7 @@ const LearnContainer = ({ children }: Props) => {
   return (
     <Box
       sx={{
-        margin: "0 auto",
-        background: "#4797ed43", //color de fondo
-        padding:"20px 0"
+        marginBottom: "50px",
       }}
     >
       {children}
