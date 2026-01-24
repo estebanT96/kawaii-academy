@@ -32,6 +32,7 @@ const seionRowE = getRow("seion-hiragana", "e");
 const seionRowO = getRow("seion-hiragana", "o");
 const emptySpace = { character: "", romaji: "なに。。。", row: "" };
 seionRowI.splice(7, 0, emptySpace);
+seionRowE.splice(7, 0, emptySpace);
 
 export const SEION_HIRAGANA_ROWS = [
   { vowel: "a", chars: seionRowA },

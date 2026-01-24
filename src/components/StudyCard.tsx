@@ -1,56 +1,45 @@
-import {
-  Box,
-  CardContent,
-  Container,
-  TextField,
-  Typography,
-} from "@mui/material";
-import Card from "@mui/material/Card";
-
-// import { STUDY_CHAR } from "../data/testKana";
+import { useState } from "react";
+import { Container } from "@mui/material";
+import { STUDY_CHAR } from "../data/testKana"; // Your Master List
+import StudyCardContainer from "./ui/StudyCardContainer";
+import StudyCardContent from "./StudyCardContent";
+import StudySelection from "./StudySelection";
 
 const StudyCard = () => {
+  const uniqueRows = Array.from(new Set(STUDY_CHAR.map((c) => c.row)));
+  const [selectedRows, setSelectedRows] = useState<string[]>([]);
+  const [isGameActive, setIsGameActive] = useState(false);
+  const [activeData, setActiveData] = useState(STUDY_CHAR);
+
+  const toggleRow = (row: string) => {
+    setSelectedRows((prev) =>
+      prev.includes(row) ? prev.filter((r) => r !== row) : [...prev, row],
+    );
+  };
+
+  const handleStart = () => {
+    const filtered = STUDY_CHAR.filter((char) =>
+      selectedRows.includes(char.row),
+    );
+    setActiveData(filtered);
+    setIsGameActive(true);
+  };
+
   return (
-    <>
-      <Container maxWidth="md" sx={{ paddingTop: "50px" }}>
-        <Card
-          variant="outlined"
-          sx={{
-            padding: "20px 0",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: "5px",
-            border: "1px solid rgb(0, 95, 164)",
-            boxShadow: "5px 5px 0px rgb(0, 95, 164)",
-            height: "500px",
-          }}
-        >
-          <CardContent
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <Typography boxShadow="1px solid black" variant="h1">
-              あ
-            </Typography>
-            <Box>
-              <TextField
-                size="small"
-                hiddenLabel
-                sx={{ input: { textAlign: "center" } }}
-                variant="filled"
-              ></TextField>
-            </Box>
-            <Typography boxShadow="1px solid black" variant="h3">
-              a
-            </Typography>
-          </CardContent>
-        </Card>
-      </Container>
-    </>
+    <Container maxWidth="lg" sx={{ paddingTop: "50px" }}>
+      <StudyCardContainer>
+        {!isGameActive ? (
+          <StudySelection
+            allRows={uniqueRows}
+            selectedRows={selectedRows}
+            toggleRow={toggleRow}
+            onStart={handleStart}
+          />
+        ) : (
+          <StudyCardContent data={activeData} />
+        )}
+      </StudyCardContainer>
+    </Container>
   );
 };
 

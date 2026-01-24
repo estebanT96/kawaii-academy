@@ -21,6 +21,7 @@ const seionRowE = getRow("seion-katakana", "e");
 const seionRowO = getRow("seion-katakana", "o");
 const emptySpace = { character: "", romaji: "ナニ。。。", row:"" };
 seionRowI.splice(7, 0, emptySpace);
+seionRowE.splice(7, 0, emptySpace);
 
 export const SEION_KATAKANA_ROWS = [
   { vowel: "a", chars: seionRowA },

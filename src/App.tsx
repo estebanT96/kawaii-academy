@@ -37,7 +37,7 @@ function App() {
             >
               <NavBar />
             </Box>
-            <Box sx={{ gridArea: "main" }}>
+            <Box sx={{ gridArea: "main" }}> 
               <Routes>
                 <Route path="/" element={<Home />}></Route>
                 <Route path="/learn" element={<Learn />}></Route>
