@@ -1,9 +1,11 @@
-import { Box, List, ListItem, Typography } from "@mui/material";
+import { Box, List, Link, ListItem, Typography } from "@mui/material";
 import { YOON_HIRAGANA_ROWS, yoonRowHeader } from "../data/filteredHiragana";
 import YoonHiraganaLearn from "./YoonHiraganaLearn";
 import DakuonHiraganaLearn from "./DakuonHiraganaLearn";
 import SeionHiraganaLearn from "./SeionHiraganaLearn";
 import SunnyIcon from "@mui/icons-material/Sunny";
+import links from "../data/links";
+import { Link as RouterLink } from "react-router-dom";
 
 const HiraganaLearnSection = () => {
   return (
@@ -44,7 +46,7 @@ const HiraganaLearnSection = () => {
 
       <Box display="flex" justifyContent="space-between">
         <Box width="100%" sx={{ minWidth: 0 }}>
-          <Box sx={{ marginBottom: "30px", maxWidth: "700px" }}>
+          <Box sx={{ marginBottom: "30px" }}>
             <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
               <strong>Hiragana</strong> is the foundation of the Japanese
               language, it is made up of 3 main categories and contains 46 basic
@@ -106,6 +108,48 @@ const HiraganaLearnSection = () => {
             rowHeader={yoonRowHeader}
             rows={YOON_HIRAGANA_ROWS}
           />
+          <Box width="100%">
+            <Box display="flex" alignItems="center">
+              <Typography
+                sx={{
+                  fontSize: { xs: "12px", md: "14px", marginRight: "10px" },
+                }}
+              >
+                Ready to test what you learned? Pick your rows and give it a
+                shot!{" "}
+              </Typography>{" "}
+              <Link
+                underline="none"
+                component={RouterLink}
+                key={links[1].id}
+                to={links[1].path}
+              >
+                <Box
+                  padding="2px 5px"
+                  borderRadius="5px"
+                  sx={{
+                    backgroundColor: links[1].color,
+                    transition: "all ease 200ms",
+                    border: links[1].border,
+                    boxShadow: links[1].boxShadow,
+                    "&:hover": {
+                      cursor: "pointer",
+                      filter: "brightness(1.1)",
+                      boxShadow: links[1]["&:hover"],
+                    },
+                    "&:active": {
+                      transform: "translate(1px, 1px)",
+                      boxShadow: "1px 1px 0px transparent ",
+                    },
+                  }}
+                >
+                  <Typography color="black" fontWeight="500" fontSize="12px">
+                    {links[1].tag}
+                  </Typography>
+                </Box>
+              </Link>
+            </Box>
+          </Box>
         </Box>
       </Box>
     </Box>

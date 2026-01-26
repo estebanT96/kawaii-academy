@@ -1,22 +1,25 @@
-import { Box, Typography, List, ListItem } from "@mui/material";
+import { Box, Typography, List, Link, ListItem } from "@mui/material";
 import { YOON_KATAKANA_ROWS, yoonRowHeader } from "../data/filteredKatakana";
 import YoonKatakanaLearn from "./YoonKatakanaLearn";
 import DakuonKatakanaLearn from "./DakuonKatakanaLearn";
 import SeionKatakanaLearn from "./SeionKatakanaLearn";
 import SunnyIcon from "@mui/icons-material/Sunny";
+import links from "../data/links";
+import { Link as RouterLink } from "react-router-dom";
 
 const HiraganaLearnSection = () => {
   return (
     <Box
       sx={{
-        background: "rgb(255, 255, 255)", //color de fondo
+        background: "rgb(255, 255, 255)",
         padding: { xs: "15px", md: "30px" },
       }}
     >
       <Box
         display="flex"
         alignItems="baseline"
-        width="auto"
+        width="100%"
+        top="0"
         sx={{
           justifyContent: { xs: "flex-start" },
         }}
@@ -35,15 +38,15 @@ const HiraganaLearnSection = () => {
         <Typography
           variant="h5"
           color="rgb(160, 160, 160)"
-          sx={{ fontSize: { xs: "14px", md: "24px" } }}
+          sx={{ fontSize: { xs: "14px", md: "20px" } }}
         >
           カタカナ
         </Typography>
       </Box>
 
-      <Box display="flex" justifyContent="space-between" width="100%">
-        <Box>
-          <Box sx={{ marginBottom: "30px", maxWidth: "700px" }}>
+      <Box display="flex" justifyContent="space-between">
+        <Box width="100%" sx={{ minWidth: 0 }}>
+          <Box sx={{ marginBottom: "30px" }}>
             <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
               <strong>Katakana</strong> is primarily used for foreign loanwords
               (like 'coffee' or 'computer'), foreign names, and onomatopoeia
@@ -107,6 +110,39 @@ const HiraganaLearnSection = () => {
             rowHeader={yoonRowHeader}
             rows={YOON_KATAKANA_ROWS}
           />
+          <Box display="flex" alignItems="center">
+            <Typography
+              sx={{ fontSize: { xs: "12px", md: "14px", marginRight: "10px" } }}
+            >
+              Ready to test what you learned? Pick your rows and give it a
+              shot!{" "}
+            </Typography>{" "}
+            <Link underline="none" component={RouterLink} key={links[1].id} to={links[1].path}>
+              <Box
+                padding="2px 5px"
+                borderRadius="5px"
+                sx={{
+                  backgroundColor: links[1].color,
+                  transition: "all ease 200ms",
+                  border: links[1].border,
+                  boxShadow: links[1].boxShadow,
+                  "&:hover": {
+                    cursor: "pointer",
+                    filter: "brightness(1.1)",
+                    boxShadow: links[1]["&:hover"],
+                  },
+                  "&:active": {
+                    transform: "translate(1px, 1px)",
+                    boxShadow: "1px 1px 0px transparent ",
+                  },
+                }}
+              >
+                <Typography color="black" fontWeight="500" fontSize="12px">
+                  {links[1].tag}
+                </Typography>
+              </Box>
+            </Link>
+          </Box>
         </Box>
       </Box>
     </Box>

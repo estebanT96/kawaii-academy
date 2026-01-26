@@ -52,7 +52,7 @@ const YoonKatakanaLearn = ({ rowHeader, rows }: Props) => {
                   key={item}
                   sx={{
                     borderBottom: "2px solid rgb(205, 205, 205)",
-                    fontSize: { xs: "20px", md: "20px" },
+                    fontSize: { xs: "16px", md: "20px" },
                     color: "rgb(62, 110, 255)",
                   }}
                 >

@@ -1,8 +1,9 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container} from "@mui/material";
 import LearnContainer from "../components/ui/LearnContainer";
 import HiraganaLearnSection from "../components/HiraganaLearnSection";
 import WordLearnSection from "../components/WordLearnSection";
 import KatakanaLearnSection from "../components/KatakanaLearnSection";
+
 
 const Learn = () => (
   <Container maxWidth="lg" sx={{ paddingTop: "30px" }}>

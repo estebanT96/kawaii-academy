@@ -25,95 +25,97 @@ interface Props {
 
 const WordColumn = ({ headers, words }: Props) => {
   return (
-    <Table
-      size="small"
-      sx={{ width: "auto", maxWidth: "600px", marginBottom: "20px" }}
-    >
-      <TableHead>
-        {headers.map((header) => (
-          <TableRow key={header.romaji}>
-            <TableCell
-              sx={{
-                padding: "5px 0",
-                whiteSpace: "nowrap",
-              }}
-            >
-              <Typography
-                variant="h5"
-                sx={{ fontSize: { xs: "18px", md: "26px" } }}
-              >
-                {header.type}
-              </Typography>
-            </TableCell>
-            <TableCell
-              sx={{
-                padding: "0px",
-              }}
-            >
-              <Typography
-                variant="h5"
-                sx={{ fontSize: { xs: "18px", md: "26px" } }}
-              >
-                {header.romaji}
-              </Typography>
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableHead>
-      <TableBody>
-        {words.map((word) => (
-          <TableRow key={word.wordInRomaji}>
-            <TableCell
-              sx={{
-                border: "1px solid rgb(224, 224, 224)",
-                fontFamily: "'Poppins', sans-serif",
-                transition: "all ease 150ms",
-                "&:hover": {
-                  backgroundColor: "#dedede",
-                  color: "rgb(255, 97, 35)",
-                  cursor: "pointer",
-                },
-                "&:hover + td .romaji-text": {
-                  color: "#0067d6",
-                  fontWeight: "500",
-                },
-              }}
-            >
-              <Typography
-                variant="h5"
+    <>
+      <Table
+        size="small"
+        sx={{ width: "auto", maxWidth: "600px", marginBottom: "20px" }}
+      >
+        <TableHead>
+          {headers.map((header) => (
+            <TableRow key={header.romaji}>
+              <TableCell
                 sx={{
-                  fontSize: { xs: "14px", md: "24px" },
+                  padding: "5px 0",
                   whiteSpace: "nowrap",
                 }}
               >
-                {word.wordInKana}
-              </Typography>
-            </TableCell>
-            <TableCell
-              sx={{
-                border: "1px solid rgb(224, 224, 224)",
-                fontFamily: "'Poppins', sans-serif",
-                transition: "all ease 150ms",
-                paddingLeft: "10px",
-              }}
-            >
-              <Typography
-                className="romaji-text"
+                <Typography
+                  variant="h5"
+                  sx={{ fontSize: { xs: "18px", md: "26px" } }}
+                >
+                  {header.type}
+                </Typography>
+              </TableCell>
+              <TableCell
                 sx={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: { xs: "12px", md: "24px" },
-                  transition: "all ease 200ms",
-                  color: "rgb(163, 163, 163)",
-                  fontWeight: "500",
+                  padding: "0px",
                 }}
               >
-                {word.wordInRomaji}
-              </Typography>
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+                <Typography
+                  variant="h5"
+                  sx={{ fontSize: { xs: "18px", md: "26px" } }}
+                >
+                  {header.romaji}
+                </Typography>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableHead>
+        <TableBody>
+          {words.map((word) => (
+            <TableRow key={word.wordInRomaji}>
+              <TableCell
+                sx={{
+                  border: "1px solid rgb(224, 224, 224)",
+                  fontFamily: "'Poppins', sans-serif",
+                  transition: "all ease 150ms",
+                  "&:hover": {
+                    backgroundColor: "#dedede",
+                    color: "rgb(255, 97, 35)",
+                    cursor: "pointer",
+                  },
+                  "&:hover + td .romaji-text": {
+                    color: "#0067d6",
+                    fontWeight: "500",
+                  },
+                }}
+              >
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontSize: { xs: "14px", md: "24px" },
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {word.wordInKana}
+                </Typography>
+              </TableCell>
+              <TableCell
+                sx={{
+                  border: "1px solid rgb(224, 224, 224)",
+                  fontFamily: "'Poppins', sans-serif",
+                  transition: "all ease 150ms",
+                  paddingLeft: "10px",
+                }}
+              >
+                <Typography
+                  className="romaji-text"
+                  sx={{
+                    fontFamily: "'Poppins', sans-serif",
+                    fontSize: { xs: "12px", md: "24px" },
+                    transition: "all ease 200ms",
+                    color: "rgb(163, 163, 163)",
+                    fontWeight: "500",
+                  }}
+                >
+                  {word.wordInRomaji}
+                </Typography>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </>
   );
 };
 

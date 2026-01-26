@@ -46,7 +46,7 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
                   color: "rgb(62, 110, 255)",
                 }}
               >
-                <VowelContainer sx={{ fontSize: { xs: "20px", md: "20px" } }}>
+                <VowelContainer sx={{ fontSize: { xs: "16px", md: "20px" } }}>
                   {consonant}
                 </VowelContainer>
               </TableCell>
@@ -59,11 +59,10 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
               <TableCell
                 sx={{
                   borderBottom: "2px solid rgb(236, 236, 236)",
-                  fontSize: { xs: "20px", md: "20px" },
                   color: "rgb(255, 63, 63)",
                 }}
               >
-                <VowelContainer sx={{ fontSize: { xs: "20px", md: "20px" } }}>
+                <VowelContainer sx={{ fontSize: { xs: "16px", md: "20px" } }}>
                   {row.vowel}
                 </VowelContainer>
               </TableCell>

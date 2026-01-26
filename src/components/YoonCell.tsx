@@ -25,7 +25,7 @@ const YoonCell = ({ character, romaji, onHover }: Props) => {
     >
       <Typography
         variant="h5"
-        sx={{ fontWeight: { xs: 600 }, fontSize: { xs: "20px", md: "24px" } }}
+        sx={{ fontWeight: { xs: 600 }, fontSize: { xs: "16px", md: "24px" } }}
       >
         {character}
       </Typography>
