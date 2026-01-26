@@ -5,12 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Learn from "./pages/Learn";
 import Footer from "./components/Footer";
+import ScrollTop from "./components/ScrollTop";
 function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
+          <ScrollTop />
           <Box
             display="grid"
             sx={{
@@ -52,7 +54,9 @@ function App() {
                 <Route path="/learn" element={<Learn />}></Route>
               </Routes>
             </Box>
-            <Footer />
+            <Box>
+              <Footer />
+            </Box>
           </Box>
         </Router>
       </ThemeProvider>

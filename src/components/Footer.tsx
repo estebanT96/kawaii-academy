@@ -8,11 +8,11 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#4797ed", // Darker version of your main blue
+        backgroundColor: "#4797ed", 
         color: "white",
-        marginTop: "auto", // Pushes footer to bottom if page is short
-        paddingY: 4,
-        borderTop: "1px solid rgb(255, 221, 0)", // That retro yellow accent line
+        marginTop: "auto", 
+        paddingY: { xs: "15px", md: "20px" },
+        borderTop: "1px solid rgb(255, 221, 0)", 
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: { xs: "center", md: "center" },
