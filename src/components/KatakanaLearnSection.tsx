@@ -46,7 +46,7 @@ const HiraganaLearnSection = () => {
 
       <Box display="flex" justifyContent="space-between">
         <Box width="100%" sx={{ minWidth: 0 }}>
-          <Box sx={{ marginBottom: "30px" }}>
+          <Box sx={{ marginBottom: { xs: "10px", md: "30px" } }}>
             <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
               <strong>Katakana</strong> is primarily used for foreign loanwords
               (like 'coffee' or 'computer'), foreign names, and onomatopoeia
@@ -110,14 +110,25 @@ const HiraganaLearnSection = () => {
             rowHeader={yoonRowHeader}
             rows={YOON_KATAKANA_ROWS}
           />
-          <Box display="flex" alignItems="center">
+          <Box
+            display="flex"
+            alignItems="center"
+            sx={{ flexDirection: { xs: "column", md: "row" } }}
+          >
             <Typography
-              sx={{ fontSize: { xs: "12px", md: "14px", marginRight: "10px" } }}
+              sx={{
+                fontSize: { xs: "12px", md: "14px" },
+                marginRight: { xs: "0", md: "10px" },
+              }}
             >
-              Ready to test what you learned? Pick your rows and give it a
-              shot!{" "}
+              Ready to test what you learned? Give it a shot!{" "}
             </Typography>{" "}
-            <Link underline="none" component={RouterLink} key={links[1].id} to={links[1].path}>
+            <Link
+              underline="none"
+              component={RouterLink}
+              key={links[1].id}
+              to={links[1].path}
+            >
               <Box
                 padding="2px 5px"
                 borderRadius="5px"

@@ -36,7 +36,9 @@ const StudyCardContent = ({ data }: Props) => {
   if (index >= data.length) {
     return (
       <CardContent sx={{ textAlign: "center" }}>
-        <Typography sx={{fontSize:{xs:"32px", md:"56px"}}}>Congratulations!</Typography>
+        <Typography sx={{ fontSize: { xs: "32px", md: "56px" } }}>
+          Congratulations!
+        </Typography>
         <RestartButton setIndex={setIndex} />
       </CardContent>
     );
@@ -46,6 +48,7 @@ const StudyCardContent = ({ data }: Props) => {
     <CardContent
       sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
+      <Typography>How do you read this kana symbol?</Typography>
       <Typography boxShadow="1px solid black" variant="h1">
         {data[index].char}
       </Typography>
@@ -60,9 +63,13 @@ const StudyCardContent = ({ data }: Props) => {
           }
         ></TextField>
       </Box>
-      <Typography variant="h3">{data[index].romaji}</Typography>
-      <Typography variant="h5" color="rgb(145, 145, 145)">
+      {/* <Typography variant="h3">{data[index].romaji}</Typography> */}
+
+      <Typography variant="h5" color="rgb(255, 35, 35)" marginTop="10px">
         [ {index}/{data.length} ]
+      </Typography>
+      <Typography variant="body2" color="rgb(145, 145, 145)" textAlign="center">
+        Characters will automatically disappear if you answer correctly.
       </Typography>
     </CardContent>
   );

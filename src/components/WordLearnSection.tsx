@@ -18,7 +18,7 @@ const WordLearnSection = () => {
       padding="15px"
       sx={{
         backgroundColor: "rgb(255, 255, 255)",
-        paddingTop: "30px",
+        paddingTop: "15px",
 
         paddingBottom: "30px",
       }}
@@ -56,12 +56,18 @@ const WordLearnSection = () => {
           words={katakanaWords}
         ></WordColumn>
       </Box>
-      <Box display="flex" alignItems="center">
+      <Box
+        display="flex"
+        alignItems="center"
+        sx={{ flexDirection: { xs: "column", md: "row" } }}
+      >
         <Typography
-          sx={{ fontSize: { xs: "12px", md: "14px", marginRight: "10px" } }}
+          sx={{
+            fontSize: { xs: "12px", md: "14px" },
+            marginRight: { xs: "0", md: "10px" },
+          }}
         >
-          Ready to test what you learned? Pick your rows and give it a
-          shot!{" "}
+          Ready to test what you learned? Give it a shot!{" "}
         </Typography>{" "}
         <Link
           underline="none"

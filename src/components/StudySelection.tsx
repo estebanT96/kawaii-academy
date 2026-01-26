@@ -31,7 +31,7 @@ const StudySelection = ({
         </Typography>
         <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
           Japanese has 3 writing systems. We start with
-          <strong> Hiragana</strong> and <strong> Katakana</strong>
+          <strong> Hiragana</strong> and <strong> Katakana</strong>.
         </Typography>
         <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
           To start learning, go to our{" "}

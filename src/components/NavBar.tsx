@@ -32,21 +32,12 @@ const NavBar = () => {
             }}
           >
             <img src={logo} alt="" height="100%" />
-            <Box display="flex" alignItems="center">
-              <Typography
-                variant="body2"
-                fontWeight="800"
-                margin="0 5px"
-                sx={{ fontSize: { xs: "14px", md: "16px" } }} 
-              >
-                Kawaii
+            <Box display="flex" flexDirection="column" alignItems="flex-start" marginLeft="5px">
+              <Typography fontWeight="800" fontSize="16px" marginBottom="-7px">
+                Kawaii Academy
               </Typography>
-              <Typography
-                variant="body2"
-                fontWeight="800"
-                sx={{ fontSize: { xs: "14px", md: "16px" } }}
-              >
-                Academy
+              <Typography fontSize="12px">
+                Learn Japanese the fun way.
               </Typography>
             </Box>
           </Box>

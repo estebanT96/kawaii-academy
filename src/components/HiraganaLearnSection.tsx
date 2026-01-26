@@ -46,7 +46,7 @@ const HiraganaLearnSection = () => {
 
       <Box display="flex" justifyContent="space-between">
         <Box width="100%" sx={{ minWidth: 0 }}>
-          <Box sx={{ marginBottom: "30px" }}>
+          <Box sx={{ marginBottom: { xs: "10px", md: "30px" } }}>
             <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
               <strong>Hiragana</strong> is the foundation of the Japanese
               language, it is made up of 3 main categories and contains 46 basic
@@ -109,14 +109,18 @@ const HiraganaLearnSection = () => {
             rows={YOON_HIRAGANA_ROWS}
           />
           <Box width="100%">
-            <Box display="flex" alignItems="center">
+            <Box
+              display="flex"
+              alignItems="center"
+              sx={{ flexDirection: { xs: "column", md: "row" } }}
+            >
               <Typography
                 sx={{
-                  fontSize: { xs: "12px", md: "14px", marginRight: "10px" },
+                  fontSize: { xs: "12px", md: "14px" },
+                  marginRight:{xs:"0", md:"10px"}
                 }}
               >
-                Ready to test what you learned? Pick your rows and give it a
-                shot!{" "}
+                Ready to test what you learned? Give it a shot!{" "}
               </Typography>{" "}
               <Link
                 underline="none"
