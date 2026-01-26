@@ -1,4 +1,4 @@
-import { Box, Button, Paper, Typography, Link } from "@mui/material";
+import { Box, Button, Typography, Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
 interface Props {

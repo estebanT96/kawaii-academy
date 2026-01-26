@@ -1,7 +1,7 @@
 import ScriptDescription from "./ScriptDescription";
 import KanaTable from "./KanaTable";
 import TableCard from "./TableCard";
-import { Box, Typography } from "@mui/material";
+import { Box} from "@mui/material";
 import { seionHiraganaDesc } from "../data/descriptions";
 import { seionConsonants, SEION_HIRAGANA_ROWS } from "../data/filteredHiragana";
 import { useState } from "react";
