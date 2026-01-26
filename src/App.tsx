@@ -14,6 +14,7 @@ function App() {
           <Box
             display="grid"
             sx={{
+              minHeight: "100vh",
               gridTemplateRows: "auto 1fr",
               gridTemplateAreas: {
                 xs: `"nav" 
@@ -41,8 +42,8 @@ function App() {
               sx={{
                 gridArea: "main",
                 background: "#4797ed3a",
-                width: "100%", 
-                overflowX: "hidden",  
+                width: "100%",
+                overflowX: "hidden",
                 minWidth: 0,
               }}
             >
@@ -51,7 +52,7 @@ function App() {
                 <Route path="/learn" element={<Learn />}></Route>
               </Routes>
             </Box>
-            <Footer></Footer>
+            <Footer />
           </Box>
         </Router>
       </ThemeProvider>
