@@ -1,4 +1,5 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Paper, Typography, Link } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 interface Props {
   allRows: string[];
@@ -18,8 +19,51 @@ const StudySelection = ({
   };
   return (
     <Box display="flex" flexDirection="column" alignItems="center" gap={1}>
+      <Box
+        sx={{
+          padding: "20px",
+          width: "100%",
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="body1" fontWeight="bold" color="rgb(0, 95, 164)">
+          New to Japanese?
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+          Japanese has 3 writing systems. We start with
+          <strong> Hiragana</strong> and <strong> Katakana</strong>
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+          To start learning, go to our{" "}
+          <Link component={RouterLink} to="/learn">
+            Learn
+          </Link>{" "}
+          section!
+        </Typography>
+      </Box>
+      <Box width="100%" textAlign="center">
+        <Typography variant="body1" fontWeight="bold" color="rgb(0, 95, 164)">
+          Already know your Kana?
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+          This is a Flashcard Game. You will see a character (like あ) and type
+          its sound (like "a").
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+          Select specific rows below to create a custom quiz. <br />
+        </Typography>
+      </Box>
+      <Box
+        height="2px"
+        width="70%"
+        sx={{
+          backgroundColor: "rgb(198, 198, 198)",
+          marginBottom: "20px",
+        }}
+      ></Box>
+
       <Typography
-        sx={{ fontSize: { xs: "18px", md: "24px" }, fontWeight: "600" }}
+        sx={{ fontSize: { xs: "18px", md: "20px" }, fontWeight: "600" }}
       >
         Select Rows to Study
       </Typography>
@@ -34,7 +78,7 @@ const StudySelection = ({
           />
           <Typography
             variant="body1"
-            sx={{ fontSize: { xs: "18px", md: "24px" } }}
+            sx={{ fontSize: { xs: "16px", md: "18px" } }}
           >
             Hiragana
           </Typography>
@@ -48,7 +92,7 @@ const StudySelection = ({
           />
           <Typography
             variant="body1"
-            sx={{ fontSize: { xs: "18px", md: "24px" } }}
+            sx={{ fontSize: { xs: "16px", md: "18px" } }}
           >
             Katakana
           </Typography>
@@ -78,9 +122,9 @@ const StudySelection = ({
                 color: isSelected ? "white" : baseColor,
 
                 "&:hover": {
-                  transform: "translateY(-2px)",
-                  boxShadow: `0px 4px 0px ${baseColor}`,
-                  backgroundColor: isSelected ? baseColor : "rgba(0,0,0,0.05)",
+                  backgroundColor: isSelected
+                    ? baseColor
+                    : "rgba(0, 0, 0, 0.15)",
                 },
 
                 "&:active": {
@@ -111,6 +155,8 @@ const StudySelection = ({
           border: "1px solid black",
           boxShadow: "2px 2px 0px black",
           fontWeight: "500",
+          textTransform: "none",
+          fontFamily: "Poppins",
 
           "&:hover": {
             backgroundColor: "rgb(237, 207, 4)",

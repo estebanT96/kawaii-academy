@@ -26,7 +26,7 @@ const StudyCard = () => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ paddingTop: "50px" }}>
+    <Container maxWidth="lg" sx={{ paddingTop: "30px" }}>
       <StudyCardContainer>
         {!isGameActive ? (
           <StudySelection

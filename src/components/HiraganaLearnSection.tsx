@@ -1,16 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, List, ListItem, Typography } from "@mui/material";
 import { YOON_HIRAGANA_ROWS, yoonRowHeader } from "../data/filteredHiragana";
-
 import YoonHiraganaLearn from "./YoonHiraganaLearn";
-
 import DakuonHiraganaLearn from "./DakuonHiraganaLearn";
 import SeionHiraganaLearn from "./SeionHiraganaLearn";
+import SunnyIcon from "@mui/icons-material/Sunny";
 
 const HiraganaLearnSection = () => {
   return (
     <Box
       sx={{
-        background: "rgb(255, 255, 255)", //color de fondo
+        background: "rgb(255, 255, 255)",
         padding: { xs: "15px", md: "30px" },
       }}
     >
@@ -29,15 +28,15 @@ const HiraganaLearnSection = () => {
             textDecoration: "underline",
             marginRight: "20px",
             marginBottom: "15px",
-            fontSize: { xs: "24px", md: "48px" },
+            fontSize: { xs: "20px", md: "42px" },
           }}
         >
           Hiragana
         </Typography>
         <Typography
           variant="h5"
-          color="rgb(100,100,100)"
-          sx={{ fontSize: { xs: "14px", md: "24px" } }}
+          color="rgb(160, 160, 160)"
+          sx={{ fontSize: { xs: "14px", md: "20px" } }}
         >
           ひらがな
         </Typography>
@@ -45,6 +44,62 @@ const HiraganaLearnSection = () => {
 
       <Box display="flex" justifyContent="space-between">
         <Box width="100%" sx={{ minWidth: 0 }}>
+          <Box sx={{ marginBottom: "30px", maxWidth: "700px" }}>
+            <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+              <strong>Hiragana</strong> is the foundation of the Japanese
+              language, it is made up of 3 main categories and contains 46 basic
+              characters that represent every sound in Japanese.
+            </Typography>
+            <List>
+              <ListItem>
+                <SunnyIcon
+                  sx={{
+                    fontSize: "18px",
+                    marginRight: "10px",
+                    color: "rgb(255, 79, 79)",
+                  }}
+                />{" "}
+                <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+                  <strong>Seion (Basic Sounds): </strong>
+                  The 46 primary "clear sounds" of Japanese. This is the
+                  foundation of the language (e.g., あ, か, さ).
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <SunnyIcon
+                  sx={{
+                    fontSize: "18px",
+                    marginRight: "10px",
+                    color: "rgb(255, 79, 79)",
+                  }}
+                />
+                <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+                  <strong>Dakuon (Voiced Sounds): </strong>
+                  Characters modified with two dots (゛) or a circle (゜) to
+                  change their sound (e.g., "ka" becomes "ga", "ha" becomes "ba"
+                  or "pa").
+                </Typography>
+              </ListItem>
+              <ListItem>
+                <SunnyIcon
+                  sx={{
+                    fontSize: "18px",
+                    marginRight: "10px",
+                    color: "rgb(255, 79, 79)",
+                  }}
+                />
+                <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+                  <strong>Yoon (Combo Sounds): </strong>A combination of a
+                  character plus a small ya, yu, or yo. They blend together to
+                  make one smooth sound (e.g., き "ki" + ゃ "ya" = きゃ "kya").
+                </Typography>
+              </ListItem>
+            </List>
+            <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+              You should learn these first! Once you know Hiragana, you can
+              pronounce any Japanese word.
+            </Typography>
+          </Box>
           <SeionHiraganaLearn />
           <DakuonHiraganaLearn />
           <YoonHiraganaLearn

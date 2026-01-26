@@ -24,6 +24,6 @@ export const theme = createTheme({
     h5: { fontFamily: "'Noto Sans Japanese', sans-serif", fontWeight: 600 },
     h6: { fontFamily: "'Poppins', sans-serif", fontSize: "16px" },
     body1: { fontFamily: "'Poppins', sans-serif" },
-    body2: { fontFamily: "'Google Sans Flex', sans-serif" },
+    body2: { fontFamily: "'Poppins', sans-serif" },
   },
 });

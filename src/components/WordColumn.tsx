@@ -25,7 +25,10 @@ interface Props {
 
 const WordColumn = ({ headers, words }: Props) => {
   return (
-    <Table size="small" sx={{ width: "auto", maxWidth: "600px" }}>
+    <Table
+      size="small"
+      sx={{ width: "auto", maxWidth: "600px", marginBottom: "20px" }}
+    >
       <TableHead>
         {headers.map((header) => (
           <TableRow key={header.romaji}>
@@ -35,14 +38,24 @@ const WordColumn = ({ headers, words }: Props) => {
                 whiteSpace: "nowrap",
               }}
             >
-              <Typography variant="h5">{header.type}</Typography>
+              <Typography
+                variant="h5"
+                sx={{ fontSize: { xs: "18px", md: "26px" } }}
+              >
+                {header.type}
+              </Typography>
             </TableCell>
             <TableCell
               sx={{
                 padding: "0px",
               }}
             >
-              <Typography variant="h5">{header.romaji}</Typography>
+              <Typography
+                variant="h5"
+                sx={{ fontSize: { xs: "18px", md: "26px" } }}
+              >
+                {header.romaji}
+              </Typography>
             </TableCell>
           </TableRow>
         ))}
@@ -69,7 +82,7 @@ const WordColumn = ({ headers, words }: Props) => {
               <Typography
                 variant="h5"
                 sx={{
-                  fontSize: { xs: "20px", md: "24px" },
+                  fontSize: { xs: "14px", md: "24px" },
                   whiteSpace: "nowrap",
                 }}
               >
@@ -88,7 +101,7 @@ const WordColumn = ({ headers, words }: Props) => {
                 className="romaji-text"
                 sx={{
                   fontFamily: "'Poppins', sans-serif",
-                  fontSize: { xs: "18px", md: "1.5rem" },
+                  fontSize: { xs: "12px", md: "24px" },
                   transition: "all ease 200ms",
                   color: "rgb(163, 163, 163)",
                   fontWeight: "500",

@@ -26,7 +26,11 @@ const ScriptDescription = ({ data }: Props) => {
               marginBottom="10px"
               alignItems="center"
             >
-              <Typography variant="h6" color="rgb(152, 152, 152)">
+              <Typography
+                variant="h6"
+                color="rgb(152, 152, 152)"
+                sx={{ fontSize: { xs: "14px", md: "16px" } }}
+              >
                 {item.title}
               </Typography>
               <Box
