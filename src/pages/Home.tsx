@@ -3,7 +3,7 @@ import { Box, Container } from "@mui/material";
 
 const Home = () => {
   return (
-    <Container sx={{ paddingTop: "30px" }}>
+    <Container sx={{ paddingY: "30px" }}>
       <Box
         sx={{
           maxWidth: "1000px",
