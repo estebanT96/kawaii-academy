@@ -59,7 +59,7 @@ const StudySelection = ({
             page.
           </Typography>
           <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
-            When you feel ready, you can come back to the this page to quiz your
+            When you feel ready, you can come back to this page to quiz your
             kana skills.
           </Typography>
         </Box>

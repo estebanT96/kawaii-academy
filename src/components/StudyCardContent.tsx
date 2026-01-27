@@ -25,7 +25,7 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
       if (anchor) {
         setTimeout(() => {
           anchor.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 300);
+        }, 100);
       }
     }
   }, [index, data.length]);

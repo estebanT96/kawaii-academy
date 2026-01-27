@@ -80,7 +80,11 @@ const StudyCard = () => {
       ) : (
         <StudyCardContent
           data={activeData}
-          onBackToMenu={() => setIsGameActive(false)}
+          onBackToMenu={() => {
+            setIsGameActive(false);
+            setSelectedRows([]);
+            setDisplayedChar([]);
+          }}
         />
       )}
     </Container>
