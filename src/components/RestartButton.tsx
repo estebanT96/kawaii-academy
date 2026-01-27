@@ -1,13 +1,13 @@
 import { Button } from "@mui/material";
 
 interface Props {
-  setIndex: (index: number) => void;
+  onClick: () => void;
 }
 
-const RestartButton = ({ setIndex }: Props) => {
+const RestartButton = ({ onClick }: Props) => {
   return (
     <Button
-      onClick={() => setIndex(0)}
+      onClick={onClick}
       sx={{
         backgroundColor: "rgb(237, 207, 4)",
         transition: "all ease 200ms",

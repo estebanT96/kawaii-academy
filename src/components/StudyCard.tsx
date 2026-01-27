@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box, Container } from "@mui/material";
 import { STUDY_CHAR } from "../data/testKana"; // Your Master List
 import StudyCardContent from "./StudyCardContent";
@@ -35,14 +35,19 @@ const StudyCard = () => {
     });
   };
 
-  const scrollToTop = () => {
+  const performScroll = () => {
     const anchor = document.getElementById("scroll-anchor");
     if (anchor) {
       anchor.scrollIntoView({ behavior: "smooth", block: "start" });
-    } else {
-      window.scrollTo(0, 0); // Fallback
     }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      performScroll();
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [isGameActive]);
 
   const handleStart = () => {
     const filtered = STUDY_CHAR.filter((char) =>
@@ -51,11 +56,10 @@ const StudyCard = () => {
     const randomizedData = shuffleArray(filtered);
     setActiveData(randomizedData);
     setIsGameActive(true);
-    scrollToTop();
   };
   return (
     <Container sx={{ padding: "30px 0", background: "rgb(255, 255, 255)" }}>
-      <Box id="scroll-anchor" sx={{ position: "absolute", top: 0, left: 0 }} />
+      <Box id="scroll-anchor" sx={{ top: 0, left: 0 }} />
       {!isGameActive ? (
         <StudySelection
           allRows={uniqueRows}
@@ -67,10 +71,7 @@ const StudyCard = () => {
       ) : (
         <StudyCardContent
           data={activeData}
-          onBackToMenu={() => {
-            setIsGameActive(false);
-            scrollToTop();
-          }}
+          onBackToMenu={() => setIsGameActive(false)}
         />
       )}
     </Container>

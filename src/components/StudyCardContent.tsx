@@ -34,6 +34,17 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
       }
     }
   };
+  const handleRestart = () => {
+    setIndex(0);
+    // Manually trigger the scroll here since "isGameActive" doesn't change
+    const anchor = document.getElementById("scroll-anchor");
+    if (anchor) {
+        // setTimeout ensures the "Congratulations" text is gone before scrolling
+        setTimeout(() => {
+            anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+    }
+  };
 
   if (index >= data.length) {
     return (
@@ -48,7 +59,7 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
           gap={1}
           sx={{ flexDirection: { xs: "column", md: "row" } }}
         >
-          <RestartButton setIndex={setIndex} />
+          <RestartButton onClick={handleRestart} />
           <SelectAgainButton onBackToMenu={onBackToMenu} />
         </Box>
       </CardContent>
