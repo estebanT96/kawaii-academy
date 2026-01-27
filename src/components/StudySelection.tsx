@@ -15,6 +15,7 @@ interface Props {
   onStart: () => void;
 }
 
+
 const StudySelection = ({
   allRows,
   selectedRows,
@@ -59,7 +60,7 @@ const StudySelection = ({
             page.
           </Typography>
           <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
-            When you feel ready, you can come back to the Study page to quiz
+            When you feel ready, you can come back to the this  page to quiz
             your kana skills.
           </Typography>
         </Box>

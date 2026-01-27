@@ -8,11 +8,11 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        backgroundColor: "#4797ed", 
+        backgroundColor: "#4797ed",
         color: "white",
-        marginTop: "auto", 
+        marginTop: "auto",
         paddingY: { xs: "15px", md: "20px" },
-        borderTop: "1px solid rgb(255, 221, 0)", 
+        borderTop: "1px solid rgb(255, 221, 0)",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: { xs: "center", md: "center" },
@@ -62,7 +62,7 @@ const Footer = () => {
             </Box>
           </Box>
           <Typography variant="caption" display="block" sx={{ opacity: 0.6 }}>
-            © 2026 Esteban Tapia. All rights reserved.
+            © 2026 Kawaii Academy. All rights reserved.
           </Typography>
 
           <Box textAlign={{ xs: "center", md: "right" }}>
@@ -71,7 +71,7 @@ const Footer = () => {
               fontWeight="bold"
               sx={{
                 marginBottom: "3px",
-                fontSize: { xs: "12px", md: "14px" },
+                fontSize: { xs: "10px", md: "14px" },
                 paddingTop: { xs: "15px", md: "0" },
               }}
             >
@@ -95,7 +95,12 @@ const Footer = () => {
                 }}
               >
                 <LinkedInIcon fontSize="small" />
-                <Typography variant="body2">LinkedIn</Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ fontSize: { xs: "10px", md: "14px" } }}
+                >
+                  LinkedIn
+                </Typography>
               </Link>
 
               <Link
@@ -111,7 +116,12 @@ const Footer = () => {
                 }}
               >
                 <GitHubIcon fontSize="small" />
-                <Typography variant="body2">GitHub</Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ fontSize: { xs: "10px", md: "14px" } }}
+                >
+                  GitHub
+                </Typography>
               </Link>
             </Stack>
           </Box>

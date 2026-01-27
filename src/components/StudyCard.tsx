@@ -11,6 +11,15 @@ const StudyCard = () => {
   const [activeData, setActiveData] = useState(STUDY_CHAR);
   const [displayedChar, setDisplayedChar] = useState<typeof STUDY_CHAR>([]);
 
+  const shuffleArray = <T,>(array: T[]) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
   const toggleRow = (row: string) => {
     const selectedNewChars = STUDY_CHAR.filter((char) => char.row === row);
     setDisplayedChar(selectedNewChars);
@@ -32,10 +41,12 @@ const StudyCard = () => {
     const filtered = STUDY_CHAR.filter((char) =>
       selectedRows.includes(char.row),
     );
-    setActiveData(filtered);
+
+    const randomizedData = shuffleArray(filtered);
+
+    setActiveData(randomizedData);
     setIsGameActive(true);
   };
-
   return (
     <Container sx={{ padding: "30px 0", background: "rgb(255, 255, 255)" }}>
       {!isGameActive ? (
