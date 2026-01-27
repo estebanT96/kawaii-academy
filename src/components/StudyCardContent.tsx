@@ -1,5 +1,5 @@
 import { Box, CardContent, TextField, Typography } from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import RestartButton from "./RestartButton";
 import SelectAgainButton from "./SelectAgainButton";
 
@@ -18,6 +18,17 @@ interface Props {
 const StudyCardContent = ({ data, onBackToMenu }: Props) => {
   const [index, setIndex] = useState(0);
   const [inputVal, setInputVal] = useState("");
+
+  useEffect(() => {
+    if (index >= data.length) {
+      const anchor = document.getElementById("scroll-anchor");
+      if (anchor) {
+        setTimeout(() => {
+          anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 300);
+      }
+    }
+  }, [index, data.length]);
 
   const handleInput = (character: string, romaji: string, input: string) => {
     console.log(character, romaji, input);
@@ -38,9 +49,9 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
     setIndex(0);
     const anchor = document.getElementById("scroll-anchor");
     if (anchor) {
-        setTimeout(() => {
-            anchor.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 100);
+      setTimeout(() => {
+        anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
     }
   };
 
