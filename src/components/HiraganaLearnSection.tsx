@@ -48,9 +48,9 @@ const HiraganaLearnSection = () => {
         <Box width="100%" sx={{ minWidth: 0 }}>
           <Box sx={{ marginBottom: { xs: "10px", md: "30px" } }}>
             <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-              <strong>Hiragana</strong> is the foundation of the Japanese
-              language, it is made up of 3 main categories and contains 46 basic
-              characters that represent every sound in Japanese.
+              <strong>Hiragana</strong> is the foundation of Japanese
+              it is made up of 3 main categories (seion, dakuon and yoon) and contains 46 basic
+              characters that represent every sound in the language.
             </Typography>
             <List>
               <ListItem>
@@ -63,8 +63,7 @@ const HiraganaLearnSection = () => {
                 />{" "}
                 <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
                   <strong>Seion (Basic Sounds): </strong>
-                  The 46 primary "clear sounds" of Japanese. This is the
-                  foundation of the language (e.g., あ, か, さ).
+                  The 46 primary "clear sounds" of Japanese.
                 </Typography>
               </ListItem>
               <ListItem>
@@ -98,7 +97,7 @@ const HiraganaLearnSection = () => {
               </ListItem>
             </List>
             <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-              You should learn these first! Once you know Hiragana, you can
+              You should learn these first, once you know Hiragana, you can
               pronounce any Japanese word.
             </Typography>
             <Typography
@@ -110,7 +109,7 @@ const HiraganaLearnSection = () => {
                 fontWeight:"600"
               }}
             >
-              [hover or select a character in a table and it will be displayed along with its
+              [select a character in a table and it will be displayed along with its
               pronounciation]
             </Typography>
           </Box>

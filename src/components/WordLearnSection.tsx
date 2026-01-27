@@ -37,7 +37,7 @@ const WordLearnSection = () => {
           sx={{ fontSize: { xs: "12px", md: "14px" }, paddingTop: "10px" }}
         >
           Practice your hiragana and katakana reading skills with the following
-          words!
+          words.
         </Typography>
       </Box>
       <Box
