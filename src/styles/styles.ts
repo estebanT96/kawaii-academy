@@ -1,5 +1,22 @@
 import { createTheme } from "@mui/material";
+import "@mui/material/styles";
+declare module "@mui/material/styles" {
+  interface TypographyVariants {
+    body3: React.CSSProperties;
+  }
 
+  // Allow configuration using `createTheme`
+  interface TypographyVariantsOptions {
+    body3?: React.CSSProperties;
+  }
+}
+
+// Update the Typography's variant prop options
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    body3: true;
+  }
+}
 export const theme = createTheme({
   typography: {
     // This sets the font for EVERYTHING (body, buttons, inputs) by default
@@ -25,5 +42,10 @@ export const theme = createTheme({
     h6: { fontFamily: "'Poppins', sans-serif", fontSize: "16px" },
     body1: { fontFamily: "'Poppins', sans-serif" },
     body2: { fontFamily: "'Poppins', sans-serif" },
+    body3: {
+      fontFamily: "'Noto Sans Japanese', sans-serif",
+      fontSize: "60px",
+      fontWeight: 600,
+    },
   },
 });

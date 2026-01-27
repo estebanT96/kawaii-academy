@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Container } from "@mui/material";
 import { STUDY_CHAR } from "../data/testKana"; // Your Master List
-import StudyCardContainer from "./ui/StudyCardContainer";
 import StudyCardContent from "./StudyCardContent";
 import StudySelection from "./StudySelection";
 
@@ -38,20 +37,18 @@ const StudyCard = () => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ padding: "30px 0" }}>
-      <StudyCardContainer>
-        {!isGameActive ? (
-          <StudySelection
-            allRows={uniqueRows}
-            selectedRows={selectedRows}
-            toggleRow={toggleRow}
-            onStart={handleStart}
-            displayedChars={displayedChar}
-          />
-        ) : (
-          <StudyCardContent data={activeData} />
-        )}
-      </StudyCardContainer>
+    <Container sx={{ padding: "30px 0", background: "rgb(255, 255, 255)" }}>
+      {!isGameActive ? (
+        <StudySelection
+          allRows={uniqueRows}
+          selectedRows={selectedRows}
+          toggleRow={toggleRow}
+          onStart={handleStart}
+          displayedChars={displayedChar}
+        />
+      ) : (
+        <StudyCardContent data={activeData} />
+      )}
     </Container>
   );
 };

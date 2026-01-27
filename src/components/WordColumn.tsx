@@ -28,7 +28,7 @@ const WordColumn = ({ headers, words }: Props) => {
     <>
       <Table
         size="small"
-        sx={{ width: "auto", maxWidth: "600px", marginBottom: "20px" }}
+        sx={{ width: "auto", maxWidth: "500px", marginBottom: "20px" }}
       >
         <TableHead>
           {headers.map((header) => (
@@ -95,7 +95,6 @@ const WordColumn = ({ headers, words }: Props) => {
                   border: "1px solid rgb(224, 224, 224)",
                   fontFamily: "'Poppins', sans-serif",
                   transition: "all ease 150ms",
-                  paddingLeft: "10px",
                 }}
               >
                 <Typography

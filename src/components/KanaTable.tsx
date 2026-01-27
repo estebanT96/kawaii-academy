@@ -30,7 +30,6 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
     <Box
       sx={{
         overflowX: { xs: "auto", md: "visible" },
-        width: "100%",
         maxWidth: { xs: "85vw", md: "100%" },
         marginBottom: "25px",
       }}

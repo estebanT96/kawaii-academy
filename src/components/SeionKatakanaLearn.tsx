@@ -7,6 +7,7 @@ import { seionConsonants, SEION_KATAKANA_ROWS } from "../data/filteredKatakana";
 import { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { keyframes } from "@mui/system";
+import MobileTableCard from "./MobileTableCard";
 
 const SeionKatakanaLearn = () => {
   const slideLeftRight = keyframes`
@@ -25,27 +26,51 @@ const SeionKatakanaLearn = () => {
   };
   return (
     <>
-      <ScriptDescription data={[seionKatakanaDesc]} />
-      <Box display="flex">
-        <Box>
+      <Box display="flex" alignItems="center" justifyContent="space-between">
+        <ScriptDescription data={[seionKatakanaDesc]} />
+        <MobileTableCard
+          char={activeItem.character}
+          romaji={activeItem.romaji}
+        />
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
+        <Box display="flex" justifyContent="space-between" width="100%">
           <KanaTable
             onHover={handleHover}
             consonants={seionConsonants}
             rows={SEION_KATAKANA_ROWS}
           />
-          <Typography textAlign="right" marginTop="-25px">
+          <TableCard
+            character={activeItem.character}
+            romaji={activeItem.romaji}
+          ></TableCard>
+        </Box>
+        <Box
+          sx={{ display: { xs: "flex", sm: "none" }, marginTop: "-25px" }}
+          justifyContent="flex-end"
+        >
+          <Typography
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              color: "rgb(255, 88, 88)",
+              fontWeight: "600",
+            }}
+            fontSize="12px"
+          >
+            [scroll]
             <ArrowRightAltIcon
               sx={{
-                color: "red",
                 animation: `${slideLeftRight} 700ms ease-in-out infinite alternate`,
               }}
             />
           </Typography>
         </Box>
-        <TableCard
-          character={activeItem.character}
-          romaji={activeItem.romaji}
-        ></TableCard>
       </Box>
     </>
   );

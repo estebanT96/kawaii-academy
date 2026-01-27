@@ -8,6 +8,7 @@ import {
   DAKUON_KATAKANA_ROWS,
 } from "../data/filteredKatakana";
 import { useState } from "react";
+import MobileTableCard from "./MobileTableCard";
 
 const DakuonKatakanaLearn = () => {
   const [activeItem, setActiveItem] = useState({
@@ -19,7 +20,13 @@ const DakuonKatakanaLearn = () => {
   };
   return (
     <>
-      <ScriptDescription data={[dakuonKatakanaDesc]} />
+      <Box display="flex" alignItems="center">
+        <ScriptDescription data={[dakuonKatakanaDesc]} />
+        <MobileTableCard
+          char={activeItem.character}
+          romaji={activeItem.romaji}
+        />
+      </Box>
       <Box display="flex">
         <KanaTable
           onHover={handleHover}

@@ -26,70 +26,79 @@ const StudySelection = ({
     return row.startsWith("h") ? "rgb(19, 139, 194)" : "rgb(234, 58, 58)";
   };
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" gap={1}>
+    <Box display="flex" flexDirection="column" alignItems="center">
       <Box
         sx={{
-          padding: "20px",
-          width: "100%",
           textAlign: "center",
         }}
       >
-        <Typography variant="body1" fontWeight="bold" color="rgb(0, 95, 164)">
-          New to Japanese?
-        </Typography>
-        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-          Japanese has 3 writing systems. We start with
-          <strong> Hiragana</strong> and <strong> Katakana</strong>.
-        </Typography>
-        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-          To start learning, go to our{" "}
-          <Link
-            component={RouterLink}
-            to="/learn"
-            sx={{ color: "rgb(241, 177, 0)", fontWeight: "600" }}
+        <Box paddingX="20px">
+          <Typography
+            sx={{ fontSize: { xs: "18px", md: "24px" } }}
+            fontWeight="bold"
+            color="rgb(0, 95, 164)"
           >
-            Learn
-          </Link>{" "}
-          section.
-        </Typography>
-        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-          When you feel ready, you can come back to the Study page to quiz your
-          kana skills.
-        </Typography>
-      </Box>
-      <Box width="100%" textAlign="center">
-        <Typography variant="body1" fontWeight="bold" color="rgb(0, 95, 164)">
-          Already know your Kana?
-        </Typography>
-        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-          This is a Flashcard Game. You will see a character (like あ) and type
-          its sound (like "a").
-        </Typography>
-        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-          Select specific rows below to create a custom quiz. <br />
-        </Typography>
+            New to Japanese?
+          </Typography>
+
+          <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
+            To start learning, go to our{" "}
+            <Link
+              component={RouterLink}
+              to="/learn"
+              sx={{
+                color: "rgb(223, 163, 0)",
+                fontWeight: "600",
+                "&:hover": {
+                  filter: "brightness(130%)",
+                },
+              }}
+            >
+              Learn
+            </Link>{" "}
+            page.
+          </Typography>
+          <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
+            When you feel ready, you can come back to the Study page to quiz
+            your kana skills.
+          </Typography>
+        </Box>
+        <Box textAlign="center">
+          <Typography
+            sx={{ fontSize: { xs: "18px", md: "24px" }, marginTop: "10px" }}
+            fontWeight="bold"
+            color="rgb(0, 95, 164)"
+          >
+            Already know your Kana?
+          </Typography>
+          <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
+            This is a Flashcard Game. You will see a character (like あ) and
+            type its sound (like "a").
+          </Typography>
+          <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
+            Choose specific rows below to create a custom quiz. <br />
+          </Typography>
+        </Box>
       </Box>
       <Box
-        height="2px"
+        height="1px"
         width="70%"
+        marginY="10px"
         sx={{
           backgroundColor: "rgb(198, 198, 198)",
-          marginBottom: "20px",
         }}
       ></Box>
-
-      <Typography
-        sx={{ fontSize: { xs: "18px", md: "20px" }, fontWeight: "600" }}
-      >
+      <Typography fontSize="18px" fontWeight="bold">
         Select Rows to Study
       </Typography>
+
       <Box
         display="flex"
         alignItems="center"
         sx={{ flexDirection: { xs: "column", md: "row" } }}
       >
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-          Row selection:
+          You selected:
         </Typography>
         <Box display="flex">
           {displayedChars.map((item) => (
@@ -136,7 +145,6 @@ const StudySelection = ({
           </Typography>
         </Box>
       </Box>
-
       <Box display="flex" flexWrap="wrap" justifyContent="center" gap={2}>
         {allRows.map((row) => {
           const isSelected = selectedRows.includes(row);
@@ -189,7 +197,6 @@ const StudySelection = ({
         onClick={onStart}
         sx={{
           marginTop: 1,
-          paddingX: 3,
           backgroundColor: "rgb(237, 207, 4)",
           transition: "all ease 200ms",
           color: "black",

@@ -45,7 +45,7 @@ const ScriptDescription = ({ data }: Props) => {
                   width: "fit-content",
                 }}
               >
-                <Typography color="white" fontWeight="600" fontSize="14px">
+                <Typography color="white" fontWeight="600" fontSize="14px" sx={{display:{xs:"none", sm:"block"}}}>
                   {item.icon}
                 </Typography>
               </Box>

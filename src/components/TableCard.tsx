@@ -13,11 +13,10 @@ const TableCard = ({ character, romaji }: Props) => {
       justifyContent="center"
       alignItems="center"
       margin="0 auto"
-      width="100%"
-      sx={{ display: { xs: "none", md: "flex" } }}
+      sx={{ display: { xs: "none", sm: "flex" } }}
     >
-      <Typography variant="h1">{character}</Typography>
-      <Typography marginBottom="10px" color="rgb(255, 67, 67)" variant="h5">
+      <Typography variant="h1" sx={{fontSize:{xs:"52px", md:"120px"}}}>{character}</Typography>
+      <Typography variant="h5" marginBottom="10px" color="rgb(255, 67, 67)" textAlign="center"  sx={{fontSize:{sm:"16px", md:"30px"}}} >
         [ {romaji ? `${romaji}` : "select kana"} ]
       </Typography>
     </Box>

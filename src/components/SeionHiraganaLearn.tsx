@@ -7,14 +7,15 @@ import { seionConsonants, SEION_HIRAGANA_ROWS } from "../data/filteredHiragana";
 import { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { keyframes } from "@mui/system";
+import MobileTableCard from "./MobileTableCard";
 
 const SeionHiraganaLearn = () => {
   const slideLeftRight = keyframes`
   from {
-    transform: translateX(-2px);
+    transform: translateX(-1px);
   }
   to {
-    transform: translateX(2px);
+    transform: translateX(1px);
   }`;
   const [activeItem, setActiveItem] = useState({
     character: "",
@@ -25,33 +26,51 @@ const SeionHiraganaLearn = () => {
   };
   return (
     <>
-      <ScriptDescription data={[seionHiraganaDesc]} />
+      <Box display="flex" alignItems="center" justifyContent="space-between">
+        <ScriptDescription data={[seionHiraganaDesc]} />
+        <MobileTableCard
+          char={activeItem.character}
+          romaji={activeItem.romaji}
+        />
+      </Box>
       <Box
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
-          gap: 2,
         }}
       >
-        <Box width="100%">
+        <Box display="flex" justifyContent="space-between" width="100%">
           <KanaTable
             onHover={handleHover}
             consonants={seionConsonants}
             rows={SEION_HIRAGANA_ROWS}
           />
-          <Typography textAlign="right" marginTop="-25px">
+          <TableCard
+            character={activeItem.character}
+            romaji={activeItem.romaji}
+          ></TableCard>
+        </Box>
+        <Box
+          sx={{ display: { xs: "flex", sm: "none" }, marginTop: "-25px" }}
+          justifyContent="flex-end"
+        >
+          <Typography
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              color: "rgb(255, 88, 88)",
+              fontWeight: "600",
+            }}
+            fontSize="12px"
+          >
+            [scroll]
             <ArrowRightAltIcon
               sx={{
-                color: "red",
                 animation: `${slideLeftRight} 700ms ease-in-out infinite alternate`,
               }}
             />
           </Typography>
         </Box>
-        <TableCard
-          character={activeItem.character}
-          romaji={activeItem.romaji}
-        ></TableCard>
       </Box>
     </>
   );

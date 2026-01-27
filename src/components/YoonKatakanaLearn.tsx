@@ -12,6 +12,7 @@ import { useState } from "react";
 import TableCard from "./TableCard";
 import ScriptDescription from "./ScriptDescription";
 import { yoonKatakanaDesc } from "../data/descriptions";
+import MobileTableCard from "./MobileTableCard";
 
 interface KanaChar {
   character: string;
@@ -39,7 +40,13 @@ const YoonKatakanaLearn = ({ rowHeader, rows }: Props) => {
 
   return (
     <Box display="flex" flexDirection="column">
-      <ScriptDescription data={[yoonKatakanaDesc]} />
+         <Box display="flex" alignItems="center">
+        <ScriptDescription data={[yoonKatakanaDesc]} />
+        <MobileTableCard
+          char={activeItem.character}
+          romaji={activeItem.romaji}
+        />
+      </Box>
       <Box display="flex">
         <Table
           size="small"

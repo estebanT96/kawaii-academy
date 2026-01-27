@@ -10,20 +10,8 @@ import { Link as RouterLink } from "react-router-dom";
 const HiraganaLearnSection = () => {
   return (
     <Box
-      sx={{
-        background: "rgb(255, 255, 255)",
-        padding: { xs: "15px", md: "30px" },
-      }}
     >
-      <Box
-        display="flex"
-        alignItems="baseline"
-        width="100%"
-        top="0"
-        sx={{
-          justifyContent: { xs: "flex-start" },
-        }}
-      >
+      <Box display="flex" alignItems="baseline">
         <Typography
           variant="h3"
           sx={{
@@ -48,9 +36,9 @@ const HiraganaLearnSection = () => {
         <Box width="100%" sx={{ minWidth: 0 }}>
           <Box sx={{ marginBottom: { xs: "10px", md: "30px" } }}>
             <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-              <strong>Hiragana</strong> is the foundation of Japanese
-              it is made up of 3 main categories (seion, dakuon and yoon) and contains 46 basic
-              characters that represent every sound in the language.
+              <strong>Hiragana</strong> is the foundation of Japanese it is made
+              up of 3 main categories (seion, dakuon and yoon) and contains 46
+              basic characters that represent every sound in the language.
             </Typography>
             <List>
               <ListItem>
@@ -105,12 +93,12 @@ const HiraganaLearnSection = () => {
                 fontSize: { xs: "10px", md: "12px" },
                 color: "red",
                 textAlign: "center",
-                marginTop:"5px",
-                fontWeight:"600"
+                marginTop: "5px",
+                fontWeight: "600",
               }}
             >
-              [select a character in a table and it will be displayed along with its
-              pronounciation]
+              [select a character in a table and it will be displayed along with
+              its pronounciation]
             </Typography>
           </Box>
           <SeionHiraganaLearn />

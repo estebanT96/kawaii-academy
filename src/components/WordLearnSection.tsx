@@ -15,15 +15,11 @@ const WordLearnSection = () => {
       display="flex"
       flexDirection="column"
       position="relative"
-      padding="15px"
       sx={{
         backgroundColor: "rgb(255, 255, 255)",
-        paddingTop: "15px",
-
-        paddingBottom: "30px",
       }}
     >
-      <Box margin="15px">
+      <Box marginBottom="10px">
         <Typography
           variant="h3"
           sx={{
@@ -42,10 +38,10 @@ const WordLearnSection = () => {
       </Box>
       <Box
         display="flex"
-        width={{ xs: "auto", md: "90%" }}
+        width={{ xs: "auto", sm: "80%", md: "100%" }}
         justifyContent="space-between"
         margin="0 auto"
-        flexDirection={{ xs: "column", md: "row" }}
+        flexDirection={{ xs: "column", sm: "row" }}
       >
         <WordColumn
           headers={[hiraganaTableHeader]}

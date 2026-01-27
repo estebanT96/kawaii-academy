@@ -32,7 +32,7 @@ const NavBar = () => {
             }}
           >
             <img src={logo} alt="" height="100%" />
-            <Box display="flex" flexDirection="column" alignItems="flex-start" marginLeft="5px">
+            <Box display="flex" flexDirection="column" alignItems="flex-start" marginLeft="5px" color="white">
               <Typography fontWeight="800" fontSize="16px" marginBottom="-7px">
                 Kawaii Academy
               </Typography>

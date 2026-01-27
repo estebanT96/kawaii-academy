@@ -44,7 +44,6 @@ function App() {
               sx={{
                 gridArea: "main",
                 background: "#4797ed3a",
-                width: "100%",
                 overflowX: "hidden",
                 minWidth: 0,
               }}

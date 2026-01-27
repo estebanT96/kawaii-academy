@@ -12,6 +12,7 @@ import { useState } from "react";
 import TableCard from "./TableCard";
 import ScriptDescription from "./ScriptDescription";
 import { yoonHiraganaDesc } from "../data/descriptions";
+import MobileTableCard from "./MobileTableCard";
 
 interface KanaChar {
   character: string;
@@ -39,7 +40,14 @@ const YoonHiraganaLearn = ({ rowHeader, rows }: Props) => {
 
   return (
     <Box display="flex" flexDirection="column">
-      <ScriptDescription data={[yoonHiraganaDesc]} />
+      <Box display="flex" alignItems="center">
+        <ScriptDescription data={[yoonHiraganaDesc]} />
+        <MobileTableCard
+          char={activeItem.character}
+          romaji={activeItem.romaji}
+        />
+      </Box>
+
       <Box display="flex">
         <Table
           size="small"
