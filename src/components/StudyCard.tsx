@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { STUDY_CHAR } from "../data/testKana"; // Your Master List
 import StudyCardContent from "./StudyCardContent";
 import StudySelection from "./StudySelection";
@@ -35,18 +35,27 @@ const StudyCard = () => {
     });
   };
 
+  const scrollToTop = () => {
+    const anchor = document.getElementById("scroll-anchor");
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      window.scrollTo(0, 0); // Fallback
+    }
+  };
+
   const handleStart = () => {
     const filtered = STUDY_CHAR.filter((char) =>
       selectedRows.includes(char.row),
     );
-
     const randomizedData = shuffleArray(filtered);
-
     setActiveData(randomizedData);
     setIsGameActive(true);
+    scrollToTop();
   };
   return (
     <Container sx={{ padding: "30px 0", background: "rgb(255, 255, 255)" }}>
+      <Box id="scroll-anchor" sx={{ position: "absolute", top: 0, left: 0 }} />
       {!isGameActive ? (
         <StudySelection
           allRows={uniqueRows}
@@ -60,7 +69,7 @@ const StudyCard = () => {
           data={activeData}
           onBackToMenu={() => {
             setIsGameActive(false);
-            window.scrollTo(0, 0); // Optional: Scrolls back to top
+            scrollToTop();
           }}
         />
       )}

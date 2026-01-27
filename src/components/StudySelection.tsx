@@ -194,10 +194,7 @@ const StudySelection = ({
       </Box>
       <Button
         disabled={selectedRows.length === 0}
-        onClick={() => {
-          window.scrollTo(0, 0);
-          onStart();
-        }}
+        onClick={onStart}
         sx={{
           marginTop: 1,
           backgroundColor: "rgb(237, 207, 4)",
