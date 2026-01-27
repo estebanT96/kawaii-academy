@@ -97,7 +97,7 @@ const StudySelection = ({
         alignItems="center"
         sx={{ flexDirection: { xs: "column", md: "row" } }}
       >
-        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" }}}>
           You selected:
         </Typography>
         <Box display="flex">
@@ -115,7 +115,7 @@ const StudySelection = ({
         </Box>
       </Box>
 
-      <Box display="flex" gap={3}>
+      <Box display="flex" gap={3} marginBottom="10px">
         <Box display="flex" alignItems="center" gap={1}>
           <Box
             width={15}

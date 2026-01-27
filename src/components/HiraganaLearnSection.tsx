@@ -36,7 +36,7 @@ const HiraganaLearnSection = () => {
         <Box width="100%" sx={{ minWidth: 0 }}>
           <Box sx={{ marginBottom: { xs: "10px", md: "30px" } }}>
             <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-              <strong>Hiragana</strong> is the foundation of Japanese it is made
+              <strong>Hiragana</strong> is the foundation of Japanese, it is made
               up of 3 main categories (seion, dakuon and yoon) and contains 46
               basic characters that represent every sound in the language.
             </Typography>
