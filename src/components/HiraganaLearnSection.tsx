@@ -101,6 +101,18 @@ const HiraganaLearnSection = () => {
               You should learn these first! Once you know Hiragana, you can
               pronounce any Japanese word.
             </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "10px", md: "12px" },
+                color: "red",
+                textAlign: "center",
+                marginTop:"5px",
+                fontWeight:"600"
+              }}
+            >
+              [hover or select a character in a table and it will be displayed along with its
+              pronounciation]
+            </Typography>
           </Box>
           <SeionHiraganaLearn />
           <DakuonHiraganaLearn />
@@ -117,7 +129,7 @@ const HiraganaLearnSection = () => {
               <Typography
                 sx={{
                   fontSize: { xs: "12px", md: "14px" },
-                  marginRight:{xs:"0", md:"10px"}
+                  marginRight: { xs: "0", md: "10px" },
                 }}
               >
                 Ready to test what you learned? Give it a shot!{" "}

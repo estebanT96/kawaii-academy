@@ -35,7 +35,7 @@ const StudyCardContent = ({ data }: Props) => {
 
   if (index >= data.length) {
     return (
-      <CardContent sx={{ textAlign: "center" }}>
+      <CardContent sx={{ textAlign: "center", paddingTop:"30px" }}>
         <Typography sx={{ fontSize: { xs: "32px", md: "56px" } }}>
           Congratulations!
         </Typography>
