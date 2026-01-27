@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Box, Container } from "@mui/material";
 import { STUDY_CHAR } from "../data/testKana"; // Your Master List
 import StudyCardContent from "./StudyCardContent";
@@ -10,6 +10,8 @@ const StudyCard = () => {
   const [isGameActive, setIsGameActive] = useState(false);
   const [activeData, setActiveData] = useState(STUDY_CHAR);
   const [displayedChar, setDisplayedChar] = useState<typeof STUDY_CHAR>([]);
+
+  const isFirstRender = useRef(true);
 
   const shuffleArray = <T,>(array: T[]) => {
     const shuffled = [...array];
@@ -43,12 +45,16 @@ const StudyCard = () => {
   };
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return; //
+    }
+
     const timer = setTimeout(() => {
       performScroll();
     }, 100);
     return () => clearTimeout(timer);
   }, [isGameActive]);
-
   const handleStart = () => {
     const filtered = STUDY_CHAR.filter((char) =>
       selectedRows.includes(char.row),
@@ -59,7 +65,10 @@ const StudyCard = () => {
   };
   return (
     <Container sx={{ padding: "30px 0", background: "rgb(255, 255, 255)" }}>
-      <Box id="scroll-anchor" sx={{ top: 0, left: 0 }} />
+      <Box
+        id="scroll-anchor"
+        sx={{ top: 0, left: 0, scrollMarginTop: "100px" }}
+      />
       {!isGameActive ? (
         <StudySelection
           allRows={uniqueRows}
