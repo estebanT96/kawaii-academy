@@ -10,11 +10,23 @@ const StudyCard = () => {
   const [selectedRows, setSelectedRows] = useState<string[]>([]);
   const [isGameActive, setIsGameActive] = useState(false);
   const [activeData, setActiveData] = useState(STUDY_CHAR);
+  const [displayedChar, setDisplayedChar] = useState<typeof STUDY_CHAR>([]);
 
   const toggleRow = (row: string) => {
-    setSelectedRows((prev) =>
-      prev.includes(row) ? prev.filter((r) => r !== row) : [...prev, row],
-    );
+    const selectedNewChars = STUDY_CHAR.filter((char) => char.row === row);
+    setDisplayedChar(selectedNewChars);
+    console.log("You just clicked row:", row);
+    console.log("Displaying ONLY these characters:", selectedNewChars);
+
+    setSelectedRows((prev) => {
+      const isAlreadySelected = prev.includes(row);
+
+      if (isAlreadySelected) {
+        return prev.filter((r) => r !== row);
+      } else {
+        return [...prev, row];
+      }
+    });
   };
 
   const handleStart = () => {
@@ -34,6 +46,7 @@ const StudyCard = () => {
             selectedRows={selectedRows}
             toggleRow={toggleRow}
             onStart={handleStart}
+            displayedChars={displayedChar}
           />
         ) : (
           <StudyCardContent data={activeData} />

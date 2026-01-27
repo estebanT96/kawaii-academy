@@ -1,9 +1,16 @@
 import { Box, Button, Typography, Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
+type KanaChar = {
+  char: string;
+  romaji: string;
+  row: string;
+};
+
 interface Props {
   allRows: string[];
   selectedRows: string[];
+  displayedChars: KanaChar[];
   toggleRow: (row: string) => void;
   onStart: () => void;
 }
@@ -11,6 +18,7 @@ interface Props {
 const StudySelection = ({
   allRows,
   selectedRows,
+  displayedChars,
   toggleRow,
   onStart,
 }: Props) => {
@@ -35,10 +43,18 @@ const StudySelection = ({
         </Typography>
         <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
           To start learning, go to our{" "}
-          <Link component={RouterLink} to="/learn">
+          <Link
+            component={RouterLink}
+            to="/learn"
+            sx={{ color: "rgb(241, 177, 0)", fontWeight: "600" }}
+          >
             Learn
           </Link>{" "}
-          section!
+          section.
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+          When you feel ready, you can come back to the Study page to quiz your
+          kana skills.
         </Typography>
       </Box>
       <Box width="100%" textAlign="center">
@@ -67,6 +83,28 @@ const StudySelection = ({
       >
         Select Rows to Study
       </Typography>
+      <Box
+        display="flex"
+        alignItems="center"
+        sx={{ flexDirection: { xs: "column", md: "row" } }}
+      >
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+          Row selection:
+        </Typography>
+        <Box display="flex">
+          {displayedChars.map((item) => (
+            <Typography
+              variant="h6"
+              padding="5px"
+              color="rgb(156, 156, 156)"
+              fontWeight="600"
+              sx={{ fontSize: { xs: "14px", md: "16px" } }}
+            >
+              [{item.char}]
+            </Typography>
+          ))}
+        </Box>
+      </Box>
 
       <Box display="flex" gap={3}>
         <Box display="flex" alignItems="center" gap={1}>
@@ -78,7 +116,7 @@ const StudySelection = ({
           />
           <Typography
             variant="body1"
-            sx={{ fontSize: { xs: "16px", md: "18px" } }}
+            sx={{ fontSize: { xs: "14px", md: "18px" } }}
           >
             Hiragana
           </Typography>
@@ -92,7 +130,7 @@ const StudySelection = ({
           />
           <Typography
             variant="body1"
-            sx={{ fontSize: { xs: "16px", md: "18px" } }}
+            sx={{ fontSize: { xs: "14px", md: "18px" } }}
           >
             Katakana
           </Typography>
@@ -107,10 +145,13 @@ const StudySelection = ({
           return (
             <Box
               key={row}
-              onClick={() => toggleRow(row)}
+              onClick={() => {
+                toggleRow(row);
+                console.log(row);
+              }}
               sx={{
                 width: "50px",
-                padding: "4px 4px",
+                padding: "2px 2px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",

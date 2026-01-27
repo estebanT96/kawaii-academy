@@ -275,4 +275,3 @@ export const STUDY_CHAR: KanaChar[] = [
   { char: "ピョ", romaji: "pyo", type: "katakana", row: "k-pi" },
 ];
 
-console.log(STUDY_CHAR);
