@@ -23,8 +23,6 @@ const StudyCard = () => {
   const toggleRow = (row: string) => {
     const selectedNewChars = STUDY_CHAR.filter((char) => char.row === row);
     setDisplayedChar(selectedNewChars);
-    console.log("You just clicked row:", row);
-    console.log("Displaying ONLY these characters:", selectedNewChars);
 
     setSelectedRows((prev) => {
       const isAlreadySelected = prev.includes(row);
@@ -58,7 +56,13 @@ const StudyCard = () => {
           displayedChars={displayedChar}
         />
       ) : (
-        <StudyCardContent data={activeData} />
+        <StudyCardContent
+          data={activeData}
+          onBackToMenu={() => {
+            setIsGameActive(false);
+            window.scrollTo(0, 0); // Optional: Scrolls back to top
+          }}
+        />
       )}
     </Container>
   );

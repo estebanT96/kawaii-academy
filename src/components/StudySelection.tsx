@@ -15,7 +15,6 @@ interface Props {
   onStart: () => void;
 }
 
-
 const StudySelection = ({
   allRows,
   selectedRows,
@@ -60,8 +59,8 @@ const StudySelection = ({
             page.
           </Typography>
           <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
-            When you feel ready, you can come back to the this  page to quiz
-            your kana skills.
+            When you feel ready, you can come back to the this page to quiz your
+            kana skills.
           </Typography>
         </Box>
         <Box textAlign="center">
@@ -195,7 +194,10 @@ const StudySelection = ({
       </Box>
       <Button
         disabled={selectedRows.length === 0}
-        onClick={onStart}
+        onClick={() => {
+          window.scrollTo(0, 0);
+          onStart();
+        }}
         sx={{
           marginTop: 1,
           backgroundColor: "rgb(237, 207, 4)",

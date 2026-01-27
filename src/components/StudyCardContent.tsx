@@ -1,6 +1,7 @@
 import { Box, CardContent, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import RestartButton from "./RestartButton";
+import SelectAgainButton from "./SelectAgainButton";
 
 interface KanaChar {
   char: string;
@@ -11,9 +12,10 @@ interface KanaChar {
 
 interface Props {
   data: KanaChar[];
+  onBackToMenu: () => void;
 }
 
-const StudyCardContent = ({ data }: Props) => {
+const StudyCardContent = ({ data, onBackToMenu }: Props) => {
   const [index, setIndex] = useState(0);
   const [inputVal, setInputVal] = useState("");
 
@@ -35,11 +37,20 @@ const StudyCardContent = ({ data }: Props) => {
 
   if (index >= data.length) {
     return (
-      <CardContent sx={{ textAlign: "center", paddingTop:"30px" }}>
+      <CardContent sx={{ textAlign: "center", paddingTop: "30px" }}>
         <Typography sx={{ fontSize: { xs: "32px", md: "56px" } }}>
           Congratulations!
         </Typography>
-        <RestartButton setIndex={setIndex} />
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          gap={1}
+          sx={{ flexDirection: { xs: "column", md: "row" } }}
+        >
+          <RestartButton setIndex={setIndex} />
+          <SelectAgainButton onBackToMenu={onBackToMenu} />
+        </Box>
       </CardContent>
     );
   }
