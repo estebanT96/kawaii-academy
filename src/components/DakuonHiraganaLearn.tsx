@@ -4,7 +4,6 @@ import {
   DAKUON_HIRAGANA_ROWS,
 } from "../data/filteredHiragana";
 import { useState } from "react";
-import MobileTableCard from "./MobileTableCard";
 import DakuonTableCard from "./DakuonTableCard";
 import DakuonKanaTable from "./DakuonKanaTable";
 
@@ -18,12 +17,6 @@ const DakuonHiraganaLearn = () => {
   };
   return (
     <>
-      <Box display="flex" alignItems="center">
-        <MobileTableCard
-          char={activeItem.character}
-          romaji={activeItem.romaji}
-        />
-      </Box>
       <Box
         sx={{
           display: "flex",

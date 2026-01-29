@@ -6,6 +6,7 @@ import SunnyIcon from "@mui/icons-material/Sunny";
 import links from "../data/links";
 import { Link as RouterLink } from "react-router-dom";
 import { useState } from "react";
+import MobileTableCard from "./MobileTableCard";
 
 const HiraganaLearnSection = () => {
   const [selectedTab, setSelectedTab] = useState("seion");
@@ -106,6 +107,7 @@ const HiraganaLearnSection = () => {
             display="flex"
             flexDirection="column"
             position="relative"
+            width="100%"
             sx={{ paddingTop: { xs: "30px", md: "none" } }}
           >
             <Stack
@@ -114,138 +116,145 @@ const HiraganaLearnSection = () => {
                 position: "relative",
                 marginLeft: "5px",
                 borderBottom: "1px solid rgb(210, 210, 210)",
-                width: "16%",
+                width: "100%",
+                display:'flex',
+                justifyContent:"space-between"
               }}
             >
-              <Box
-                onClick={() => setSelectedTab("seion")}
-                paddingX="5px"
-                paddingTop="3px"
-                paddingBottom={selectedTab === "seion" ? "7px" : "3px"}
-                marginRight="3px"
-                borderBottom={
-                  selectedTab === "seion"
-                    ? "1px transparent "
-                    : "1px solid rgb(183, 183, 183)"
-                }
-                sx={{
-                  position: "absolute",
-                  bottom: "-1px",
-                  left: 0,
-                  backgroundColor:
+              <Box>
+                <Box
+                  onClick={() => setSelectedTab("seion")}
+                  paddingX="5px"
+                  paddingTop="3px"
+                  paddingBottom={selectedTab === "seion" ? "7px" : "3px"}
+                  marginRight="3px"
+                  borderBottom={
                     selectedTab === "seion"
-                      ? "rgb(255, 242, 158)"
-                      : "rgb(237, 207, 4)",
-                  transition: "all ease 200ms",
-                  borderTop:
-                    selectedTab === "seion"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderLeft:
-                    selectedTab === "seion"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderRight:
-                    selectedTab === "seion"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderBottom: "none",
-                  "&:hover": {
-                    cursor: "pointer",
-                    filter: "brightness(1.1)",
-                  },
-                }}
-              >
-                <Typography color="black" fontWeight="500" fontSize="12px">
-                  Seion
-                </Typography>
+                      ? "1px transparent "
+                      : "1px solid rgb(183, 183, 183)"
+                  }
+                  sx={{
+                    position: "absolute",
+                    bottom: "-1px",
+                    left: 0,
+                    backgroundColor:
+                      selectedTab === "seion"
+                        ? "rgb(255, 242, 158)"
+                        : "rgb(237, 207, 4)",
+                    transition: "all ease 200ms",
+                    borderTop:
+                      selectedTab === "seion"
+                        ? "1px solid rgb(237,207,4)"
+                        : "rgb(237, 207, 4)",
+                    borderLeft:
+                      selectedTab === "seion"
+                        ? "1px solid rgb(237,207,4)"
+                        : "rgb(237, 207, 4)",
+                    borderRight:
+                      selectedTab === "seion"
+                        ? "1px solid rgb(237,207,4)"
+                        : "rgb(237, 207, 4)",
+                    borderBottom: "none",
+                    "&:hover": {
+                      cursor: "pointer",
+                      filter: "brightness(1.1)",
+                    },
+                  }}
+                >
+                  <Typography color="black" fontWeight="500" fontSize="12px">
+                    Seion
+                  </Typography>
+                </Box>
+                <Box
+                  onClick={() => setSelectedTab("dakuon")}
+                  paddingX="5px"
+                  paddingTop="3px"
+                  paddingBottom={selectedTab === "dakuon" ? "7px" : "3px"}
+                  marginRight="3px"
+                  borderBottom={
+                    selectedTab === "dakuon"
+                      ? "1px transparent "
+                      : "1px solid rgb(183, 183, 183)"
+                  }
+                  sx={{
+                    position: "absolute",
+                    bottom: "-1px",
+                    left: 50,
+                    backgroundColor:
+                      selectedTab === "dakuon"
+                        ? "rgb(255, 242, 158)"
+                        : "rgb(237, 207, 4)",
+                    transition: "all ease 200ms",
+                    borderTop:
+                      selectedTab === "dakuon"
+                        ? "1px solid rgb(237,207,4)"
+                        : "rgb(237, 207, 4)",
+                    borderLeft:
+                      selectedTab === "dakuon"
+                        ? "1px solid rgb(237,207,4)"
+                        : "rgb(237, 207, 4)",
+                    borderRight:
+                      selectedTab === "dakuon"
+                        ? "1px solid rgb(237,207,4)"
+                        : "rgb(237, 207, 4)",
+                    borderBottom: "none",
+                    "&:hover": {
+                      cursor: "pointer",
+                      filter: "brightness(1.1)",
+                    },
+                  }}
+                >
+                  <Typography color="black" fontWeight="500" fontSize="12px">
+                    Dakuon
+                  </Typography>
+                </Box>
+                <Box
+                  onClick={() => setSelectedTab("yoon")}
+                  paddingX="5px"
+                  paddingTop="3px"
+                  paddingBottom={selectedTab === "yoon" ? "7px" : "3px"}
+                  marginRight="3px"
+                  borderBottom={
+                    selectedTab === "yoon"
+                      ? "1px transparent "
+                      : "1px solid rgb(183, 183, 183)"
+                  }
+                  sx={{
+                    position: "absolute",
+                    bottom: "-1px",
+                    left: 113,
+                    backgroundColor:
+                      selectedTab === "yoon"
+                        ? "rgb(255, 242, 158)"
+                        : "rgb(237, 207, 4)",
+                    transition: "all ease 200ms",
+                    borderTop:
+                      selectedTab === "yoon"
+                        ? "1px solid rgb(237,207,4)"
+                        : "rgb(237, 207, 4)",
+                    borderLeft:
+                      selectedTab === "yoon"
+                        ? "1px solid rgb(237,207,4)"
+                        : "rgb(237, 207, 4)",
+                    borderRight:
+                      selectedTab === "yoon"
+                        ? "1px solid rgb(237,207,4)"
+                        : "rgb(237, 207, 4)",
+                    borderBottom: "none",
+                    "&:hover": {
+                      cursor: "pointer",
+                      filter: "brightness(1.1)",
+                    },
+                  }}
+                >
+                  <Typography color="black" fontWeight="500" fontSize="12px">
+                    Yoon
+                  </Typography>
+                </Box>
               </Box>
-              <Box
-                onClick={() => setSelectedTab("dakuon")}
-                paddingX="5px"
-                paddingTop="3px"
-                paddingBottom={selectedTab === "dakuon" ? "7px" : "3px"}
-                marginRight="3px"
-                borderBottom={
-                  selectedTab === "dakuon"
-                    ? "1px transparent "
-                    : "1px solid rgb(183, 183, 183)"
-                }
-                sx={{
-                  position: "absolute",
-                  bottom: "-1px",
-                  left: 50,
-                  backgroundColor:
-                    selectedTab === "dakuon"
-                      ? "rgb(255, 242, 158)"
-                      : "rgb(237, 207, 4)",
-                  transition: "all ease 200ms",
-                  borderTop:
-                    selectedTab === "dakuon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderLeft:
-                    selectedTab === "dakuon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderRight:
-                    selectedTab === "dakuon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderBottom: "none",
-                  "&:hover": {
-                    cursor: "pointer",
-                    filter: "brightness(1.1)",
-                  },
-                }}
-              >
-                <Typography color="black" fontWeight="500" fontSize="12px">
-                  Dakuon
-                </Typography>
-              </Box>
-              <Box
-                onClick={() => setSelectedTab("yoon")}
-                paddingX="5px"
-                paddingTop="3px"
-                paddingBottom={selectedTab === "yoon" ? "7px" : "3px"}
-                marginRight="3px"
-                borderBottom={
-                  selectedTab === "yoon"
-                    ? "1px transparent "
-                    : "1px solid rgb(183, 183, 183)"
-                }
-                sx={{
-                  position: "absolute",
-                  bottom: "-1px",
-                  left: 113,
-                  backgroundColor:
-                    selectedTab === "yoon"
-                      ? "rgb(255, 242, 158)"
-                      : "rgb(237, 207, 4)",
-                  transition: "all ease 200ms",
-                  borderTop:
-                    selectedTab === "yoon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderLeft:
-                    selectedTab === "yoon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderRight:
-                    selectedTab === "yoon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderBottom: "none",
-                  "&:hover": {
-                    cursor: "pointer",
-                    filter: "brightness(1.1)",
-                  },
-                }}
-              >
-                <Typography color="black" fontWeight="500" fontSize="12px">
-                  Yoon
-                </Typography>
-              </Box>
+               <Box >
+                  <MobileTableCard />
+                </Box>
             </Stack>
             <Box marginBottom="20px" overflow="hidden">
               {selectedTab === "seion" && <SeionHiraganaLearn />}

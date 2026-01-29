@@ -5,7 +5,6 @@ import { seionConsonants, SEION_HIRAGANA_ROWS } from "../data/filteredHiragana";
 import { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { keyframes } from "@mui/system";
-import MobileTableCard from "./MobileTableCard";
 
 const SeionHiraganaLearn = () => {
   const slideLeftRight = keyframes`
@@ -24,12 +23,6 @@ const SeionHiraganaLearn = () => {
   };
   return (
     <>
-      <Box display="flex" alignItems="center" justifyContent="space-between">
-        <MobileTableCard
-          char={activeItem.character}
-          romaji={activeItem.romaji}
-        />
-      </Box>
       <Box
         sx={{
           display: "flex",

@@ -17,7 +17,6 @@ const MobileTableCard = ({ char, romaji }: Props) => {
         background: "rgba(255, 234, 127, 0.79)",
         padding: "2px 5px",
       }}
-      alignItems="center"
     >
       <Typography fontSize="16px" fontWeight="600" marginRight="2px">
         {char}

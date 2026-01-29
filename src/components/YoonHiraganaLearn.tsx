@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import { useState } from "react";
 import TableCard from "./TableCard";
-import MobileTableCard from "./MobileTableCard";
 import YoonKanaTable from "./YoonKanaTable";
 import { YOON_HIRAGANA_ROWS } from "../data/filteredHiragana";
 import { yoonRowHeader } from "../data/filteredKatakana";
@@ -16,12 +15,6 @@ const YoonHiraganaLearn = () => {
 
   return (
     <>
-      <Box display="flex" alignItems="center">
-        <MobileTableCard
-          char={activeItem.character}
-          romaji={activeItem.romaji}
-        />
-      </Box>
       <Box
         sx={{
           display: "flex",
