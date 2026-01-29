@@ -9,6 +9,7 @@ interface Props {
 const YoonCell = ({ character, romaji, onHover }: Props) => {
   return (
     <TableCell
+      align="center"
       sx={{
         fontFamily: "'Poppins', sans-serif",
         transition: "all ease 150ms",

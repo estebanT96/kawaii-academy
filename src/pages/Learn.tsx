@@ -86,8 +86,8 @@ const Learn = () => (
           </Typography>
         </Box>
         <HiraganaLearnSection />
-        <KatakanaLearnSection />
-        <WordLearnSection />
+        {/* <KatakanaLearnSection />
+        <WordLearnSection /> */}
       </Box>
     </LearnContainer>
   </Container>

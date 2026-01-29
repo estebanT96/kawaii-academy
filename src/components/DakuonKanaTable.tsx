@@ -31,10 +31,10 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
       sx={{
         overflowX: { xs: "auto", md: "visible" },
         marginBottom: "25px",
-        width: "100%",
+        width: { xs: "100%", md: "75%" },
       }}
     >
-      <Table size="small">
+      <Table size="small" sx={{ width: "100%", tableLayout: "fixed" }}>
         <TableHead>
           <TableRow>
             {consonants.map((consonant, index) => (

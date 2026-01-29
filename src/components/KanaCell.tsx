@@ -9,6 +9,7 @@ interface Props {
 const KanaCell = ({ character, romaji, onHover }: Props) => {
   return (
     <TableCell
+      align="center"
       sx={{
         transition: "all ease 150ms",
         whiteSpace: "nowrap",

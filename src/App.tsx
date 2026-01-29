@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Learn from "./pages/Learn";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
+
 function App() {
   return (
     <>

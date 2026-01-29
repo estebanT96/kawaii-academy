@@ -5,17 +5,18 @@ interface Props {
   romaji: string;
 }
 
-const TableCard = ({ character, romaji }: Props) => {
+const DakuonTableCard = ({ character, romaji }: Props) => {
   return (
     <Box
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      width="30%"
+      marginRight="30px"
+      width="25%"
       sx={{ display: { xs: "none", sm: "flex" } }}
     >
-      <Typography variant="h1" sx={{ fontSize: { xs: "52px", md: "120px" } }}>
+      <Typography variant="h1" sx={{ fontSize: { sm: "64px", md: "120px" } }}>
         {character}
       </Typography>
       <Typography
@@ -31,4 +32,4 @@ const TableCard = ({ character, romaji }: Props) => {
   );
 };
 
-export default TableCard;
+export default DakuonTableCard;

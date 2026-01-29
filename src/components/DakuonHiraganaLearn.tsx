@@ -1,14 +1,12 @@
-import ScriptDescription from "./ScriptDescription";
-import KanaTable from "./KanaTable";
-import TableCard from "./TableCard";
 import { Box } from "@mui/material";
-import { dakuonHiraganaDesc } from "../data/descriptions";
 import {
   dakuonConsonants,
   DAKUON_HIRAGANA_ROWS,
 } from "../data/filteredHiragana";
 import { useState } from "react";
 import MobileTableCard from "./MobileTableCard";
+import DakuonTableCard from "./DakuonTableCard";
+import DakuonKanaTable from "./DakuonKanaTable";
 
 const DakuonHiraganaLearn = () => {
   const [activeItem, setActiveItem] = useState({
@@ -21,8 +19,10 @@ const DakuonHiraganaLearn = () => {
   return (
     <>
       <Box display="flex" alignItems="center">
-        <ScriptDescription data={[dakuonHiraganaDesc]} />
-        <MobileTableCard char={activeItem.character} romaji={activeItem.romaji} />
+        <MobileTableCard
+          char={activeItem.character}
+          romaji={activeItem.romaji}
+        />
       </Box>
       <Box
         sx={{
@@ -30,16 +30,16 @@ const DakuonHiraganaLearn = () => {
           flexDirection: { xs: "column", md: "row" },
         }}
       >
-        <Box display="flex" justifyContent="space-between" width="100%">
-          <KanaTable
+        <Box display="flex" width="auto">
+          <DakuonKanaTable
             onHover={handleHover}
             consonants={dakuonConsonants}
             rows={DAKUON_HIRAGANA_ROWS}
           />
-          <TableCard
+          <DakuonTableCard
             character={activeItem.character}
             romaji={activeItem.romaji}
-          ></TableCard>
+          ></DakuonTableCard>
         </Box>
       </Box>
     </>
