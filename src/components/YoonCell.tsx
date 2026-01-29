@@ -11,7 +11,6 @@ const YoonCell = ({ character, romaji, onHover }: Props) => {
     <TableCell
       align="center"
       sx={{
-        fontFamily: "'Poppins', sans-serif",
         transition: "all ease 150ms",
         whiteSpace: "nowrap",
         borderBottom: "2px solid rgb(236, 236, 236)",

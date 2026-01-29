@@ -6,8 +6,8 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import YoonCell from "./YoonCell";
 import VowelContainer from "./ui/VowelContainer";
+import KanaCell from "./KanaCell";
 
 interface KanaChar {
   character: string;
@@ -28,7 +28,7 @@ interface Props {
 const YoonKanaTable = ({ consonants, rows, onHover }: Props) => {
   return (
     <>
-      <Box sx={{width:{xs:"100%", md:"80%"}}}>
+      <Box sx={{ width: { xs: "100%", md: "80%" } }}>
         <Table size="small">
           <TableHead>
             <TableRow>
@@ -60,7 +60,7 @@ const YoonKanaTable = ({ consonants, rows, onHover }: Props) => {
                   <VowelContainer>{row.rowSyllable}</VowelContainer>
                 </TableCell>
                 {row.chars.map((data) => (
-                  <YoonCell
+                  <KanaCell
                     key={data.character}
                     character={data.character}
                     romaji={data.romaji}
