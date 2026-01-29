@@ -1,8 +1,7 @@
 import { Box, Container, Link, Typography } from "@mui/material";
 import LearnContainer from "../components/ui/LearnContainer";
 import HiraganaLearnSection from "../components/HiraganaLearnSection";
-import WordLearnSection from "../components/WordLearnSection";
-import KatakanaLearnSection from "../components/KatakanaLearnSection";
+
 import { Link as RouterLink } from "react-router-dom";
 
 const Learn = () => (
