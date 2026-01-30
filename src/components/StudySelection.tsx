@@ -180,13 +180,13 @@ const StudySelection = ({
         </Box>
       </Box>
       <Box display="flex" flexWrap="wrap" justifyContent="center" gap={2}>
-        {allRows.map((row) => {
+        {allRows.map((row, index) => {
           const isSelected = selectedRows.includes(row);
           const baseColor = getColor(row);
 
           return (
             <Box
-              key={row}
+              key={index}
               onClick={() => {
                 toggleRow(row);
                 console.log(row);

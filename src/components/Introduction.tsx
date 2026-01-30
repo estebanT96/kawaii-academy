@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import thinkingKizune from "../assets/thinkingGif.gif";
+import thinkingKizuneWebM from "../assets/thinkingKizuneWebM.webm";
 const Introduction = () => {
   return (
     <Box
@@ -418,8 +418,8 @@ const Introduction = () => {
 
       <Box
         sx={{
-          width: { xs: "60px", md: "80px" },
-          height: { xs: "60px", md: "80px" },
+          width: { xs: "80px", md: "100px" },
+          height: { xs: "80px", md: "100px" },
           overflow: "hidden",
           borderRadius: "10%",
           display: "flex",
@@ -427,19 +427,22 @@ const Introduction = () => {
           alignItems: "center",
           backgroundColor: "#fff",
           marginX: "auto",
-          marginBottom:"15px"
+          marginBottom: "15px",
         }}
       >
-        <Box
-          component="img"
-          src={thinkingKizune}
-          alt="Thinking Kizune"
-          sx={{
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: "100%",
             height: "100%",
-            width: "115%",
             objectFit: "cover",
           }}
-        />
+        >
+          <source src={thinkingKizuneWebM} type="video/webm" />
+        </video>
       </Box>
 
       <Typography

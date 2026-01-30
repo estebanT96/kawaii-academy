@@ -2,7 +2,7 @@ import { Box, CardContent, TextField, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import RestartButton from "./RestartButton";
 import SelectAgainButton from "./SelectAgainButton";
-import logo from "../assets/congratsImg.png";
+import congrats from "../assets/congratsGif.webm";
 
 interface KanaChar {
   char: string;
@@ -59,14 +59,34 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
   if (index >= data.length) {
     return (
       <CardContent >
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          sx={{ height: { xs: "120px", sm: "150px", md: "200px" } }}
+      <Box
+        sx={{
+          width: { xs: "130px", md: "150px" },
+          height: { xs: "130px", md: "150px" },
+          overflow: "hidden",
+          borderRadius: "10%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#fff",
+          marginX: "auto",
+          marginBottom: "15px",
+        }}
+      >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: "105%",
+            height: "105%",
+            objectFit: "cover",
+          }}
         >
-          <img src={logo} alt="" height="100%" />
-        </Box>
+          <source src={congrats} type="video/webm" />
+        </video>
+      </Box>
         <Box
           display="flex"
           alignItems="center"
