@@ -44,15 +44,14 @@ const KatakanaLearnSection = () => {
             <Box
               sx={{
                 borderBottom: "1px solid rgb(210, 210, 210)",
-                width: "16.3%",
+                width: "15%",
               }}
             >
               <Box
                 onClick={() => setSelectedTab("seion")}
                 paddingX="5px"
                 paddingTop="3px"
-                paddingBottom={selectedTab === "seion" ? "2px" : "0"}
-                marginRight="3px"
+                paddingBottom={selectedTab === "seion" ? "1px" : "0px"}
                 borderBottom={
                   selectedTab === "seion"
                     ? "1px transparent "
@@ -67,19 +66,13 @@ const KatakanaLearnSection = () => {
                       ? "rgb(255, 232, 85)"
                       : "rgb(237, 207, 4)",
                   transition: "all ease 100ms",
-                  borderTop:
+                  borderTop: "1px solid rgb(237, 207, 4)",
+                  borderLeft: "1px solid rgb(237, 207, 4)",
+                  borderRight: "1px solid rgb(237, 207, 4)",
+                  borderBottom:
                     selectedTab === "seion"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderLeft:
-                    selectedTab === "seion"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderRight:
-                    selectedTab === "seion"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderBottom: "none",
+                      ? "1px solid transparent"
+                      : "1px solid rgb(209, 209, 209)",
                   "&:hover": {
                     cursor: "pointer",
                     filter: "brightness(1.1)",
@@ -94,8 +87,7 @@ const KatakanaLearnSection = () => {
                 onClick={() => setSelectedTab("dakuon")}
                 paddingX="5px"
                 paddingTop="3px"
-                paddingBottom={selectedTab === "dakuon" ? "2px" : "0"}
-                marginRight="3px"
+                paddingBottom={selectedTab === "dakuon" ? "1px" : "0"}
                 borderBottom={
                   selectedTab === "dakuon"
                     ? "1px transparent "
@@ -104,25 +96,19 @@ const KatakanaLearnSection = () => {
                 sx={{
                   position: "absolute",
                   bottom: 0,
-                  left: 50,
+                  left: 45,
                   backgroundColor:
                     selectedTab === "dakuon"
                       ? "rgb(255, 232, 85)"
                       : "rgb(237, 207, 4)",
                   transition: "all ease 100ms",
-                  borderTop:
+                  borderTop: "1px solid rgb(237, 207, 4)",
+                  borderLeft: "1px solid rgb(237, 207, 4)",
+                  borderRight: "1px solid rgb(237, 207, 4)",
+                  borderBottom:
                     selectedTab === "dakuon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderLeft:
-                    selectedTab === "dakuon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderRight:
-                    selectedTab === "dakuon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderBottom: "none",
+                      ? "1px solid transparent"
+                      : "1px solid rgb(209, 209, 209)",
                   "&:hover": {
                     cursor: "pointer",
                     filter: "brightness(1.1)",
@@ -137,8 +123,7 @@ const KatakanaLearnSection = () => {
                 onClick={() => setSelectedTab("yoon")}
                 paddingX="5px"
                 paddingTop="3px"
-                paddingBottom={selectedTab === "yoon" ? "2px" : "0"}
-                marginRight="3px"
+                paddingBottom={selectedTab === "yoon" ? "1px" : "0"}
                 borderBottom={
                   selectedTab === "yoon"
                     ? "1px transparent "
@@ -147,25 +132,19 @@ const KatakanaLearnSection = () => {
                 sx={{
                   position: "absolute",
                   bottom: 0,
-                  left: 113,
+                  left: 103,
                   backgroundColor:
                     selectedTab === "yoon"
                       ? "rgb(255, 232, 85)"
                       : "rgb(237, 207, 4)",
                   transition: "all ease 100ms",
-                  borderTop:
+                  borderTop: "1px solid rgb(237, 207, 4)",
+                  borderLeft: "1px solid rgb(237, 207, 4)",
+                  borderRight: "1px solid rgb(237, 207, 4)",
+                  borderBottom:
                     selectedTab === "yoon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderLeft:
-                    selectedTab === "yoon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderRight:
-                    selectedTab === "yoon"
-                      ? "1px solid rgb(237,207,4)"
-                      : "rgb(237, 207, 4)",
-                  borderBottom: "none",
+                      ? "1px solid transparent"
+                      : "1px solid rgb(209, 209, 209)",
                   "&:hover": {
                     cursor: "pointer",
                     filter: "brightness(1.1)",
@@ -177,7 +156,7 @@ const KatakanaLearnSection = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box>
+            <Box sx={{ position: "absolute", bottom: 0, right: 0 }}>
               <MobileTableCard
                 char={activeItem.character}
                 romaji={activeItem.romaji}

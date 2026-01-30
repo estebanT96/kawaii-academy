@@ -32,7 +32,7 @@ export const theme = createTheme({
       fontWeight: 700,
       fontSize: "70px",
     },
-    h3: { fontFamily: "'Poppins', sans-serif", fontWeight: 600 },
+    h3: { fontFamily: "'Poppins', sans-serif", fontWeight: 600, fontSize:"35px" },
     h4: {
       fontFamily: "'Noto Sans Japanese', sans-serif",
       fontWeight: 600,
