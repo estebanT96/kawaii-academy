@@ -62,8 +62,7 @@ const StudySelection = ({
             When you feel ready, you can come back to this page to quiz your
             kana skills.
           </Typography>
-        </Box>
-        <Box textAlign="center">
+
           <Typography
             sx={{ fontSize: { xs: "18px", md: "24px" }, marginTop: "10px" }}
             fontWeight="bold"
@@ -72,9 +71,13 @@ const StudySelection = ({
             Already know your Kana?
           </Typography>
           <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-            This is a Flashcard Game. You will see a character (like あ) and
-            type its sound (like "a"). The game ends until you have correctly
-            answered the symbol reading.
+            This is a Flashcard Game.
+          </Typography>
+          <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+            You will see a character (like あ) and type its sound (like "a").
+          </Typography>
+          <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+            The game ends until you have correctly answered the symbol reading.
           </Typography>
           <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
             Choose specific rows below to create a custom randomized quiz.{" "}

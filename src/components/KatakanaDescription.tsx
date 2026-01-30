@@ -27,9 +27,9 @@ const KatakanaDescription = () => {
       <Box sx={{ marginBottom: { xs: "10px", md: "30px" } }}>
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           <strong>Katakana</strong> is primarily used for foreign loanwords
-          (like 'coffee' or 'computer'), foreign names, and onomatopoeia (sound
-          effects). Katakana holds the exact same sounds as Hiragana but uses
-          sharper, more angular characters.
+          foreign names, and onomatopoeia, just as we mentioned in the
+          introduction. Katakana holds the exact same sounds as Hiragana but
+          uses sharper, more angular characters.
         </Typography>
         <List>
           <ListItem>
@@ -80,6 +80,16 @@ const KatakanaDescription = () => {
           <strong>Pro Tip: </strong>
           You will see Katakana everywhere on restaurant menus (burgers, pasta)
           and technology (smartphone, internet)!
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+          <strong>Quick challenge: </strong>
+          Try to figure out how to write the following words!
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+          <strong>1.</strong> Icecream <span style={{color:"red"}}> [ai∘su∘ku∘ri∘mu]</span>
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+          <strong>2.</strong> Pizza <span style={{color:"red"}}>[pi∘za]</span>
         </Typography>
       </Box>
     </>

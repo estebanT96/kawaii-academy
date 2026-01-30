@@ -10,7 +10,7 @@ const Introduction = () => {
       sx={{ marginBottom: { xs: "30px", md: "50px" } }}
     >
       <Typography
-        variant="h3"
+        variant="h3"            
         sx={{
           textDecoration: "underline",
           marginRight: "20px",
@@ -421,7 +421,7 @@ const Introduction = () => {
         sx={{ fontSize: { xs: "14px", md: "16px" } }}
       >
         <strong>Hiragana:</strong> The 46 primary sounds of Japanese, its
-        calligraphy and symbology is derived of more complex symbols (Kanji),
+        calligraphy and symbology are derived of more complex symbols (Kanji),
         which were later converted into conceptual and mono-syllabic symbols.
       </Typography>
 
@@ -435,15 +435,8 @@ const Introduction = () => {
         sharper, more angular characters.{" "}
       </Typography>
       <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-        Below, you can find the tables for Hiragana and Katakana
+        Below, you can find the tables and explanations for Hiragana and Katakana
         characters.{" "}
-      </Typography>
-      <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-        Select a tab to switch between types (seion, dakuon and yoon), so you
-        can get familiarized with every symbol.
-      </Typography>
-      <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-        That is all you need to know for now, you are ready to start learning!
       </Typography>
       <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}></Typography>
     </Box>
