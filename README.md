@@ -24,13 +24,17 @@
 - **Routing:** React Router DOM v6
 - **Deployment:** [https://vercel.com/estebans-projects-826585b6/kawaii-academy]
 
-##  Screenshots
+## Screenshots
 
-| **Study Selection**       |  **Character Table Interface** | **Game Interface **|
-| :-----------------------: | :----------------------------: | :-------------------------:|
-| <img src="./docs/Screenshot 2026-01-30 at 4.12.07 PM.png" width="300" /> | <img src="./docs/Screenshot 2026-01-30 at 4.12.28 PM.png" width="300" /> |<img src="./docs/Screenshot 2026-01-30 at 4.22.07 PM.png" width="300" />|
+|                                                          **Study Selection**                                                          |                                                     **Character Table Interface**                                                     |                           **Game Interface **                            |
+| :-----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------: |
+| <a href="./docs/Screenshot 2026-01-30 at 4.12.07 PM.png"><img src="./docs/Screenshot 2026-01-30 at 4.12.07 PM.png" width="300" /></a> | <a href="./docs/Screenshot 2026-01-30 at 4.12.28 PM.png"><img src="./docs/Screenshot 2026-01-30 at 4.12.28 PM.png" width="300" /></a> | <a href="./docs/Screenshot 2026-01-30 at 4.22.07 PM.png"><img src="./docs/Screenshot 2026-01-30 at 4.22.07 PM.png" width="300" /></a> |
 
-##  Installation & Setup
+|                       **Mobile Study Selection **                        |                  **Mobile Character Table Interface **                   |                       ** Mobile Game Interface **                        |
+| :----------------------------------------------------------------------: | :----------------------------------------------------------------------: | :----------------------------------------------------------------------: |
+| <a href="./docs/Screenshot 2026-01-30 at 4.27.27 PM.png"><img src="./docs/Screenshot 2026-01-30 at 4.27.27 PM.png" width="300" /></a> | <a href="./docs/Screenshot 2026-01-30 at 4.28.08 PM.png"><img src="./docs/Screenshot 2026-01-30 at 4.28.08 PM.png" width="300" /></a> | <a href="./docs/Screenshot 2026-01-30 at 4.27.38 PM.png"> <img src="./docs/Screenshot 2026-01-30 at 4.27.38 PM.png" width="300" /></a> |
+
+## Installation & Setup
 
 Clone the repository and install the dependencies to run it locally.
 
@@ -47,6 +51,8 @@ npm install
 # 4. Start the development server
 npm run dev
 ```
+
 ## Credits & Assets
+
 - **Music:** "Boogie" by Pecan Pie via [Uppbeat](https://uppbeat.io/t/pecan-pie/boogie) (License: ZZAOYODV5BDGZBFS).
 - **Illustrations:** Custom AI-generated assets (Kizune Character).
