@@ -30,7 +30,7 @@ const WordLearnSection = () => {
           Word Glossary
         </Typography>
         <Typography
-          sx={{ fontSize: { xs: "12px", md: "14px" }, paddingTop: "10px" }}
+          sx={{ fontSize: { xs: "14px", md: "16px" }, paddingTop: "10px" }}
         >
           Practice your hiragana and katakana reading skills with the following
           words.

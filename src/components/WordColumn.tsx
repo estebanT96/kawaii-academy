@@ -83,7 +83,7 @@ const WordColumn = ({ headers, words }: Props) => {
                 <Typography
                   variant="h5"
                   sx={{
-                    fontSize: { xs: "14px", md: "24px" },
+                    fontSize: { xs: "16px", md: "24px" },
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -93,7 +93,6 @@ const WordColumn = ({ headers, words }: Props) => {
               <TableCell
                 sx={{
                   border: "1px solid rgb(224, 224, 224)",
-                  fontFamily: "'Poppins', sans-serif",
                   transition: "all ease 150ms",
                 }}
               >
@@ -101,7 +100,7 @@ const WordColumn = ({ headers, words }: Props) => {
                   className="romaji-text"
                   sx={{
                     fontFamily: "'Poppins', sans-serif",
-                    fontSize: { xs: "12px", md: "24px" },
+                    fontSize: { xs: "16px", md: "24px" },
                     transition: "all ease 200ms",
                     color: "rgb(163, 163, 163)",
                     fontWeight: "500",

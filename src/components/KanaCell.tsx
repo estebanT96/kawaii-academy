@@ -26,7 +26,7 @@ const KanaCell = ({ character, romaji, onHover, mobileActiveHover }: Props) => {
       key={character}
     >
       <Typography
-        sx={{ fontWeight: { xs: 600 }, fontSize: { xs: "16px", md: "24px" } }}
+        sx={{ fontWeight: { xs: 600 }, fontSize: { xs: "18px", md: "24px" } }}
       >
         {character}
       </Typography>

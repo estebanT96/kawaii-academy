@@ -25,7 +25,7 @@ const KatakanaDescription = () => {
         </Typography>
       </Box>
       <Box sx={{ marginBottom: { xs: "10px", md: "30px" } }}>
-        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           <strong>Katakana</strong> is primarily used for foreign loanwords
           (like 'coffee' or 'computer'), foreign names, and onomatopoeia (sound
           effects). It represents the exact same sounds as Hiragana but uses
@@ -40,7 +40,7 @@ const KatakanaDescription = () => {
                 color: "rgb(255, 79, 79)",
               }}
             />{" "}
-            <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+            <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
               <strong>Seion (Basic Sounds): </strong>
               The 46 standard characters. Unlike Hiragana's curvy strokes, these
               have sharp, straight lines."(e.g., ア, カ, サ).
@@ -54,7 +54,7 @@ const KatakanaDescription = () => {
                 color: "rgb(255, 79, 79)",
               }}
             />
-            <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+            <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
               <strong>Dakuon (Voiced Sounds): </strong>
               Katakana characters with two dots (゛) or a circle (゜) to create
               voiced sounds (e.g., カ "ka" becomes ガ "ga").
@@ -68,7 +68,7 @@ const KatakanaDescription = () => {
                 color: "rgb(255, 79, 79)",
               }}
             />
-            <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+            <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
               <strong>Yoon (Combo Sounds): </strong>A combination of a
               Characters combined with a small ya, yu, or yo to create blended
               sounds, often used to mimic foreign pronunciations (e.g., キャ
@@ -76,7 +76,7 @@ const KatakanaDescription = () => {
             </Typography>
           </ListItem>
         </List>
-        <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           <strong>Pro Tip: </strong>
           You will see Katakana everywhere on restaurant menus (burgers, pasta)
           and technology (smartphone, internet)!"

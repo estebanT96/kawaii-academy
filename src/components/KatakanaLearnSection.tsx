@@ -63,7 +63,7 @@ const KatakanaLearnSection = () => {
                   left: 0,
                   backgroundColor:
                     selectedTab === "seion"
-                      ? "rgb(255, 232, 85)"
+                      ? "rgb(244, 211, 0)"
                       : "rgb(237, 207, 4)",
                   transition: "all ease 100ms",
                   borderTop: "1px solid rgb(237, 207, 4)",
@@ -79,7 +79,7 @@ const KatakanaLearnSection = () => {
                   },
                 }}
               >
-                <Typography color="black" fontWeight="500" fontSize="12px">
+                <Typography color="black" fontWeight="500" fontSize="14px">
                   Seion
                 </Typography>
               </Box>
@@ -96,10 +96,10 @@ const KatakanaLearnSection = () => {
                 sx={{
                   position: "absolute",
                   bottom: 0,
-                  left: 45,
+                  left: 51,
                   backgroundColor:
                     selectedTab === "dakuon"
-                      ? "rgb(255, 232, 85)"
+                      ? "rgb(244, 211, 0)"
                       : "rgb(237, 207, 4)",
                   transition: "all ease 100ms",
                   borderTop: "1px solid rgb(237, 207, 4)",
@@ -115,7 +115,7 @@ const KatakanaLearnSection = () => {
                   },
                 }}
               >
-                <Typography color="black" fontWeight="500" fontSize="12px">
+                <Typography color="black" fontWeight="500" fontSize="14px">
                   Dakuon
                 </Typography>
               </Box>
@@ -132,10 +132,10 @@ const KatakanaLearnSection = () => {
                 sx={{
                   position: "absolute",
                   bottom: 0,
-                  left: 103,
+                  left: 118,
                   backgroundColor:
                     selectedTab === "yoon"
-                      ? "rgb(255, 232, 85)"
+                      ? "rgb(244, 211, 0)"
                       : "rgb(237, 207, 4)",
                   transition: "all ease 100ms",
                   borderTop: "1px solid rgb(237, 207, 4)",
@@ -151,7 +151,7 @@ const KatakanaLearnSection = () => {
                   },
                 }}
               >
-                <Typography color="black" fontWeight="500" fontSize="12px">
+                <Typography color="black" fontWeight="500" fontSize="14px">
                   Yoon
                 </Typography>
               </Box>

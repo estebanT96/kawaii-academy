@@ -44,7 +44,7 @@ const YoonKanaTable = ({
                   key={item}
                   sx={{
                     borderBottom: "2px solid rgb(205, 205, 205)",
-                    fontSize: { xs: "16px", md: "20px" },
+                    fontSize: { xs: "18px", md: "20px" },
                     color: "rgb(62, 110, 255)",
                   }}
                 >
@@ -59,7 +59,7 @@ const YoonKanaTable = ({
                 <TableCell
                   sx={{
                     borderBottom: "2px solid rgb(236, 236, 236)",
-                    fontSize: { xs: "16px", md: "20px" },
+                    fontSize: { xs: "18px", md: "20px" },
                     color: "rgb(255, 63, 63)",
                   }}
                 >

@@ -12,7 +12,7 @@ const GiveItAShot = () => {
       >
         <Typography
           sx={{
-            fontSize: { xs: "12px", md: "14px" },
+            fontSize: { xs: "14px", md: "16px" },
             marginRight: { xs: "0", md: "10px" },
           }}
         >

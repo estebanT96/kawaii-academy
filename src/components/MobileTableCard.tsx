@@ -18,10 +18,10 @@ const MobileTableCard = ({ char, romaji }: Props) => {
         padding: "2px 5px",
       }}
     >
-      <Typography fontSize="16px" fontWeight="600" marginRight="2px">
+      <Typography fontSize="18px" fontWeight="600" marginRight="2px">
         {char}
       </Typography>
-      <Typography color="rgb(255, 67, 67)" fontWeight="600" fontSize="10px">
+      <Typography color="rgb(255, 67, 67)" fontWeight="600" fontSize="12px">
         [{romaji ? romaji : "select kana"}]
       </Typography>
     </Box>
