@@ -7,6 +7,7 @@ const NavBarLinks = () => {
       <Stack
         direction="row"
         justifyContent="space-between"
+        alignItems="center"
         sx={{ display: { xs: "none", md: "flex" } }}
       >
         {links.map((link) => (
@@ -19,7 +20,7 @@ const NavBarLinks = () => {
             <Box>
               <Box
                 padding="5px 25px"
-                marginRight="20px"
+                marginX="10px"
                 borderRadius="5px"
                 sx={{
                   backgroundColor: link.color,

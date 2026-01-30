@@ -3,11 +3,11 @@ export default [
     id: 0,
     tag: "Learn",
     path: "/learn",
-    color: "transparent",
-    border: "none",
-    boxShadow: "none",
+    color: "rgb(237, 207, 4)",
+    border: "1px solid black",
+    boxShadow: "2px 2px 0px black",
     "&:hover": {
-      boxShadow: "none",
+      boxShadow: "3px 3px 0px black",
     },
   },
   {

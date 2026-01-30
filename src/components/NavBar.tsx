@@ -2,6 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import logo from "../assets/logoFace.png";
 import NavBarLinks from "./NavBarLinks";
 import MobileNavLinks from "./MobileNavLinks";
+import BackgroundMusic from "./BackgroundMusic";
 
 const NavBar = () => {
   return (
@@ -32,7 +33,13 @@ const NavBar = () => {
             }}
           >
             <img src={logo} alt="" height="100%" />
-            <Box display="flex" flexDirection="column" alignItems="flex-start" marginLeft="5px" color="white">
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="flex-start"
+              marginLeft="5px"
+              color="white"
+            >
               <Typography fontWeight="800" fontSize="16px" marginBottom="-7px">
                 Kawaii Academy
               </Typography>
@@ -41,7 +48,10 @@ const NavBar = () => {
               </Typography>
             </Box>
           </Box>
-          <Box height="100%" display={{ xs: "none", sm: "none", md: "block" }}>
+          <Box height="100%" display={{ xs: "none", sm: "none", md: "flex" }}>
+            <Box marginRight="10px">
+              <BackgroundMusic />
+            </Box>
             <NavBarLinks />
           </Box>
           <MobileNavLinks />
