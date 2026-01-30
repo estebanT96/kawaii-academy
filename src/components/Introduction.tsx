@@ -144,20 +144,33 @@ const Introduction = () => {
         </span>
       </Typography>
       <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-        There are 5 vowels in the Japanese language{" "}
+        There are 5 vowels in the Japanese language:{" "}
+      </Typography>
+      <Typography margin="0 auto" sx={{ fontSize: { xs: "14px", md: "16px" } }}>
         <strong style={{ fontWeight: "600", color: "rgb(255, 62, 62)" }}>
           {" "}
           [a, i, u, e, o]{" "}
         </strong>{" "}
-        and 15 main consonants{" "}
+      </Typography>
+      <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+        And 15 main consonants{" "}
+      </Typography>
+      <Typography
+        marginBottom="10px"
+        marginX="auto"
+        sx={{ fontSize: { xs: "14px", md: "16px" } }}
+      >
         <strong style={{ fontWeight: "600", color: "rgb(8, 107, 255)" }}>
           [k, s, t, n, h, m, y, r, w, g, z, d, b, p]
         </strong>
-        ; "n" is the only consonant that has a symbol for itself.
       </Typography>
       <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-        Also, each vowel has its own hiragana and katakana character, but for
-        consonants, you make consonant + vowel combinations.
+        The letter "n" is the only consonant that has a symbol for itself [ん]
+        (look for it in the seion kana tables).
+      </Typography>
+      <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+        Also, each vowel has its own hiragana and katakana character, but
+        consonants are always accompanied by a vowel (except for ん).
       </Typography>
       <Typography
         marginTop="10px"
@@ -263,10 +276,9 @@ const Introduction = () => {
       >
         In the example above, you can visualize how each hiragana symbol looks
         when you combine the [k] consonant with every vowel. The same concept
-        applies to Katakana, symbols represent the exact same sounds as
-        hiragana, but Katakana uses sharper and more angular characters.
+        applies to Katakana; symbols represent the exact same sounds as
+        hiragana, but the main visible difference lies in how they look.
       </Typography>
-
       <Typography
         fontWeight="700"
         marginBottom="10px"
@@ -275,14 +287,22 @@ const Introduction = () => {
         Before we move on, you might be wondering what the difference between
         Hiragana and Katakana is...
       </Typography>
-      <Typography
-        marginBottom="5px"
-        sx={{ fontSize: { xs: "14px", md: "16px" } }}
-      >
+      <Box marginBottom="5px" sx={{ fontSize: { xs: "14px", md: "16px" } }}>
         <strong>Hiragana:</strong> The 46 primary sounds of Japanese, its
         calligraphy and symbology is derived of more complex symbols (Kanji) and
-        transformed into a syllabic symbol.{" "}
-      </Typography>
+        they were transformed into a conceptual and mono-syllabic symbol. There
+        are some specific cases where you can combine characters to create more
+        complex sounds:
+        <Typography
+          margin="0 auto"
+          sx={{ fontSize: { xs: "14px", md: "16px" } }}
+        >
+          <strong style={{ fontWeight: "600", color: "rgb(255, 62, 62)" }}>
+            {" "}
+            [kya, kyu, kyo, sha, shu, sho]{" "}
+          </strong>{" "}
+        </Typography>
+      </Box>
       <Typography
         marginBottom="20px"
         sx={{ fontSize: { xs: "14px", md: "16px" } }}

@@ -5,6 +5,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
 import VowelContainer from "./ui/VowelContainer";
 import KanaCell from "./KanaCell";
@@ -78,6 +79,21 @@ const YoonKanaTable = ({
             ))}
           </TableBody>
         </Table>
+        <Typography
+          sx={{ fontSize: { xs: "14px", md: "16px" }, marginTop: "10px" }}
+        >
+          Yoon characters are the result of a "pair-up" between two syllabic
+          symbols, and should only be combined with "ya", "yu" and "yo".
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+          The first symbol you see in the yoon table, is a combination of:{" "}
+          <strong>ki + ya </strong> that results in <strong>"kya".</strong>
+        </Typography>
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+          As you can see, "ya" kana is slightly smaller than "ki", this will
+          always apply when working with yoon kana. So keep an eye out for these
+          use cases!
+        </Typography>
       </Box>
     </>
   );
