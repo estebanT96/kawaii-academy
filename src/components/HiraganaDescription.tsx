@@ -39,15 +39,20 @@ const HiraganaDescription = () => {
           Take a look at the following words:{" "}
         </Typography>
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-          <strong>1. a∘ri∘ga∘to∘u:</strong> Notice how this word ends with a
-          "u"? This is what creates the long "o" sound.
+          <strong style={{ color: "rgb(8, 107, 255)" }}>
+            1. a∘ri∘ga∘to∘u:
+          </strong>{" "}
+          Notice how this word ends with a "u"? This is what creates the long
+          "o" sound.
         </Typography>
         <Typography
           sx={{ fontSize: { xs: "14px", md: "16px" }, marginBottom: "10px" }}
         >
-          <strong>2. o∘o∘ki∘i [big]:</strong> This is an adjective, it means
-          big; this word also contains a long "o", in this case it is made up of
-          two "o" characters.
+          <strong style={{ color: "rgb(8, 107, 255)" }}>
+            2. o∘o∘ki∘i [big]:
+          </strong>{" "}
+          This is an adjective, it means big; this word also contains a long
+          "o", in this case it is made up of two "o" characters.
         </Typography>
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           <strong>
@@ -78,16 +83,21 @@ const HiraganaDescription = () => {
           Take a look at the following words:{" "}
         </Typography>
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-          <strong>1. se∘n∘se∘i [teacher]:</strong> Notice how this word ends
-          with an "i"? Even though it is written as an "i", it combines with the
-          previous syllable to create the long "e" sound.
+          <strong style={{ color: "rgb(8, 107, 255)" }}>
+            1. se∘n∘se∘i [teacher]:
+          </strong>
+          Notice how this word ends with an "i"? Even though it is written as an
+          "i", it combines with the previous syllable to create the long "e"
+          sound.
         </Typography>
         <Typography
           sx={{ fontSize: { xs: "14px", md: "16px" }, marginBottom: "10px" }}
         >
-          <strong>2. o∘ne∘e∘sa∘n [older sister]:</strong> This word also
-          contains a long "e"; in this case, it is made up of two "e"
-          characters. two "o" characters.
+          <strong style={{ color: "rgb(8, 107, 255)" }}>
+            2. o∘ne∘e∘sa∘n [older sister]:
+          </strong>{" "}
+          This word also contains a long "e"; in this case, it is made up of two
+          "e" characters.
         </Typography>
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           <strong>

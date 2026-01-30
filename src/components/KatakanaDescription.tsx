@@ -85,11 +85,23 @@ const KatakanaDescription = () => {
           <strong>Quick challenge: </strong>
           Try to figure out how to write the following words!
         </Typography>
-        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-          <strong>1.</strong> Icecream <span style={{color:"red"}}> [ai∘su∘ku∘ri∘mu]</span>
+        <Typography
+          sx={{
+            fontSize: { xs: "14px", md: "16px" },
+            color: "rgb(255, 62, 62)",
+          }}
+        >
+          <strong>1. Icecream </strong>
+          <span style={{ color: "red" }}> [ai∘su∘ku∘ri∘mu]</span>
         </Typography>
-        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-          <strong>2.</strong> Pizza <span style={{color:"red"}}>[pi∘za]</span>
+        <Typography
+          sx={{
+            fontSize: { xs: "14px", md: "16px" },
+            color: "rgb(255, 62, 62)",
+          }}
+        >
+          <strong>2. Pizza </strong>
+          <span style={{ color: "red" }}> [pi∘za]</span>
         </Typography>
       </Box>
     </>
