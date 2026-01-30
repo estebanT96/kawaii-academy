@@ -1,8 +1,10 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Link, Stack, Typography } from "@mui/material";
 import logo from "../assets/logoFace.png";
 import NavBarLinks from "./NavBarLinks";
 import MobileNavLinks from "./MobileNavLinks";
 import BackgroundMusic from "./BackgroundMusic";
+import links from "../data/links";
+import { Link as RouterLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -25,29 +27,42 @@ const NavBar = () => {
             margin: "0 auto",
           }}
         >
-          <Box
-            display="flex"
-            alignItems="center"
-            sx={{
-              height: { xs: "48px", md: "54px" },
-            }}
+          <Link
+            key={links[1].id}
+            component={RouterLink}
+            underline="none"
+            to={links[1].path}
           >
-            <img src={logo} alt="" height="100%" />
             <Box
               display="flex"
-              flexDirection="column"
-              alignItems="flex-start"
-              marginLeft="5px"
-              color="white"
+              alignItems="center"
+              sx={{
+                height: { xs: "48px", md: "54px" },
+              }}
             >
-              <Typography fontWeight="800" fontSize="16px" marginBottom="-7px">
-                Kawaii Academy
-              </Typography>
-              <Typography fontSize="12px">
-                Learn Japanese the fun way.
-              </Typography>
+              <img src={logo} alt="" height="100%" />
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="flex-start"
+                marginLeft="5px"
+                color="white"
+              >
+                <Typography
+                  fontWeight="800"
+                  sx={{
+                    fontSize: { xs: "12px", sm: "16px" },
+                    marginBottom: { xs: "-3px", sm: "-7px" },
+                  }}
+                >
+                  Kawaii Academy
+                </Typography>
+                <Typography sx={{ fontSize: { xs: "9px", sm: "12px" } }}>
+                  Learn Japanese the fun way.
+                </Typography>
+              </Box>
             </Box>
-          </Box>
+          </Link>
           <Box height="100%" display={{ xs: "none", sm: "none", md: "flex" }}>
             <Box marginRight="10px">
               <BackgroundMusic />

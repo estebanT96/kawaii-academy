@@ -2,6 +2,8 @@ import { Box, Container, Typography, Link, Stack } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import logo from "../assets/logoFace.png";
+import links from "../data/links";
+import { Link as RouterLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -12,6 +14,7 @@ const Footer = () => {
         color: "white",
         marginTop: "auto",
         paddingY: { xs: "15px", md: "20px" },
+        height: "auto",
         borderTop: "1px solid rgb(255, 221, 0)",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
@@ -28,11 +31,11 @@ const Footer = () => {
             flexDirection: { xs: "column", md: "row" },
           }}
         >
-          <Box
-            display="flex"
-            sx={{
-              alignItems: { xs: "center", md: "center" },
-            }}
+          <Link
+            key={links[1].id}
+            component={RouterLink}
+            underline="none"
+            to={links[1].path}
           >
             <Box
               display="flex"
@@ -47,24 +50,59 @@ const Footer = () => {
                 flexDirection="column"
                 alignItems="flex-start"
                 marginLeft="5px"
+                color="white"
               >
                 <Typography
                   fontWeight="800"
-                  fontSize="16px"
-                  marginBottom="-7px"
+                  sx={{
+                    fontSize: "16px",
+                    marginBottom: "-7px",
+                  }}
                 >
                   Kawaii Academy
                 </Typography>
-                <Typography fontSize="12px">
+                <Typography sx={{ fontSize: "12px" }}>
                   Learn Japanese the fun way.
                 </Typography>
               </Box>
             </Box>
+          </Link>
+          <Box>
+            <Typography
+              variant="caption"
+              display="block"
+              sx={{ color: "rgb(232, 232, 232)" }}
+            >
+              © 2026 Kawaii Academy. All rights reserved.
+            </Typography>
           </Box>
-          <Typography variant="caption" display="block" sx={{ opacity: 0.6 }}>
-            © 2026 Kawaii Academy. All rights reserved.
-          </Typography>
-
+          <Box display="flex" flexDirection="column">
+            <Typography
+              variant="caption"
+              sx={{ fontSize: "10px", color: "rgb(232, 232, 232)" }}
+            >
+              Music from #Uppbeat (free for Creators!):
+            </Typography>
+            <Typography
+              variant="caption"
+              sx={{ fontSize: "10px", color: "rgb(232, 232, 232)" }}
+            >
+              <Link
+                href="https://uppbeat.io/t/pecan-pie/boogie"
+                target="_blank"
+                rel="noopener"
+                sx={{
+                  ml: 1,
+                  color: "rgb(232, 232, 232)",
+                  textDecoration: "none",
+                }}
+              >
+                https://uppbeat.io/t/pecan-pie/boogie
+              </Link>
+              <br />
+              License code: **ZZAOYODV5BDGZBFS**
+            </Typography>
+          </Box>
           <Box textAlign={{ xs: "center", md: "right" }}>
             <Typography
               variant="body2"
