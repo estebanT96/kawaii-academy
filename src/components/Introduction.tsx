@@ -7,7 +7,7 @@ const Introduction = () => {
       display="flex"
       flexDirection="column"
       justifyContent="center"
-      sx={{ marginBottom: "20px" }}
+      sx={{     marginBottom:{xs:"30px", md:"50px"}}}
     >
       <Typography
         variant="h3"
@@ -169,8 +169,8 @@ const Introduction = () => {
         (look for it in the seion kana tables).
       </Typography>
       <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-        Each vowel has its own hiragana and katakana character, but
-        consonants are always accompanied by a vowel (except for ん).
+        Each vowel has its own hiragana and katakana character, but consonants
+        are always accompanied by a vowel (except for ん).
       </Typography>
       <Typography
         marginTop="10px"
@@ -181,16 +181,16 @@ const Introduction = () => {
       <Box display="flex" sx={{ flexDirection: { xs: "column", md: "row" } }}>
         <Box
           margin="0 auto"
-          marginY="30px"
+          marginTop="20px"
           display="flex"
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
         >
           <Typography
-            variant="h5"
+            variant="h3"
             sx={{
-              fontSize: { xs: "22px", md: "30px" },
+              fontSize: { xs: "26px", md: "30px" },
             }}
             textAlign="center"
             marginBottom="10px"
@@ -202,17 +202,17 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               a
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
-              あ [a]
+              あ
             </Typography>
           </Box>
           <Box
@@ -220,17 +220,17 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               i
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
-              い [i]
+              い
             </Typography>
           </Box>
           <Box
@@ -238,17 +238,17 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               u
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
-              う [u]
+              う
             </Typography>
           </Box>
           <Box
@@ -256,17 +256,17 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "28px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               e
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
-              え [e]
+              え
             </Typography>
           </Box>
           <Box
@@ -274,17 +274,17 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               o
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
-              お [o]
+              お
             </Typography>
           </Box>
         </Box>
@@ -297,9 +297,9 @@ const Introduction = () => {
           alignItems="center"
         >
           <Typography
-            variant="h5"
+            variant="h3"
             sx={{
-              fontSize: { xs: "22px", md: "30px" },
+              fontSize: { xs: "26px", md: "30px" },
             }}
             textAlign="center"
             marginBottom="10px"
@@ -311,14 +311,14 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               k + a
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
               か [ka]
@@ -329,14 +329,14 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               k + i
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
               き [ki]
@@ -347,14 +347,14 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               k + u
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
               く [ku]
@@ -365,14 +365,14 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               k + e
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
               け [ke]
@@ -383,14 +383,14 @@ const Introduction = () => {
           >
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
             >
               k + o
             </Typography>
             <ArrowRightAltIcon fontSize="large" />
             <Typography
               variant="h3"
-              sx={{ fontSize: { xs: "22px", md: "26px" } }}
+              sx={{ fontSize: { xs: "28px", md: "36px" } }}
               color="rgb(255, 62, 62)"
             >
               こ [ko]

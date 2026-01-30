@@ -20,7 +20,11 @@ const KatakanaLearnSection = () => {
   };
 
   return (
-    <Box marginTop="30px" display="flex" justifyContent="space-between">
+    <Box
+      display="flex"
+      justifyContent="space-between"
+      sx={{ marginTop: { xs: "30px", md: "50px" } }}
+    >
       <Box width="100%" sx={{ minWidth: 0 }}>
         <KatakanaDescription />
         <Box

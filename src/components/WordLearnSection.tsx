@@ -11,12 +11,12 @@ import GiveItAShot from "./GiveItAShot";
 const WordLearnSection = () => {
   return (
     <Box
-      marginTop="30px"
       display="flex"
       flexDirection="column"
       position="relative"
       sx={{
         backgroundColor: "rgb(255, 255, 255)",
+        marginTop:{xs:"30px", md:"50px"}
       }}
     >
       <Box marginBottom="10px">
