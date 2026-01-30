@@ -7,7 +7,7 @@ const Introduction = () => {
       display="flex"
       flexDirection="column"
       justifyContent="center"
-      sx={{     marginBottom:{xs:"30px", md:"50px"}}}
+      sx={{ marginBottom: { xs: "30px", md: "50px" } }}
     >
       <Typography
         variant="h3"
@@ -402,8 +402,8 @@ const Introduction = () => {
         marginBottom="20px"
         sx={{ fontSize: { xs: "14px", md: "16px" } }}
       >
-        In the example above, you can visualize how each hiragana symbol looks
-        when you combine the [k] consonant with every vowel. The same concept
+        In the examples above, you can visualize each vowel hiragana, and the
+        combination of the [k] consonant with every vowel. The same concept
         applies to Katakana, where symbols represent the exact same sounds as
         hiragana, but the main visible difference lies in how they look.
       </Typography>
