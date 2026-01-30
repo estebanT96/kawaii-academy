@@ -23,9 +23,10 @@ interface Props {
   consonants: string[];
   rows: Row[];
   onHover: (character: string, romaji: string) => void;
+  mobileActiveHover: (character: string, romaji: string) => void;
 }
 
-const KanaTable = ({ consonants, rows, onHover }: Props) => {
+const KanaTable = ({ consonants, rows, onHover, mobileActiveHover }: Props) => {
   return (
     <Box
       sx={{
@@ -75,6 +76,7 @@ const KanaTable = ({ consonants, rows, onHover }: Props) => {
                   character={data.character}
                   romaji={data.romaji}
                   onHover={onHover}
+                  mobileActiveHover={mobileActiveHover}
                 ></KanaCell>
               ))}
             </TableRow>

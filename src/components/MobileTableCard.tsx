@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 
-
 interface Props {
   char: string;
   romaji: string;
@@ -11,6 +10,7 @@ const MobileTableCard = ({ char, romaji }: Props) => {
     <Box
       sx={{
         display: { xs: "flex", sm: "none" },
+        alignItems: "center",
         border: "1px solid rgb(0, 0, 0)",
         borderRadius: "5px",
         boxShadow: "2px 2px 0px black",

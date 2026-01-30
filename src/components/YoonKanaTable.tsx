@@ -23,9 +23,15 @@ interface Props {
   consonants: string[];
   rows: Row[];
   onHover: (character: string, romaji: string) => void;
+  mobileActiveHover: (character: string, romaji: string) => void;
 }
 
-const YoonKanaTable = ({ consonants, rows, onHover }: Props) => {
+const YoonKanaTable = ({
+  consonants,
+  rows,
+  onHover,
+  mobileActiveHover,
+}: Props) => {
   return (
     <>
       <Box sx={{ width: { xs: "100%", md: "80%" } }}>
@@ -61,6 +67,7 @@ const YoonKanaTable = ({ consonants, rows, onHover }: Props) => {
                 </TableCell>
                 {row.chars.map((data) => (
                   <KanaCell
+                    mobileActiveHover={mobileActiveHover}
                     key={data.character}
                     character={data.character}
                     romaji={data.romaji}

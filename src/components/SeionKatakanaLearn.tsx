@@ -1,15 +1,16 @@
-import ScriptDescription from "./ScriptDescription";
 import KanaTable from "./KanaTable";
 import TableCard from "./TableCard";
 import { Box, Typography } from "@mui/material";
-import { seionKatakanaDesc } from "../data/descriptions";
 import { seionConsonants, SEION_KATAKANA_ROWS } from "../data/filteredKatakana";
 import { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { keyframes } from "@mui/system";
-import MobileTableCard from "./MobileTableCard";
 
-const SeionKatakanaLearn = () => {
+interface Props {
+  mobileActiveHover: (character: string, romaji: string) => void;
+}
+
+const SeionKatakanaLearn = ({ mobileActiveHover }: Props) => {
   const slideLeftRight = keyframes`
   from {
     transform: translateX(-2px);
@@ -26,13 +27,6 @@ const SeionKatakanaLearn = () => {
   };
   return (
     <>
-      <Box display="flex" alignItems="center" justifyContent="space-between">
-        <ScriptDescription data={[seionKatakanaDesc]} />
-        <MobileTableCard
-          char={activeItem.character}
-          romaji={activeItem.romaji}
-        />
-      </Box>
       <Box
         sx={{
           display: "flex",
@@ -41,6 +35,7 @@ const SeionKatakanaLearn = () => {
       >
         <Box display="flex" justifyContent="space-between" width="100%">
           <KanaTable
+            mobileActiveHover={mobileActiveHover}
             onHover={handleHover}
             consonants={seionConsonants}
             rows={SEION_KATAKANA_ROWS}

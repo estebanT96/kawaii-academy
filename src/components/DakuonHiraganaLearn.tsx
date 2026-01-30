@@ -6,8 +6,10 @@ import {
 import { useState } from "react";
 import DakuonTableCard from "./DakuonTableCard";
 import DakuonKanaTable from "./DakuonKanaTable";
-
-const DakuonHiraganaLearn = () => {
+interface Props {
+  mobileActiveHover: (character: string, romaji: string) => void;
+}
+const DakuonHiraganaLearn = ({ mobileActiveHover }: Props) => {
   const [activeItem, setActiveItem] = useState({
     character: "",
     romaji: "",
@@ -25,6 +27,7 @@ const DakuonHiraganaLearn = () => {
       >
         <Box display="flex" width="auto">
           <DakuonKanaTable
+            mobileActiveHover={mobileActiveHover}
             onHover={handleHover}
             consonants={dakuonConsonants}
             rows={DAKUON_HIRAGANA_ROWS}

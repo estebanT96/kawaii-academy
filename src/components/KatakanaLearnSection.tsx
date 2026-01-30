@@ -1,149 +1,201 @@
-import { Box, Typography, List, Link, ListItem } from "@mui/material";
-import { YOON_KATAKANA_ROWS, yoonRowHeader } from "../data/filteredKatakana";
+import { Box, Typography, Stack } from "@mui/material";
 import YoonKatakanaLearn from "./YoonKatakanaLearn";
 import DakuonKatakanaLearn from "./DakuonKatakanaLearn";
 import SeionKatakanaLearn from "./SeionKatakanaLearn";
-import SunnyIcon from "@mui/icons-material/Sunny";
-import links from "../data/links";
-import { Link as RouterLink } from "react-router-dom";
+import KatakanaDescription from "./KatakanaDescription";
+import { useState } from "react";
+import MobileTableCard from "./MobileTableCard";
+import GiveItAShot from "./GiveItAShot";
 
 const KatakanaLearnSection = () => {
-  return (
-    <Box marginTop="30px">
-      <Box display="flex" alignItems="baseline">
-        <Typography
-          variant="h3"
-          sx={{
-            textDecoration: "underline",
-            marginRight: "20px",
-            marginBottom: "15px",
-            fontSize: { xs: "20px", md: "42px" },
-          }}
-        >
-          Katakana
-        </Typography>
-        <Typography
-          variant="h5"
-          color="rgb(160, 160, 160)"
-          sx={{ fontSize: { xs: "14px", md: "20px" } }}
-        >
-          カタカナ
-        </Typography>
-      </Box>
+  const [selectedTab, setSelectedTab] = useState("seion");
 
-      <Box display="flex" justifyContent="space-between">
-        <Box width="100%" sx={{ minWidth: 0 }}>
-          <Box sx={{ marginBottom: { xs: "10px", md: "30px" } }}>
-            <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-              <strong>Katakana</strong> is primarily used for foreign loanwords
-              (like 'coffee' or 'computer'), foreign names, and onomatopoeia
-              (sound effects). It represents the exact same sounds as Hiragana
-              but uses sharper, more angular characters.
-            </Typography>
-            <List>
-              <ListItem>
-                <SunnyIcon
-                  sx={{
-                    fontSize: "18px",
-                    marginRight: "10px",
-                    color: "rgb(255, 79, 79)",
-                  }}
-                />{" "}
-                <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-                  <strong>Seion (Basic Sounds): </strong>
-                  The 46 standard characters. Unlike Hiragana's curvy strokes,
-                  these have sharp, straight lines."(e.g., ア, カ, サ).
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <SunnyIcon
-                  sx={{
-                    fontSize: "18px",
-                    marginRight: "10px",
-                    color: "rgb(255, 79, 79)",
-                  }}
-                />
-                <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-                  <strong>Dakuon (Voiced Sounds): </strong>
-                  Katakana characters with two dots (゛) or a circle (゜) to
-                  create voiced sounds (e.g., カ "ka" becomes ガ "ga").
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <SunnyIcon
-                  sx={{
-                    fontSize: "18px",
-                    marginRight: "10px",
-                    color: "rgb(255, 79, 79)",
-                  }}
-                />
-                <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-                  <strong>Yoon (Combo Sounds): </strong>A combination of a
-                  Characters combined with a small ya, yu, or yo to create
-                  blended sounds, often used to mimic foreign pronunciations
-                  (e.g., キャ "kya").
-                </Typography>
-              </ListItem>
-            </List>
-            <Typography sx={{ fontSize: { xs: "12px", md: "14px" } }}>
-              <strong>Pro Tip: </strong>
-              You will see Katakana everywhere on restaurant menus (burgers,
-              pasta) and technology (smartphone, internet)!"
-            </Typography>
-          </Box>
-          <SeionKatakanaLearn />
-          <DakuonKatakanaLearn />
-          <YoonKatakanaLearn
-            rowHeader={yoonRowHeader}
-            rows={YOON_KATAKANA_ROWS}
-          />
-          <Box width="100%">
+  const [activeItem, setActiveItem] = useState({
+    character: "",
+    romaji: "",
+  });
+
+  const mobileActiveHover = (character: string, romaji: string) => {
+    setActiveItem({ character: character, romaji: romaji });
+  };
+
+  return (
+    <Box marginTop="30px" display="flex" justifyContent="space-between">
+      <Box width="100%" sx={{ minWidth: 0 }}>
+        <KatakanaDescription />
+        <Box
+          display="flex"
+          flexDirection="column"
+          position="relative"
+          width="100%"
+          sx={{ paddingTop: { xs: "30px", md: "none" } }}
+        >
+          <Stack
+            direction="row"
+            sx={{
+              position: "relative",
+              marginLeft: "5px",
+
+              width: "100%",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <Box
-              display="flex"
-              alignItems="center"
-              marginBottom="30px"
-              sx={{ flexDirection: { xs: "column", md: "row" } }}
+              sx={{
+                borderBottom: "1px solid rgb(210, 210, 210)",
+                width: "16.3%",
+              }}
             >
-              <Typography
+              <Box
+                onClick={() => setSelectedTab("seion")}
+                paddingX="5px"
+                paddingTop="3px"
+                paddingBottom={selectedTab === "seion" ? "2px" : "0"}
+                marginRight="3px"
+                borderBottom={
+                  selectedTab === "seion"
+                    ? "1px transparent "
+                    : "1px solid rgb(183, 183, 183)"
+                }
                 sx={{
-                  fontSize: { xs: "12px", md: "14px" },
-                  marginRight: { xs: "0", md: "10px" },
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  backgroundColor:
+                    selectedTab === "seion"
+                      ? "rgb(255, 232, 85)"
+                      : "rgb(237, 207, 4)",
+                  transition: "all ease 100ms",
+                  borderTop:
+                    selectedTab === "seion"
+                      ? "1px solid rgb(237,207,4)"
+                      : "rgb(237, 207, 4)",
+                  borderLeft:
+                    selectedTab === "seion"
+                      ? "1px solid rgb(237,207,4)"
+                      : "rgb(237, 207, 4)",
+                  borderRight:
+                    selectedTab === "seion"
+                      ? "1px solid rgb(237,207,4)"
+                      : "rgb(237, 207, 4)",
+                  borderBottom: "none",
+                  "&:hover": {
+                    cursor: "pointer",
+                    filter: "brightness(1.1)",
+                  },
                 }}
               >
-                Ready to test what you learned? Give it a shot!{" "}
-              </Typography>{" "}
-              <Link
-                underline="none"
-                component={RouterLink}
-                key={links[1].id}
-                to={links[1].path}
+                <Typography color="black" fontWeight="500" fontSize="12px">
+                  Seion
+                </Typography>
+              </Box>
+              <Box
+                onClick={() => setSelectedTab("dakuon")}
+                paddingX="5px"
+                paddingTop="3px"
+                paddingBottom={selectedTab === "dakuon" ? "2px" : "0"}
+                marginRight="3px"
+                borderBottom={
+                  selectedTab === "dakuon"
+                    ? "1px transparent "
+                    : "1px solid rgb(183, 183, 183)"
+                }
+                sx={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 50,
+                  backgroundColor:
+                    selectedTab === "dakuon"
+                      ? "rgb(255, 232, 85)"
+                      : "rgb(237, 207, 4)",
+                  transition: "all ease 100ms",
+                  borderTop:
+                    selectedTab === "dakuon"
+                      ? "1px solid rgb(237,207,4)"
+                      : "rgb(237, 207, 4)",
+                  borderLeft:
+                    selectedTab === "dakuon"
+                      ? "1px solid rgb(237,207,4)"
+                      : "rgb(237, 207, 4)",
+                  borderRight:
+                    selectedTab === "dakuon"
+                      ? "1px solid rgb(237,207,4)"
+                      : "rgb(237, 207, 4)",
+                  borderBottom: "none",
+                  "&:hover": {
+                    cursor: "pointer",
+                    filter: "brightness(1.1)",
+                  },
+                }}
               >
-                <Box
-                  padding="2px 5px"
-                  borderRadius="5px"
-                  sx={{
-                    backgroundColor: links[1].color,
-                    transition: "all ease 200ms",
-                    border: links[1].border,
-                    boxShadow: links[1].boxShadow,
-                    "&:hover": {
-                      cursor: "pointer",
-                      filter: "brightness(1.1)",
-                      boxShadow: links[1]["&:hover"],
-                    },
-                    "&:active": {
-                      transform: "translate(1px, 1px)",
-                      boxShadow: "1px 1px 0px transparent ",
-                    },
-                  }}
-                >
-                  <Typography color="black" fontWeight="500" fontSize="12px">
-                    {links[1].tag}
-                  </Typography>
-                </Box>
-              </Link>
+                <Typography color="black" fontWeight="500" fontSize="12px">
+                  Dakuon
+                </Typography>
+              </Box>
+              <Box
+                onClick={() => setSelectedTab("yoon")}
+                paddingX="5px"
+                paddingTop="3px"
+                paddingBottom={selectedTab === "yoon" ? "2px" : "0"}
+                marginRight="3px"
+                borderBottom={
+                  selectedTab === "yoon"
+                    ? "1px transparent "
+                    : "1px solid rgb(183, 183, 183)"
+                }
+                sx={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 113,
+                  backgroundColor:
+                    selectedTab === "yoon"
+                      ? "rgb(255, 232, 85)"
+                      : "rgb(237, 207, 4)",
+                  transition: "all ease 100ms",
+                  borderTop:
+                    selectedTab === "yoon"
+                      ? "1px solid rgb(237,207,4)"
+                      : "rgb(237, 207, 4)",
+                  borderLeft:
+                    selectedTab === "yoon"
+                      ? "1px solid rgb(237,207,4)"
+                      : "rgb(237, 207, 4)",
+                  borderRight:
+                    selectedTab === "yoon"
+                      ? "1px solid rgb(237,207,4)"
+                      : "rgb(237, 207, 4)",
+                  borderBottom: "none",
+                  "&:hover": {
+                    cursor: "pointer",
+                    filter: "brightness(1.1)",
+                  },
+                }}
+              >
+                <Typography color="black" fontWeight="500" fontSize="12px">
+                  Yoon
+                </Typography>
+              </Box>
             </Box>
+            <Box>
+              <MobileTableCard
+                char={activeItem.character}
+                romaji={activeItem.romaji}
+              />
+            </Box>
+          </Stack>
+          <Box marginBottom="20px" overflow="hidden">
+            {selectedTab === "seion" && (
+              <SeionKatakanaLearn mobileActiveHover={mobileActiveHover} />
+            )}
+            {selectedTab === "dakuon" && (
+              <DakuonKatakanaLearn mobileActiveHover={mobileActiveHover} />
+            )}
+            {selectedTab === "yoon" && (
+              <YoonKatakanaLearn mobileActiveHover={mobileActiveHover} />
+            )}
           </Box>
+          <GiveItAShot />
         </Box>
       </Box>
     </Box>

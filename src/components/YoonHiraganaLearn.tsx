@@ -3,9 +3,13 @@ import { useState } from "react";
 import TableCard from "./TableCard";
 import YoonKanaTable from "./YoonKanaTable";
 import { YOON_HIRAGANA_ROWS } from "../data/filteredHiragana";
-import { yoonRowHeader } from "../data/filteredKatakana";
+import { yoonRowHeader } from "../data/filteredHiragana";
 
-const YoonHiraganaLearn = () => {
+interface Props {
+  mobileActiveHover: (character: string, romaji: string) => void;
+}
+
+const YoonHiraganaLearn = ({ mobileActiveHover }: Props) => {
   const [activeItem, setActiveItem] = useState({
     character: "",
     romaji: "",
@@ -23,6 +27,7 @@ const YoonHiraganaLearn = () => {
       >
         <Box display="flex" justifyContent="space-between" width="100%">
           <YoonKanaTable
+            mobileActiveHover={mobileActiveHover}
             onHover={handleHover}
             consonants={yoonRowHeader}
             rows={YOON_HIRAGANA_ROWS}

@@ -1,16 +1,16 @@
-import ScriptDescription from "./ScriptDescription";
-import KanaTable from "./KanaTable";
-import TableCard from "./TableCard";
 import { Box } from "@mui/material";
-import { dakuonKatakanaDesc } from "../data/descriptions";
 import {
   dakuonConsonants,
   DAKUON_KATAKANA_ROWS,
 } from "../data/filteredKatakana";
 import { useState } from "react";
-import MobileTableCard from "./MobileTableCard";
+import DakuonKanaTable from "./DakuonKanaTable";
+import DakuonTableCard from "./DakuonTableCard";
+interface Props {
+  mobileActiveHover: (character: string, romaji: string) => void;
+}
 
-const DakuonKatakanaLearn = () => {
+const DakuonKatakanaLearn = ({ mobileActiveHover }: Props) => {
   const [activeItem, setActiveItem] = useState({
     character: "",
     romaji: "",
@@ -20,23 +20,24 @@ const DakuonKatakanaLearn = () => {
   };
   return (
     <>
-      <Box display="flex" alignItems="center">
-        <ScriptDescription data={[dakuonKatakanaDesc]} />
-        <MobileTableCard
-          char={activeItem.character}
-          romaji={activeItem.romaji}
-        />
-      </Box>
-      <Box display="flex">
-        <KanaTable
-          onHover={handleHover}
-          consonants={dakuonConsonants}
-          rows={DAKUON_KATAKANA_ROWS}
-        />
-        <TableCard
-          character={activeItem.character}
-          romaji={activeItem.romaji}
-        ></TableCard>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+        }}
+      >
+        <Box display="flex" width="auto">
+          <DakuonKanaTable
+            mobileActiveHover={mobileActiveHover}
+            onHover={handleHover}
+            consonants={dakuonConsonants}
+            rows={DAKUON_KATAKANA_ROWS}
+          />
+          <DakuonTableCard
+            character={activeItem.character}
+            romaji={activeItem.romaji}
+          ></DakuonTableCard>
+        </Box>
       </Box>
     </>
   );

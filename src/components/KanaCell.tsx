@@ -4,9 +4,10 @@ interface Props {
   character: string;
   romaji: string;
   onHover: (character: string, romaji: string) => void;
+  mobileActiveHover: (character: string, romaji: string) => void;
 }
 
-const KanaCell = ({ character, romaji, onHover }: Props) => {
+const KanaCell = ({ character, romaji, onHover, mobileActiveHover }: Props) => {
   return (
     <TableCell
       align="center"
@@ -21,6 +22,7 @@ const KanaCell = ({ character, romaji, onHover }: Props) => {
         },
       }}
       onMouseEnter={() => onHover(character, romaji)}
+      onClick={() => mobileActiveHover(character, romaji)}
       key={character}
     >
       <Typography

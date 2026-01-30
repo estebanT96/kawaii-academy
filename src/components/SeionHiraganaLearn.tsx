@@ -6,7 +6,11 @@ import { useState } from "react";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { keyframes } from "@mui/system";
 
-const SeionHiraganaLearn = () => {
+interface Props {
+  mobileActiveHover: (character: string, romaji: string) => void;
+}
+
+const SeionHiraganaLearn = ({ mobileActiveHover }: Props) => {
   const slideLeftRight = keyframes`
   from {
     transform: translateX(-1px);
@@ -18,9 +22,11 @@ const SeionHiraganaLearn = () => {
     character: "",
     romaji: "",
   });
+
   const handleHover = (character: string, romaji: string) => {
     setActiveItem({ character: character, romaji: romaji });
   };
+
   return (
     <>
       <Box
@@ -31,6 +37,7 @@ const SeionHiraganaLearn = () => {
       >
         <Box display="flex" justifyContent="space-between" width="100%">
           <KanaTable
+            mobileActiveHover={mobileActiveHover}
             onHover={handleHover}
             consonants={seionConsonants}
             rows={SEION_HIRAGANA_ROWS}
