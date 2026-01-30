@@ -1,5 +1,6 @@
 import { Box, Button, Typography, Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
+import logo from "../assets/logoFace.png";
 
 type KanaChar = {
   char: string;
@@ -33,6 +34,34 @@ const StudySelection = ({
         }}
       >
         <Box paddingX="20px">
+          <Box
+            width="100%"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            marginBottom="20px"
+            borderRadius="5px"
+            paddingX="5px"
+            sx={{
+              height: { xs: "32px", sm: "42px", md: "54px" },
+              backgroundColor: "rgb(237, 207, 4)",
+              border: "1px solid black",
+              boxShadow: "2px 2px 0px black",
+              gap: { xs: "3px", md: "10px" },
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: { xs: "14px", md: "24px" },
+                whiteSpace: "nowrap",
+              }}
+              fontWeight="bold"
+            >
+              Welcome to Kawaii Academy!
+            </Typography>
+
+            <img src={logo} alt="" height="100%" />
+          </Box>
           <Typography
             sx={{ fontSize: { xs: "18px", md: "24px" } }}
             fontWeight="bold"

@@ -2,6 +2,7 @@ import { Box, CardContent, TextField, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import RestartButton from "./RestartButton";
 import SelectAgainButton from "./SelectAgainButton";
+import logo from "../assets/congratsImg.png";
 
 interface KanaChar {
   char: string;
@@ -57,10 +58,15 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
 
   if (index >= data.length) {
     return (
-      <CardContent sx={{ textAlign: "center", paddingTop: "30px" }}>
-        <Typography sx={{ fontSize: { xs: "32px", md: "56px" } }}>
-          Congratulations!
-        </Typography>
+      <CardContent >
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ height: { xs: "120px", sm: "150px", md: "200px" } }}
+        >
+          <img src={logo} alt="" height="100%" />
+        </Box>
         <Box
           display="flex"
           alignItems="center"
@@ -90,7 +96,7 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
           hiddenLabel
           sx={{ input: { textAlign: "center" }, width: "60%" }}
           onChange={(e) =>
-            handleInput(data[index].char, data[index].romaji, e.target.value)
+            handleInput(data[index].char, data[index].romaji, e.target.value.toLowerCase())
           }
         ></TextField>
       </Box>

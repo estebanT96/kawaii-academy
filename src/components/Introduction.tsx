@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-
+import thinkingKizune from "../assets/thinkingGif.gif";
 const Introduction = () => {
   return (
     <Box
@@ -10,7 +10,7 @@ const Introduction = () => {
       sx={{ marginBottom: { xs: "30px", md: "50px" } }}
     >
       <Typography
-        variant="h3"            
+        variant="h3"
         sx={{
           textDecoration: "underline",
           marginRight: "20px",
@@ -416,6 +416,32 @@ const Introduction = () => {
         Hiragana and Katakana is...
       </Typography>
 
+      <Box
+        sx={{
+          width: { xs: "60px", md: "80px" },
+          height: { xs: "60px", md: "80px" },
+          overflow: "hidden",
+          borderRadius: "10%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "#fff",
+          marginX: "auto",
+          marginBottom:"15px"
+        }}
+      >
+        <Box
+          component="img"
+          src={thinkingKizune}
+          alt="Thinking Kizune"
+          sx={{
+            height: "100%",
+            width: "115%",
+            objectFit: "cover",
+          }}
+        />
+      </Box>
+
       <Typography
         marginBottom="5px"
         sx={{ fontSize: { xs: "14px", md: "16px" } }}
@@ -435,8 +461,8 @@ const Introduction = () => {
         sharper, more angular characters.{" "}
       </Typography>
       <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
-        Below, you can find the tables and explanations for Hiragana and Katakana
-        characters.{" "}
+        Below, you can find the tables and explanations for Hiragana and
+        Katakana characters.{" "}
       </Typography>
       <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}></Typography>
     </Box>
