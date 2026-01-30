@@ -53,7 +53,7 @@ const HiraganaDescription = () => {
             />
              <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
               <strong>Dakuon (Voiced Sounds): </strong>
-              Characters modified with two dots (゛) or a circle (゜) to change
+              Characters modified with two quotation marks, called dakuten (゛) or a circle, called handakuten (゜) to change
               their sound (e.g., "ka" becomes "ga", "ha" becomes "ba" or "pa").
             </Typography>
           </ListItem>

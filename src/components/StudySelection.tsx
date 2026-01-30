@@ -41,7 +41,7 @@ const StudySelection = ({
             New to Japanese?
           </Typography>
 
-          <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
+          <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
             To start learning, go to our{" "}
             <Link
               component={RouterLink}
@@ -58,7 +58,7 @@ const StudySelection = ({
             </Link>{" "}
             page.
           </Typography>
-          <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
+          <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
             When you feel ready, you can come back to this page to quiz your
             kana skills.
           </Typography>
@@ -71,12 +71,14 @@ const StudySelection = ({
           >
             Already know your Kana?
           </Typography>
-          <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
+          <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
             This is a Flashcard Game. You will see a character (like あ) and
-            type its sound (like "a").
+            type its sound (like "a"). The game ends until you have correctly
+            answered the symbol reading.
           </Typography>
-          <Typography sx={{ fontSize: { xs: "12px", md: "16px" } }}>
-            Choose specific rows below to create a custom quiz. <br />
+          <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
+            Choose specific rows below to create a custom randomized quiz.{" "}
+            <br />
           </Typography>
         </Box>
       </Box>
@@ -97,7 +99,7 @@ const StudySelection = ({
         alignItems="center"
         sx={{ flexDirection: { xs: "column", md: "row" } }}
       >
-        <Typography sx={{ fontSize: { xs: "14px", md: "16px" }}}>
+        <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           You selected:
         </Typography>
         <Box display="flex">

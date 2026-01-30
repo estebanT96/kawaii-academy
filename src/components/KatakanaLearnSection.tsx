@@ -63,7 +63,7 @@ const KatakanaLearnSection = () => {
                   left: 0,
                   backgroundColor:
                     selectedTab === "seion"
-                      ? "rgb(244, 211, 0)"
+                      ? "rgb(255, 223, 13)"
                       : "rgb(237, 207, 4)",
                   transition: "all ease 100ms",
                   borderTop: "1px solid rgb(237, 207, 4)",
@@ -75,7 +75,7 @@ const KatakanaLearnSection = () => {
                       : "1px solid rgb(209, 209, 209)",
                   "&:hover": {
                     cursor: "pointer",
-                    filter: "brightness(1.1)",
+                    backgroundColor: "rgb(255, 223, 13)",
                   },
                 }}
               >
@@ -96,10 +96,10 @@ const KatakanaLearnSection = () => {
                 sx={{
                   position: "absolute",
                   bottom: 0,
-                  left: 51,
+                  left: 50,
                   backgroundColor:
                     selectedTab === "dakuon"
-                      ? "rgb(244, 211, 0)"
+                      ? "rgb(255, 223, 13)"
                       : "rgb(237, 207, 4)",
                   transition: "all ease 100ms",
                   borderTop: "1px solid rgb(237, 207, 4)",
@@ -111,7 +111,7 @@ const KatakanaLearnSection = () => {
                       : "1px solid rgb(209, 209, 209)",
                   "&:hover": {
                     cursor: "pointer",
-                    filter: "brightness(1.1)",
+                    backgroundColor: "rgb(255, 223, 13)",
                   },
                 }}
               >
@@ -132,10 +132,10 @@ const KatakanaLearnSection = () => {
                 sx={{
                   position: "absolute",
                   bottom: 0,
-                  left: 118,
+                  left: 116,
                   backgroundColor:
                     selectedTab === "yoon"
-                      ? "rgb(244, 211, 0)"
+                      ? "rgb(255, 223, 13)"
                       : "rgb(237, 207, 4)",
                   transition: "all ease 100ms",
                   borderTop: "1px solid rgb(237, 207, 4)",
@@ -147,7 +147,7 @@ const KatakanaLearnSection = () => {
                       : "1px solid rgb(209, 209, 209)",
                   "&:hover": {
                     cursor: "pointer",
-                    filter: "brightness(1.1)",
+                    backgroundColor: "rgb(255, 223, 13)",
                   },
                 }}
               >

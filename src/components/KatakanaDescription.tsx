@@ -28,7 +28,7 @@ const KatakanaDescription = () => {
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           <strong>Katakana</strong> is primarily used for foreign loanwords
           (like 'coffee' or 'computer'), foreign names, and onomatopoeia (sound
-          effects). It represents the exact same sounds as Hiragana but uses
+          effects). Katakana holds the exact same sounds as Hiragana but uses
           sharper, more angular characters.
         </Typography>
         <List>
@@ -56,8 +56,9 @@ const KatakanaDescription = () => {
             />
             <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
               <strong>Dakuon (Voiced Sounds): </strong>
-              Katakana characters with two dots (゛) or a circle (゜) to create
-              voiced sounds (e.g., カ "ka" becomes ガ "ga").
+              Katakana characters with two quotation marks, called dakuten (゛)
+              or a circle, called handakuten (゜)to create voiced sounds (e.g.,
+              カ "ka" becomes ガ "ga").
             </Typography>
           </ListItem>
           <ListItem>
@@ -71,15 +72,14 @@ const KatakanaDescription = () => {
             <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
               <strong>Yoon (Combo Sounds): </strong>A combination of a
               Characters combined with a small ya, yu, or yo to create blended
-              sounds, often used to mimic foreign pronunciations (e.g., キャ
-              "kya").
+              sounds. (e.g., キャ "kya").
             </Typography>
           </ListItem>
         </List>
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           <strong>Pro Tip: </strong>
           You will see Katakana everywhere on restaurant menus (burgers, pasta)
-          and technology (smartphone, internet)!"
+          and technology (smartphone, internet)!
         </Typography>
       </Box>
     </>
