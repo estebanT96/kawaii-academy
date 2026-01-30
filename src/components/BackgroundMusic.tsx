@@ -1,6 +1,6 @@
 // components/BackgroundMusic.tsx
 import { useState, useRef, useEffect } from "react";
-import { Box, IconButton, Tooltip } from "@mui/material";
+import { Box, Tooltip } from "@mui/material";
 import VolumeUpIcon from "@mui/icons-material/VolumeUp";
 import VolumeOffIcon from "@mui/icons-material/VolumeOff";
 import bgMusic from "../assets/boogie-pecan-pie-main-version-41135-02-14.mp3";
