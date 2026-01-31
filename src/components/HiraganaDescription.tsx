@@ -40,7 +40,7 @@ const HiraganaDescription = () => {
         </Typography>
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           <strong style={{ color: "rgb(8, 107, 255)" }}>
-            1. a∘ri∘ga∘to∘u:
+            1. a∘ri∘ga∘to∘u: {" "}
           </strong>{" "}
           Notice how this word ends with a "u"? This is what creates the long
           "o" sound.
@@ -84,9 +84,9 @@ const HiraganaDescription = () => {
         </Typography>
         <Typography sx={{ fontSize: { xs: "14px", md: "16px" } }}>
           <strong style={{ color: "rgb(8, 107, 255)" }}>
-            1. se∘n∘se∘i [teacher]:
+            1. se∘n∘se∘i [teacher]:{" "}
           </strong>
-          Notice how this word ends with an "i"? Even though it is written as an
+          {" "}Notice how this word ends with an "i"? Even though it is written as an
           "i", it combines with the previous syllable to create the long "e"
           sound.
         </Typography>

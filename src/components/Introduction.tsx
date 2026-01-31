@@ -450,7 +450,7 @@ const Introduction = () => {
         sx={{ fontSize: { xs: "14px", md: "16px" } }}
       >
         <strong>Hiragana:</strong> The 46 primary sounds of Japanese, its
-        calligraphy and symbology are derived of more complex symbols (Kanji),
+        calligraphy and symbology are derived from more complex symbols (Kanji),
         which were later converted into conceptual and mono-syllabic symbols.
       </Typography>
 
