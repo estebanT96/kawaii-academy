@@ -58,42 +58,37 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
 
   if (index >= data.length) {
     return (
-      <CardContent >
-      <Box
-        sx={{
-          width: { xs: "80px", md: "150px" },
-          height: { xs: "80px", md: "150px" },
-          overflow: "hidden",
-          borderRadius: "50%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "#fff",
-          marginX: "auto",
-          marginBottom: "15px",
-        }}
-      >
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          style={{
-            width: "120%",
-            height: "110%",
-            objectFit: "cover",
+      <CardContent>
+        <Box
+          sx={{
+            width: { xs: "80px", md: "150px" },
+            height: { xs: "80px", md: "150px" },
+            overflow: "hidden",
+            borderRadius: "50%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "#fff",
+            marginX: "auto",
+            marginBottom: "15px",
           }}
         >
-          <source src={congrats} type="video/webm" />
-        </video>
-      </Box>
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          gap={1}
-          sx={{ flexDirection: { xs: "column", md: "row" } }}
-        >
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              width: "120%",
+              height: "110%",
+              objectFit: "cover",
+            }}
+          >
+            <source src={congrats} type="video/webm" />
+          </video>
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" gap={1} flexDirection="column">
+          <Typography sx={{fontSize:{xs:"16px", sm:"20px"}}}>Congratulations!</Typography>
           <RestartButton onClick={handleRestart} />
           <SelectAgainButton onBackToMenu={onBackToMenu} />
         </Box>
@@ -116,7 +111,11 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
           hiddenLabel
           sx={{ input: { textAlign: "center" }, width: "60%" }}
           onChange={(e) =>
-            handleInput(data[index].char, data[index].romaji, e.target.value.toLowerCase())
+            handleInput(
+              data[index].char,
+              data[index].romaji,
+              e.target.value.toLowerCase(),
+            )
           }
         ></TextField>
       </Box>
