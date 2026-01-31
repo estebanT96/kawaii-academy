@@ -2,7 +2,7 @@ import { Box, CardContent, TextField, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import RestartButton from "./RestartButton";
 import SelectAgainButton from "./SelectAgainButton";
-import congrats from "../assets/congratsGif.webm";
+import congrats from "../assets/kuzinecongrats.webm";
 
 interface KanaChar {
   char: string;
@@ -61,10 +61,10 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
       <CardContent >
       <Box
         sx={{
-          width: { xs: "130px", md: "150px" },
-          height: { xs: "130px", md: "150px" },
+          width: { xs: "80px", md: "150px" },
+          height: { xs: "80px", md: "150px" },
           overflow: "hidden",
-          borderRadius: "10%",
+          borderRadius: "50%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -79,8 +79,8 @@ const StudyCardContent = ({ data, onBackToMenu }: Props) => {
           muted
           playsInline
           style={{
-            width: "105%",
-            height: "105%",
+            width: "120%",
+            height: "110%",
             objectFit: "cover",
           }}
         >
