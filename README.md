@@ -34,7 +34,7 @@
 
 - **User Persistence Layer:** While the educational data is static, I plan to integrate Supabase (PostgreSQL) to store dynamic user data, such as study streaks, accuracy percentages, and account settings.
 
--**Audio Integration:** Adding native pronunciation audio clips for every character to improve listening comprehension alongside reading skills.
+- **Audio Integration:** Adding native pronunciation audio clips for every character to improve listening comprehension alongside reading skills.
 
 ## Screenshots
 
