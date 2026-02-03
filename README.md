@@ -15,6 +15,7 @@
 - **Progress Tracking:** Immediate feedback on answers and a summary screen upon completion.
 - **Fully Responsive:** Optimized for both desktop and mobile experience with touch-friendly controls.
 - **Reference Library:** Complete charts for Seion (Basic), Dakuon (Voiced), and Yoon (Combo) sounds.
+- **Background Music:** Included optional background music for immersive gaming experience. Used licensed source from uppbeat.io.
 
 ## Tech Stack
 
@@ -26,13 +27,13 @@
 
 ## Engineering Decisions & Challenges
 
-- **Algorithm Efficiency (Fisher-Yates Shuffle):** To ensure a truly randomized learning experience every session, I implemented the Fisher-Yates shuffle algorithm within the StudyCard component. This prevents repeating patterns in the flashcards, which is a common issue with standard Math.random() sorting methods.
-- **Optimistic UI & Instant Feedback:** In StudyCardContent.tsx, I designed the input handler to validate answers in real-time (handleInput). Instead of requiring a "Submit" button, the app detects the correct string match immediately, clears the input, and advances the state. This reduces user friction and creates a "flow state" essential for gamified learning.
-- **Static Data vs. Database:** I intentionally chose to serve the Kana data from a static file rather than fetching from a database. Since the Japanese alphabet is immutable, this decision eliminated network latency, resulting in near-instant load times and zero database costs.
+- **Algorithm Efficiency (Fisher-Yates Shuffle):** To ensure a truly randomized learning experience every session, the Fisher-Yates shuffle algorithm was implemented within the character randomization. This prevents repeating patterns in the flashcards, which is a common issue with standard Math.random() sorting methods.
+- **Optimistic UI & Instant Feedback:** Instead of requiring a "Submit" button, the app detects the correct string match immediately, clears the input, and advances the state. This reduces user friction and creates a flow state essential for gamified learning.
+- **Static Data vs. Database:** Intentional election to serve the Kana data from a static file rather than fetching from a database. Since the Japanese alphabet is immutable, this decision eliminated network latency, resulting in near-instant load times and zero database costs.
 
 ## Future Roadmap
 
-- **User Persistence Layer:** While the educational data is static, I plan to integrate Supabase (PostgreSQL) to store dynamic user data, such as study streaks, accuracy percentages, and account settings.
+- **User Persistence Layer:** Supabase (PostgreSQL) integration to store dynamic user data, such as study streaks, accuracy percentages, and account settings.
 
 - **Audio Integration:** Adding native pronunciation audio clips for every character to improve listening comprehension alongside reading skills.
 
