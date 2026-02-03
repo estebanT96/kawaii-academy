@@ -9,12 +9,12 @@
 
 ## Features
 
-- ** Interactive Flashcard Game:** Test your memory with randomized kana cards.
-- ** Customizable Study Sets:** Select specific rows to practice (e.g., only "k" and "s" rows) or mix Hiragana and Katakana.
-- ** Quick Start Mode:** One-click onboarding for absolute beginners to start learning immediately.
-- ** Progress Tracking:** Immediate feedback on answers and a summary screen upon completion.
-- ** Fully Responsive:** Optimized for both desktop and mobile experience with touch-friendly controls.
-- ** Reference Library:** Complete charts for Seion (Basic), Dakuon (Voiced), and Yoon (Combo) sounds.
+- **Interactive Flashcard Game:** Test your memory with randomized kana cards.
+- **Customizable Study Sets:** Select specific rows to practice (e.g., only "k" and "s" rows) or mix Hiragana and Katakana.
+- **Quick Start Mode:** One-click onboarding for absolute beginners to start learning immediately.
+- **Progress Tracking:** Immediate feedback on answers and a summary screen upon completion.
+- **Fully Responsive:** Optimized for both desktop and mobile experience with touch-friendly controls.
+- **Reference Library:** Complete charts for Seion (Basic), Dakuon (Voiced), and Yoon (Combo) sounds.
 
 ## Tech Stack
 
