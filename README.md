@@ -68,4 +68,4 @@ npm run dev
 ## Credits & Assets
 
 - **Music:** "Boogie" by Pecan Pie via [Uppbeat](https://uppbeat.io/t/pecan-pie/boogie) (License: ZZAOYODV5BDGZBFS).
-- **Illustrations:** Custom AI-generated assets (Kizune Character).
+- **Illustrations:** Custom generated assets (Kizune Character).
